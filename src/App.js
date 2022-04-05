@@ -1,5 +1,6 @@
 import "./App.css";
 import { Partner } from "./Components/Partner";
+import Home from './Page/HomeComponets/Home';
 
 function App() {
   return (
