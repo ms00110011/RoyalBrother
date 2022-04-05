@@ -1,0 +1,56 @@
+.landing_image{
+    /* background-color: aquamarine; */
+    background-image: url("../../../public/Imgs/home1.jpg");
+    /* background-image: url(); */
+    height: 700px;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.sanitized{
+    font-size: 25px;
+    gap: 50px;
+    /* height: 60px; */
+    background-color: aquamarine;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.sanitized_section{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left:1%;
+    text-align: center;
+    justify-content: center;
+}
+.rbx{
+    background-image: url("../../../public/Imgs/rbx.jpg");
+    height: 700px;
+    background-size: cover;
+    cursor: pointer;
+}
+
+.subscribe{
+    margin: 40% 40%;
+    background-color: #fed250;
+    color: black;
+    border-radius: 40px;
+    border: none;
+    height: fit-content;
+    font-weight: 500;
+}
+.save{
+    height: 40px;
+    background-color: rgb(102, 98, 98);
+    color: white;
+    text-align: right;
+    font-size: 22px;
+    padding-right: 10px;
+}
+.fleet{
+    height: 500px;
+    background-color: blueviolet;
+}
