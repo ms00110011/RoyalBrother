@@ -53,4 +53,21 @@
 .fleet{
     height: 500px;
     background-color: blueviolet;
+    text-align: center;
+    justify-content:center;
+    padding-top: 20px;
+}
+
+
+.fleet_card_container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.fleet_card{
+    height: 300px;
+    width: 350px;
+    background-color: #fed250;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
 }
