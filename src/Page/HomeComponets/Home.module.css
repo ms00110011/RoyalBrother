@@ -4,9 +4,10 @@
     /* background-image: url(); */
     height: 800px;
     background-position: center;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 100%;
-    padding-top: 130px;
+    padding-top: 40px;
     padding-left: 250px;
 }
 
@@ -29,6 +30,7 @@
     margin-top: 30px;
     line-height: 0.9;
     font-weight: 600;
+    color: black;
 }
 
 .landing_form button{
@@ -65,8 +67,11 @@
 .rbx{
     background-image: url("../../../public/Imgs/rbx.jpg");
     height: 900px;
-    background-size: cover;
+    background-size: contain;
     cursor: pointer;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
     /* background-color: #fed250; */
 }
 
