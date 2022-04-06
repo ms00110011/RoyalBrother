@@ -1,25 +1,36 @@
 import "./App.css";
-// <<<<<<< partner
-import { Franchise } from "./Components/Partners/Franchise";
-import { Partner } from "./Components/Partners/Partner";
-import Home from "./Page/HomeComponets/Home";
-=======
-// import { Partner } from "./Components/Partner";
-// import Home from './Page/HomeComponets/Home';
-import Offer from "./Page/OfferComponets/Offer";
-// >>>>>>> main
+
+import Navbar from "./Components/Layout/Navbar";
+import {Routes,Route} from "react-router-dom"
+import Home from "./Page/HomeComponets/Home"
+import Offer from "./Page/OfferComponets/Offer"
+
+import {Footer} from "./Components/Layout/Footer";
+import { Homepage } from "./Components/Homepage";
+
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-// <<<<<<< partner
-      <Franchise />
-      {/* <Partner /> */}
-=======
-      {/* <Partner /> */}
-      {/* <Home/> */}
-      <Offer/>
-// >>>>>>> main
+
+      <Navbar />
+
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/offer" element={<Offer />} />
+
+      
+      </Routes>
+
+      <Footer />
+
+
+
+
     </div>
   );
 }
