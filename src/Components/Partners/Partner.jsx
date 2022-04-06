@@ -1,56 +1,91 @@
 import React from "react";
 import styles from "./Partner.module.css";
-import pic from "../Photo/bike.jpg";
-import first from "../Photo/first.png";
-import second from "../Photo/second.png";
-import third from "../Photo/third.png";
-import gt from "../Icon/gt.png";
+import pic from "../../Photo/bike.jpg";
+import first from "../../Photo/first.png";
+import second from "../../Photo/second.png";
+import third from "../../Photo/third.png";
+import gt from "../../Icon/gt.png";
+import flex4 from "../../Photo/flex4.png";
+import flex5 from "../../Photo/flex5.png";
+import flex6 from "../../Photo/flex6.png";
+
 export const Partner = () => {
   return (
     <div className={styles.partner}>
-      <div className={styles.first_title}>Earn with us</div>
-      <img src={pic} alt="bike" className={styles.pic} />
-      <div className={styles.pic}></div>
+      <div>
+        <div className={styles.first_title}>Earn with us</div>
+        <img src={pic} alt="bike" className={styles.pic} />
+      </div>
+
       <div class="d-flex flex-column align-items-center my-5">
         <div>
-        <h3 class="mb-4">How it works</h3>
+          <h2 class="mb-4 fw-bolder">How it works</h2>
+          <div class={styles.under_line}></div>
         </div>
         <div>
-          <p className={styles.desc}>Invest in Royal Brothers bikes and start earning every month</p>
+          <p className={styles.desc}>
+            Invest in Royal Brothers bikes and start earning every month
+          </p>
         </div>
-        <div className={styles.flex}>
-          <div class="bg-white p-2">
-            <img src={first} className={styles.first} alt="bike" />
-            <h6>Invest on RB Bikes</h6>
-          </div>
-          <div>
-            <img src={gt} className={styles.icon} alt="" />
-          </div>
-          <div class="bg-white">
-            <img src={second} className={styles.first} alt="bike" />
-            <h6>Get into contract with Royal Brothers</h6>
-          </div>
-          <div>
-            <img src={gt} className={styles.icon} alt="" />
-          </div>
-          <div class="bg-white">
-            <img src={third} className={styles.first} alt="bike" />
-            <h6>Get paid every month</h6>
+        <div class="container mt-lg-3 mb-lg-5 w-75">
+          <div class="row">
+            <div
+              class="col-lg-3 col-md-3 bg-white border rounded  d-flex flex-column align-items-center p-3 h-25"
+              className={styles.bgflex}
+            >
+              <img src={first} width="65%" alt=""></img>
+              <p class="text-center my-4 fw-bold">Invest on RB Bikes</p>
+            </div>
+            <div class="col-lg-1 col-md-1 d-flex justify-content-center align-items-center ">
+              <img className={styles.gt} src={gt} alt="" />
+            </div>
+            <div class="col-lg-3 col-md-3  bg-white border rounded  d-flex flex-column align-items-center p-3 h-50">
+              <img src={second} width="65%" alt=""></img>
+              <p class="text-center my-4 fw-bold">
+                Get into contract with Royal Brothers
+              </p>
+            </div>
+            <div class="col-lg-1 col-md-1 d-flex justify-content-center align-items-center">
+              <img className={styles.gt} src={gt} alt="" />
+            </div>
+            <div class="col-lg-3 col-md-3 bg-white border rounded d-flex flex-column align-items-center p-3 h-25">
+              <img src={third} width="65%" alt=""></img>
+              <p class="text-center my-4 fw-bold">Get paid every month</p>
+            </div>
           </div>
         </div>
         <div className={styles.Pearning}>
           <button className={styles.earning}>Start Earning</button>
         </div>
-       <h1 className={styles.heading}>FAQ's</h1>
+        <h1 className={styles.heading}>FAQ's</h1>
+        <div className={styles.under_line2}></div>
       </div>
       <div id="accordion" className={styles.accordion}>
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a class="btn" data-bs-toggle="collapse" href="#first" className={styles.fafs} >
+            <a
+              class="btn"
+              data-bs-toggle="collapse"
+              href="#first"
+              className={styles.fafs}
+            >
               What am I investing on?
             </a>
+            <a
+              class="btn"
+              data-bs-toggle="collapse"
+              href="#first"
+              className={styles.fafs1}
+            >
+              <i class="fa-solid fa-angle-up"></i>
+            </a>
           </div>
-          <div id="first" class="collapse show" data-bs-parent="#accordion"  className={styles.fabg}>
+          <div
+            id="first"
+            class="collapse show"
+            data-bs-parent="#accordion"
+            className={styles.fabg}
+          >
             <div class="card-body" className={styles.faa}>
               You’ll be investing in buying new bikes which will be rented out
               through Royal Brothers – Bike Rentals.
@@ -60,17 +95,20 @@ export const Partner = () => {
 
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseTwo" className={styles.fafs}>
+              href="#collapseTwo"
+              className={styles.fafs}
+            >
               How much will I earn?
             </a>
           </div>
           <div
             id="collapseTwo"
             class="collapse show"
-            data-bs-parent="#accordion"  className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               We share the revenue of the bike at a ratio of 70:30 (70% for you
@@ -83,10 +121,11 @@ export const Partner = () => {
 
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseThree" className={styles.fafs}
+              href="#collapseThree"
+              className={styles.fafs}
             >
               How will I get paid?
             </a>
@@ -94,7 +133,8 @@ export const Partner = () => {
           <div
             id="collapseThree"
             class="collapse show"
-            data-bs-parent="#accordion"  className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               We will credit your earnings every month to your bank account.
@@ -103,10 +143,11 @@ export const Partner = () => {
         </div>
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseFour" className={styles.fafs}
+              href="#collapseFour"
+              className={styles.fafs}
             >
               How will I track my earnings?
             </a>
@@ -114,7 +155,8 @@ export const Partner = () => {
           <div
             id="collapseFour"
             class="collapse show"
-            data-bs-parent="#accordion"  className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               We will share access to RB Partner App through which you can track
@@ -124,10 +166,11 @@ export const Partner = () => {
         </div>
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseFive" className={styles.fafs}
+              href="#collapseFive"
+              className={styles.fafs}
             >
               Which bikes should I buy?
             </a>
@@ -135,7 +178,8 @@ export const Partner = () => {
           <div
             id="collapseFive"
             class="collapse show"
-            data-bs-parent="#accordion"  className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               We will be estimating and informing you which bike model can earn
@@ -147,10 +191,11 @@ export const Partner = () => {
         </div>
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseSix" className={styles.fafs}
+              href="#collapseSix"
+              className={styles.fafs}
             >
               Will the bikes be registered under my name?
             </a>
@@ -158,7 +203,8 @@ export const Partner = () => {
           <div
             id="collapseSix"
             class="collapse show"
-            data-bs-parent="#accordion"  className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               No, as per the Motor vehicles Act, one should have a valid license
@@ -171,10 +217,11 @@ export const Partner = () => {
         </div>
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseSeven" className={styles.fafs}
+              href="#collapseSeven"
+              className={styles.fafs}
             >
               What is the term of the agreement?
             </a>
@@ -182,7 +229,8 @@ export const Partner = () => {
           <div
             id="collapseSeven"
             class="collapse show"
-            data-bs-parent="#accordion"  className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               The agreement is for a term period of 3 years.
@@ -191,10 +239,11 @@ export const Partner = () => {
         </div>
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseEight" className={styles.fafs}
+              href="#collapseEight"
+              className={styles.fafs}
             >
               What will happen after 3 years?
             </a>
@@ -202,7 +251,8 @@ export const Partner = () => {
           <div
             id="collapseEight"
             class="collapse show"
-            data-bs-parent="#accordion"  className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               The vehicle will be handed over to you. It can be later be re-sold
@@ -213,10 +263,11 @@ export const Partner = () => {
         </div>
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseNine" className={styles.fafs}
+              href="#collapseNine"
+              className={styles.fafs}
             >
               Who will handle the registration process?
             </a>
@@ -224,7 +275,8 @@ export const Partner = () => {
           <div
             id="collapseNine"
             class="collapse show"
-            data-bs-parent="#accordion"  className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               A team of experts at Royal Brothers will take care of everything
@@ -235,10 +287,11 @@ export const Partner = () => {
         </div>
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseTen" className={styles.fafs}
+              href="#collapseTen"
+              className={styles.fafs}
             >
               Who will take care of maintenance of the bike?
             </a>
@@ -246,7 +299,8 @@ export const Partner = () => {
           <div
             id="collapseTen"
             class="collapse show"
-            data-bs-parent="#accordion"  className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               Our in-house maintenance team will take care of all the bike
@@ -257,10 +311,11 @@ export const Partner = () => {
         </div>
         <div class="card">
           <div class="card-header" className={styles.faq}>
-            <a 
+            <a
               class="collapsed btn"
               data-bs-toggle="collapse"
-              href="#collapseEleven" className={styles.fafs}
+              href="#collapseEleven"
+              className={styles.fafs}
             >
               What happens if the bike meets with an accident or gets stolen?
             </a>
@@ -268,7 +323,8 @@ export const Partner = () => {
           <div
             id="collapseEleven"
             class="collapse show"
-            data-bs-parent="#accordion" className={styles.fabg}
+            data-bs-parent="#accordion"
+            className={styles.fabg}
           >
             <div class="card-body" className={styles.faa}>
               Royal Brothers will take care of all the issues and will also
@@ -278,8 +334,24 @@ export const Partner = () => {
         </div>
       </div>
       <div className={styles.Pearning}>
-          <button className={styles.earning}>Start Earning</button>
+        <button className={styles.earning}>Start Earning</button>
+      </div>
+      <h1 class="what">Why Royal Brothers?</h1>
+      <div className={styles.under_line2}></div>
+      <div class="flex-3">
+        <div class="flex-31 bg-white">
+          <img src={flex4} class="flex-3-img"></img>
+          <p class="text-center">Licence to operate in 7 states</p>
         </div>
+        <div class="flex-31 bg-white">
+          <img src={flex5} class="flex-3-img"></img>
+          <p class="text-center">100k+ Bookings served and counting</p>
+        </div>
+        <div class="flex-31 bg-white">
+          <img src={flex6} class="flex-3-img"></img>
+          <p class="text-center">15 million kms served</p>
+        </div>
+      </div>
     </div>
   );
 };

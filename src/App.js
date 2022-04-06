@@ -1,4 +1,5 @@
 import "./App.css";
+
 import Navbar from "./Components/Layout/Navbar";
 import {Routes,Route} from "react-router-dom"
 import Home from "./Page/HomeComponets/Home"
@@ -11,9 +12,11 @@ import { Homepage } from "./Components/Homepage";
 
 
 
+
 function App() {
   return (
     <div className="App">
+
       <Navbar />
 
       <Routes>
@@ -24,6 +27,8 @@ function App() {
       </Routes>
 
       <Footer />
+
+
 
 
     </div>

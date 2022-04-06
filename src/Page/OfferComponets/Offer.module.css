@@ -1,14 +1,20 @@
 .Offer{
     height: 500px;
+    width: 100%;
     /* width: 500px; */
     background-image: url(../../../public/Imgs/offerBike.jpg);
     background-size: cover;
     padding-top: 430px;
+    max-width: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: inherit;
+    border-style: none;
 }
 .Rental{
     height: 70px;
     background:rgba(70,67,67,255);
-    opacity: 0.0 - 1.0;
     text-align: center;
     color: white;
     padding-top: 10px;
@@ -21,13 +27,15 @@
     padding-top: 100px;
     justify-content: center;
     text-align: center;
+    
 }
 .OfferCard{
     height: 300px;
     width: 550px;
     /* padding: 10px; */
     margin: 20px;
-    box-shadow: 20px 20px 20px 20px #e6e6e6;
+    box-shadow: 20px 0px 20px 20px #e6e6e6;
+    cursor: pointer;
 }
 .OfferCard>img{
     height: 300px;
