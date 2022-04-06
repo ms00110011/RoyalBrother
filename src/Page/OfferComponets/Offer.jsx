@@ -1,6 +1,13 @@
 import React from 'react'
 import style from  "./Offer.module.css"
 import OfferCard from './OfferCard'
+import offerCard1 from "./img/offerCard1.jpg";
+import offerCard2 from "./img/offerCard2.jpg";
+import offerCard3 from "./img/offerCard3.jpg";
+import offerCard4 from "./img/offerCard4.jpg";
+import offerCard5 from "./img/offerCard5.jpg";
+
+
 
 const Offer = () => {
   return (
@@ -12,11 +19,11 @@ const Offer = () => {
             </div>
         </div>
         <div className={style.card_container}>
-            <OfferCard />
-            <OfferCard />
-            <OfferCard />
-            <OfferCard />
-            <OfferCard />
+            <OfferCard image={offerCard1} />
+            <OfferCard  image={offerCard2}/>
+            <OfferCard image={offerCard3}/>
+            <OfferCard image={offerCard4}/>
+            <OfferCard image={offerCard5}/>
         </div>
     </div>
   )
