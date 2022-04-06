@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./Partner.module.css";
-import pic from "../Photo/bike.jpg";
-import first from "../Photo/first.png";
-import second from "../Photo/second.png";
-import third from "../Photo/third.png";
-import gt from "../Icon/gt.png";
+import pic from "../../Photo/bike.jpg";
+import first from "../../Photo/first.png";
+import second from "../../Photo/second.png";
+import third from "../../Photo/third.png";
+import gt from "../../Icon/gt.png";
+
 export const Partner = () => {
   return (
     <div className={styles.partner}>

@@ -1,11 +1,13 @@
 import "./App.css";
-import { Partner } from "./Components/Partner";
-import Home from './Page/HomeComponets/Home';
+import { Franchise } from "./Components/Partners/Franchise";
+import { Partner } from "./Components/Partners/Partner";
+import Home from "./Page/HomeComponets/Home";
 
 function App() {
   return (
     <div className="App">
-      <Partner />
+      <Franchise />
+      {/* <Partner /> */}
     </div>
   );
 }
