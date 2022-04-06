@@ -86,6 +86,10 @@
 .container {
   height: 100%;
 }
+.gallery {
+  width: 40%  !important;
+}
+
 .Pearning {
   display: flex;
   margin: 2em 0px;
@@ -115,6 +119,6 @@
   font-size: 17px;
   margin-bottom: 40px;
 }
-.flex31{
+.flex31 {
   background-color: white;
 }

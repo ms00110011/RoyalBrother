@@ -27,24 +27,31 @@ export const Partner = () => {
             Invest in Royal Brothers bikes and start earning every month
           </p>
         </div>
-        <div className={styles.flex}>
-          <div class="bg-white p-2">
-            <img src={first} className={styles.first} alt="bike" />
-            <h6>Invest on RB Bikes</h6>
-          </div>
-          <div>
-            <img src={gt} className={styles.icon} alt="" />
-          </div>
-          <div class="bg-white">
-            <img src={second} className={styles.first} alt="bike" />
-            <h6>Get into contract with Royal Brothers</h6>
-          </div>
-          <div>
-            <img src={gt} className={styles.icon} alt="" />
-          </div>
-          <div class="bg-white">
-            <img src={third} className={styles.first} alt="bike" />
-            <h6>Get paid every month</h6>
+        <div class="container mt-lg-3 mb-lg-5 w-75">
+          <div class="row">
+            <div
+              class="col-lg-3 col-md-3 bg-white border rounded  d-flex flex-column align-items-center p-3 h-25"
+              className={styles.bgflex}
+            >
+              <img src={first} width="65%" alt=""></img>
+              <p class="text-center my-4 fw-bold">Invest on RB Bikes</p>
+            </div>
+            <div class="col-lg-1 col-md-1 d-flex justify-content-center align-items-center ">
+              <img className={styles.gt} src={gt} alt="" />
+            </div>
+            <div class="col-lg-3 col-md-3  bg-white border rounded  d-flex flex-column align-items-center p-3 h-50">
+              <img src={second} width="65%" alt=""></img>
+              <p class="text-center my-4 fw-bold">
+                Get into contract with Royal Brothers
+              </p>
+            </div>
+            <div class="col-lg-1 col-md-1 d-flex justify-content-center align-items-center">
+              <img className={styles.gt} src={gt} alt="" />
+            </div>
+            <div class="col-lg-3 col-md-3 bg-white border rounded d-flex flex-column align-items-center p-3 h-25">
+              <img src={third} width="65%" alt=""></img>
+              <p class="text-center my-4 fw-bold">Get paid every month</p>
+            </div>
           </div>
         </div>
         <div className={styles.Pearning}>
