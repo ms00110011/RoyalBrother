@@ -11,6 +11,7 @@ import offerCard5 from "./img/offerCard5.jpg";
 
 const Offer = () => {
   return (
+    
     <div>
         <h1>Offer Page </h1>
         <div className={style.Offer}>

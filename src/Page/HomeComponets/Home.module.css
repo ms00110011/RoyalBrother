@@ -50,23 +50,26 @@
     font-size: 25px;
     gap: 50px;
     /* height: 60px; */
-    background-color: aquamarine;
+    margin-top: 10px;
     text-align: center;
     justify-content: center;
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
 }
 
 .sanitized_section{
     display: flex;
-    flex-wrap: wrap;
     margin-left:1%;
     text-align: center;
     justify-content: center;
 }
+.sanitized_section h4{
+    padding-left: 10px;
+}
 .rbx{
     background-image: url("../../../public/Imgs/rbx.jpg");
-    height: 900px;
+    height: 750px;
     background-size: contain;
     cursor: pointer;
     width: 100%;
@@ -86,6 +89,9 @@
     font-weight: 500;
     font-size: 25px;
 }
+.subscribe:hover{
+    background-color: #eed487
+}
 .save{
     height: 50px;
     background-color: rgb(102, 98, 98);
@@ -97,12 +103,19 @@
     padding-right: 10px;
 }
 .fleet{
-    margin-top: 100px;
+    /* margin-top: 100px; */
     height:600px;
     background-color: rgb(150, 224, 135);
     text-align: center;
     justify-content:center;
     padding-top: 20px;
+}
+.Line1{
+    justify-content: center;
+    margin-left: 47%;
+    height: 3px;
+    width: 100px;
+    background-color: #fed250;
 }
 .fleetDuration{
     justify-content: right;
@@ -123,13 +136,12 @@
     text-align: center;
     justify-content: center;
     height: 450px;
-    /* background-color: rebeccapurple; */
-    /* margin-top: 20px; */
+    cursor: pointer;
 }
 
 
 .fleet_card{
-    height: 390px;
+    height: 380px;
     width: 350px;
     background-color: #f7fafc;
     text-align: center;
@@ -139,6 +151,7 @@
     padding-top: 20px;
     border-radius: 20px;
 }
+
 
 .line{
     height: 2px ;
@@ -154,4 +167,8 @@
     margin-top: 40px;
     border-radius: 20px;
     border: none;
+}
+.homeButton:hover{
+    background-color: #e4c772;
+
 }
