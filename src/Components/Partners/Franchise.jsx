@@ -26,7 +26,7 @@ export const Franchise = () => {
       </div>
       <h1 class="what">What is in store for you</h1>
       <div class="underline"></div>
-      <div class="container-fluid p-4 mg">
+      <div class="container-fluid p-5 mg">
         <div class="row d-flex align-content-center align-items-center order">
           <div class="col-lg-7 col-md-12 p-4 brand">
             <h4>A Brand trusted by many</h4>
@@ -146,6 +146,7 @@ export const Franchise = () => {
         </div>
       </div>
       <h1 class="what">Why Royal Brothers?</h1>
+      <div class="under_line2"></div>
       <div class="flex-3">
         <div class="flex-31">
           <img src={flex4} class="flex-3-img"></img>
