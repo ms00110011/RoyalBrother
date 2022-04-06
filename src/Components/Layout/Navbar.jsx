@@ -76,6 +76,9 @@ export default function Navbar() {
             <Button
               variant="text"
               sx={{ textTransform: "none", color: "black" }}
+              component={Link}
+              to="/offer"
+
             >
               Offers
             </Button>
