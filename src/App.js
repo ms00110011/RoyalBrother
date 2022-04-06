@@ -3,7 +3,7 @@ import "./App.css";
 import { Franchise } from "./Components/Partners/Franchise";
 import { Partner } from "./Components/Partners/Partner";
 import Home from "./Page/HomeComponets/Home";
-=======
+// =======
 // import { Partner } from "./Components/Partner";
 // import Home from './Page/HomeComponets/Home';
 import Offer from "./Page/OfferComponets/Offer";
@@ -12,14 +12,13 @@ import Offer from "./Page/OfferComponets/Offer";
 function App() {
   return (
     <div className="App">
-// <<<<<<< partner
-      <Franchise />
+      {/* <Franchise /> */}
       {/* <Partner /> */}
-=======
+{/* ======= */}
       {/* <Partner /> */}
-      {/* <Home/> */}
-      <Offer/>
-// >>>>>>> main
+      <Home/>
+      {/* <Offer/> */}
+{/* // >>>>>>> main */}
     </div>
   );
 }

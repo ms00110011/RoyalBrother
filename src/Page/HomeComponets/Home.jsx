@@ -4,7 +4,9 @@ import sanitized from "../../Photo/sanitized.png";
 import Slider from "./Slider";
 import OurFleetCard from "./OurFleetCard";
 import Form from "./Form";
-
+import HomeBike1 from "../../Photo/homeBike.png"
+import HomeBike2 from "../../Photo/homeBike1.png"
+import HomeBike3 from "../../Photo/homeBike3.png"
 const Home = () => {
   return (
     <div>
@@ -38,7 +40,7 @@ const Home = () => {
           <div>
             <h1>OUR FEET</h1>
           </div>
-          <div>
+          <div className={style.fleetDuration}>
             <label htmlFor="">Duration </label>
             <select name="hours" id="">
               <option value="">Hours</option>
@@ -48,8 +50,10 @@ const Home = () => {
             </select>
           </div>
           <div className={style.fleet_card_container}>
-            <OurFleetCard/>
-            <OurFleetCard/>
+            <OurFleetCard img={HomeBike1}/>
+            <OurFleetCard img ={HomeBike2}/>
+            <OurFleetCard img ={HomeBike3}/>
+            <OurFleetCard img ={HomeBike3}/>
           </div>
         </div>
       </div>
