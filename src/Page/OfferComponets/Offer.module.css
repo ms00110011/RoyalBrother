@@ -7,7 +7,8 @@
 }
 .Rental{
     height: 70px;
-    background-color: rgb(65, 62, 62);
+    background:rgba(70,67,67,255);
+    opacity: 0.0 - 1.0;
     text-align: center;
     color: white;
     padding-top: 10px;
@@ -16,7 +17,6 @@
     display: flex;
     flex-wrap: wrap;
     height: 900px;
-    background-color: brown;
     /* padding-left: 10%; */
     padding-top: 100px;
     justify-content: center;
@@ -25,8 +25,11 @@
 .OfferCard{
     height: 300px;
     width: 550px;
-    background-color: aquamarine;
-    padding: 10px;
+    /* padding: 10px; */
     margin: 20px;
-    box-shadow: 20px 10px grey;
+    box-shadow: 20px 20px 20px 20px #e6e6e6;
+}
+.OfferCard>img{
+    height: 300px;
+    width: 550px;
 }
