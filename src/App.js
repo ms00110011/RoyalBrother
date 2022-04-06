@@ -1,14 +1,37 @@
+import "./App.css";
 
-import './App.css';
-import Home from './Page/HomeComponets/Home';
+import Navbar from "./Components/Layout/Navbar";
+import {Routes,Route} from "react-router-dom"
+import Home from "./Page/HomeComponets/Home"
+import Offer from "./Page/OfferComponets/Offer"
+
+import {Footer} from "./Components/Layout/Footer";
+import { Homepage } from "./Components/Homepage";
+
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-       <h1>let start code guys</h1>
-     <h1>Please look readme file first than do the code as well</h1>
-      <Home/>
-     </div>
+
+      <Navbar />
+
+      <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/offer" element={<Offer />} />
+
+      
+      </Routes>
+
+      <Footer />
+
+
+
+
+    </div>
   );
 }
 

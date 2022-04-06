@@ -3,12 +3,15 @@ import style from "./Home.module.css";
 import sanitized from "../../Photo/sanitized.png";
 import Slider from "./Slider";
 import OurFleetCard from "./OurFleetCard";
+import Form from "./Form";
 
 const Home = () => {
   return (
     <div>
-      <div className={style.landing_image}></div>
-      <div className={style.save}>Save upto 30% with Royal Brother X</div>
+      <div className={style.landing_image}>
+        <Form/>
+      </div>
+      <div className={style.save}><span style={{ color: "#fed250"}}>Save</span> upto <span style={{ color: "#fed250"}}>30%</span> with Royal Brother<span style={{ color: "#fed250"}}>X</span></div>
       <div className={style.sanitized}>
         <div className={style.sanitized_section}>
           <img src={sanitized} alt="sanitized" />

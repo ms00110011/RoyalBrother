@@ -1,0 +1,23 @@
+.logo {
+    height: 40px;
+    width: 110px;
+    margin-left: -20px;
+    background-color: red;
+}
+
+.rbx {
+    height: 30px;
+    width: 50px;
+    margin-left: 70px;
+}
+
+.btnw {
+    background-color: white;
+    color: black;
+    border: 0;
+}
+
+.yellow:hover {
+    background-color: #FED250;
+    border-color: #FED250;
+}

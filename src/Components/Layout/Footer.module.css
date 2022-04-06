@@ -1,0 +1,101 @@
+.gridWrapper {
+    height: 420px;
+    width: 100%;
+    background-color: #373737;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 20px;
+    padding: 20px;
+}
+
+h5 {
+    color: white;
+    margin: 0;
+    margin-bottom: 5px;
+
+}
+
+p {
+    color: whitesmoke;
+    
+    
+    font-size: 0.8rem;
+    text-decoration: none;
+
+}
+
+
+.none {
+    text-decoration: none;
+    color: white;
+}
+
+.follow {
+    display: flex;
+    
+    color: whitesmoke;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+
+.follow a {
+    padding-right: 20px;
+}
+
+a{
+    color: whitesmoke;
+}
+
+.banners {
+    display: flex;
+    
+}
+
+.leftgrid {
+
+    text-align: left;
+}
+
+hr {
+    width: 10%;
+    margin: 0px;
+    margin-bottom: 15px;
+
+    border-bottom: 2px solid rgb(255, 213, 0) ;
+}
+
+.footer2wrapper {
+    background-color: #444444;
+    height: 280px;
+    width: 100%;
+    text-align: center;
+    
+}
+
+h1 {
+    color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+.presence {
+    line-height: 1.2rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    color: whitesmoke;
+}
+
+
+ul
+{ 
+
+height: 1em;
+} 
+
+li {
+    display: inline-flex ;
+}
