@@ -206,9 +206,7 @@
 
 /* 1500 to last */
 @media screen and (max-width: 1500px){
-    body{
-        background-color: deeppink;
-    }
+    
     .landing_image{
         height: 700px;
         width: 100%;
@@ -246,10 +244,7 @@
 
 
 @media screen and (max-width: 1200px){
-    body{
-        background-color: darkslateblue;
-    }
-
+    
     .landing_image{
        /* background-image: url(); */
         height: 500px;
@@ -300,10 +295,7 @@
 
 
 @media screen  and (max-width:1000px){
-    body{
-        background-color: indianred;
-    }
-
+    
     .landing_image{
        height: 450px;
         padding-left: 50px;
@@ -336,9 +328,7 @@
 
 
 @media screen  and (max-width:796px){
-    body{
-        background-color: darkgreen;
-    }
+   
     .landing_image{
         /* background-color: aquamarine; */
         background-image: url("../../../public/Imgs/home1.jpg");
@@ -402,9 +392,7 @@
 
 
 @media screen and (max-width :600px){
-    body{background-color: red;
-}
-
+   
 .landing_image{
     /* background-color: aquamarine; */
     background-image: url("../../../public/Imgs/home1.jpg");
@@ -494,8 +482,6 @@
 
 
 @media screen and (max-width :450px){
-    body{background-color: rgb(116, 238, 91)
-}
     
 .landing_image{
     height: 210px;
@@ -577,9 +563,7 @@
 
 /* 1500 to last */
 @media screen and (max-width: 1500px){
-    body{
-        background-color: deeppink;
-    }
+   
     .landing_image{
         height: 700px;
         width: 100%;
@@ -617,9 +601,6 @@
 
 
 @media screen and (max-width: 1200px){
-    body{
-        background-color: darkslateblue;
-    }
 
     .landing_image{
        /* background-image: url(); */
@@ -671,9 +652,6 @@
 
 
 @media screen  and (max-width:1000px){
-    body{
-        background-color: indianred;
-    }
 
     .landing_image{
        height: 450px;
@@ -707,9 +685,7 @@
 
 
 @media screen  and (max-width:796px){
-    body{
-        background-color: darkgreen;
-    }
+    
     .landing_image{
         /* background-color: aquamarine; */
         background-image: url("../../../public/Imgs/home1.jpg");
@@ -773,8 +749,7 @@
 
 
 @media screen and (max-width :600px){
-    body{background-color: red;
-}
+ 
 
 .landing_image{
     /* background-color: aquamarine; */
@@ -865,8 +840,6 @@
 
 
 @media screen and (max-width :450px){
-    body{background-color: rgb(116, 238, 91)
-}
     
 .landing_image{
     height: 210px;
