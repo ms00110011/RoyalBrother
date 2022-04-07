@@ -1,11 +1,11 @@
 import React from 'react'
 import "./Woman.css";
-import {g1} from "../../Photo/wg1.jpg"
-import {g2} from "../../Photo/wg2.jpg"
-import {g3} from "../../Photo/wg3.jpg"
-import {g4} from "../../Photo/wg4.jpg"
-import {g5} from "../../Photo/wg5.jpg"
-import {g6} from "../../Photo/wg6.jpg"
+import g1 from "../../Photo/wg1.jpg"
+import g2 from "../../Photo/wg2.jpg"
+import g3 from "../../Photo/wg3.jpg"
+import g4 from "../../Photo/wg4.jpg"
+import g5 from "../../Photo/wg5.jpg"
+import g6 from "../../Photo/wg6.jpg"
 export const Woman = () => {
   return (
       <>
@@ -72,11 +72,11 @@ export const Woman = () => {
     </div>
     <div class="w-grid">
         <div class="w-g1"><img class="img-fluid" src={g1} alt=""/></div>
-        <div class="w-g2"><img class="img-fluid" src="./wg2.jpg" alt=""/></div>
-        <div class="w-g3"><img class="img-fluid" src="./wg3.jpg" alt=""/></div>
-        <div class="w-g4"><img class="img-fluid" src="./wg4.jpg" alt=""/></div>
-        <div class="w-g5"><img class="img-fluid" src="./wg5.jpg" alt=""/></div>
-        <div class="w-g6"><img class="img-fluid" src="./wg6.jpg" alt=""/></div>
+        <div class="w-g2"><img class="img-fluid" src={g2} alt=""/></div>
+        <div class="w-g3"><img class="img-fluid" src={g3} alt=""/></div>
+        <div class="w-g4"><img class="img-fluid" src={g4} alt=""/></div>
+        <div class="w-g5"><img class="img-fluid" src={g5} alt=""/></div>
+        <div class="w-g6"><img class="img-fluid" src={g6} alt=""/></div>
     </div>
     </>
   )
