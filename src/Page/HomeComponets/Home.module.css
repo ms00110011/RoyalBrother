@@ -126,6 +126,7 @@
     width: 100px;
     background-color: #fed250;
 }
+
 .fleetDuration{
     justify-content: right;
     text-align: right;
@@ -202,7 +203,6 @@
 
 /* 1500 to last */
 @media screen and (max-width: 1500px){
-
     .landing_image{
         height: 700px;
         width: 100%;
@@ -240,8 +240,6 @@
 
 
 @media screen and (max-width: 1200px){
- 
-
     .landing_image{
        /* background-image: url(); */
         height: 500px;
@@ -292,8 +290,7 @@
 
 
 @media screen  and (max-width:1000px){
-  
-
+    
     .landing_image{
        height: 450px;
         padding-left: 50px;
@@ -326,7 +323,7 @@
 
 
 @media screen  and (max-width:796px){
-    
+   
     .landing_image{
         /* background-color: aquamarine; */
         background-image: url("../../../public/Imgs/home1.jpg");
@@ -390,7 +387,7 @@
 
 
 @media screen and (max-width :600px){
-
+   
 .landing_image{
     /* background-color: aquamarine; */
     background-image: url("../../../public/Imgs/home1.jpg");
@@ -474,8 +471,6 @@
     width: 150px;
     margin-left: 20px;
 }
-
-
 }
 
 
@@ -539,5 +534,21 @@
     margin-top: 30px;
     width: 300px;
 }
+
+}
+
+.slider_com{
+    /* height: 800px; */
+    /* background-color: aqua; */
+    text-align: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.slider_com h1{
+    color: black;
+}
+
+
 
 }
