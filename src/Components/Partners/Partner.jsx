@@ -352,6 +352,7 @@ export const Partner = () => {
           <p class="text-center">15 million kms served</p>
         </div>
       </div>
+      
     </div>
   );
 };

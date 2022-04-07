@@ -2,7 +2,9 @@
   margin: 0;
   padding: 0;
 }
-
+.f-main {
+  padding-bottom: 4em;
+}
 .poster {
   height: 332px;
   background-image: url(../../Photo/poster.jpg);

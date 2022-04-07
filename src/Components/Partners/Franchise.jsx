@@ -13,7 +13,7 @@ import flex5 from "../../Photo/flex5.png";
 import flex6 from "../../Photo/flex6.png";
 export const Franchise = () => {
   return (
-    <div>
+    <div class="f-main">
       <div class="img-gradient">
         <div class="poster">
           <p class="own">Own a franchise</p>
