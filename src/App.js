@@ -6,6 +6,7 @@ import Home from "./Page/HomeComponets/Home";
 import Offer from "./Page/OfferComponets/Offer";
 import { Footer } from "./Components/Layout/Footer";
 import {Franchise} from "../src/Components/Partners/Franchise"
+import { Blog } from "./Page/BlogComponents/Blog";
 function App() {
   return (
     <div className="App">
@@ -15,7 +16,7 @@ function App() {
         <Route path="/offer" element={<Offer />} />
         <Route path="/partner" element={<Franchise/>}/>
       </Routes>
-
+      <Blog/>
       <Footer />
     </div>
   );
