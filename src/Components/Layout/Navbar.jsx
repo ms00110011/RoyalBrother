@@ -13,6 +13,7 @@ import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
 import { Link } from "react-router-dom";
 import SideBar from "./SideBar";
 import { makeStyles } from "@mui/styles";
+import PositionMenu from "./PostionMenu";
 
 export default function Navbar() {
 
@@ -64,6 +65,8 @@ export default function Navbar() {
             <Button
               variant="text"
               sx={{ textTransform: "none", color: "black" }}
+              component={Link}
+              to="/tariff"
             >
               Tariff
             </Button>
@@ -86,7 +89,7 @@ export default function Navbar() {
               variant="text"
               sx={{ textTransform: "none", color: "black" }}
             >
-              Partner with us
+              <PositionMenu />
             </Button>
 
             <Button
