@@ -2,13 +2,13 @@ import React from 'react'
 import style from "./Home.module.css"
 
 const OurFleetCard = (props) => {
-  const data ="Honda Dio"
+  // const data ="Honda Dio"
   return (
     <div className={style.fleet_card}>
-        <h4>{data}</h4>
+        <h4>{props.text}</h4>
         <img src={props.img} alt="" />
         <div className={style.line}></div>
-        <h2>$1/Hours</h2>
+        <h2>{props.price}</h2>
         <button className={style.homeButton}>Book Now</button>
     </div>
   )

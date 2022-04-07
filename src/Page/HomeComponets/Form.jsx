@@ -14,6 +14,7 @@ const  [data, setData] = useState(init)
 
 const dataHandle = (e) =>{
     console.log(data)
+    
 // //     console.log(pickupDate);
 // //     const {pickupDate,pickupTime,dropDate,dropTime} = e.target;
 // //     setData({...data, [name]:value})

@@ -129,7 +129,6 @@
     width: 100px;
     background-color: #fed250;
 }
-
 .fleetDuration{
     justify-content: right;
     text-align: right;
@@ -185,7 +184,6 @@
 }
 .homeButton:hover{
     background-color: #e4c772;
-
 }
 
 .slider_com{
@@ -557,4 +555,6 @@
     width: 300px;
 }
 
+=======
+>>>>>>> 6d91d141bfc54540456b490968094d906c784319
 }
