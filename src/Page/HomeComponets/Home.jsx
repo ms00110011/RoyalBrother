@@ -32,6 +32,7 @@ const Home = () => {
       </div>
       <div>
         <div className={style.fleet}>
+          
           <div>
             <h1>OUR FEET</h1>
             <Line/>
