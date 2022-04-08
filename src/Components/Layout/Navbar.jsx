@@ -82,10 +82,10 @@ export default function Navbar() {
             >
               Offers
             </Button>
-            <Link to="/partner">
+            <Link to="/earn-with-us">
               <Button
                 variant="text"
-                sx={{ textTransform: "none", color: "black" }}
+                sx={{ textTransform: "none", color: "black", textDecoration: "none" }}
               >
                 Partner with us
               </Button>
