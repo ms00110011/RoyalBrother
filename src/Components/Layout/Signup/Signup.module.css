@@ -1,0 +1,31 @@
+.logincentre {
+    text-align: center;
+}
+
+.logincard {
+    height: 600px;
+    width: 30%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius:5px ;
+    margin-bottom: 20px;
+}
+
+.loginbanner {
+    height: 50px;
+    border-bottom: 5px solid #FED250;
+    margin-bottom: 40px;
+}
+
+.loginbanner h6 {
+    font-size: large;
+    padding-top: 10px;
+}
+
+.loginph {
+    background-color: aquamarine;
+    width: 100px;
+    border: 0;
+}

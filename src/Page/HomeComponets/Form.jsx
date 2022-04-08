@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import style from "./Home.module.css"
 
 const Form = () => {
@@ -30,7 +31,10 @@ const dataHandle = (e) =>{
             <p>Dropoff</p>
             <input type="date" name="dropDate"/>
             <input type="time" name="dropTime"/> <br />
+            <Link to="/searchR">
             <button>Search</button>
+
+            </Link>
         </form>
     </div>
   )

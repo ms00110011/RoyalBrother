@@ -1,0 +1,43 @@
+.summaryWrapper {
+    height: 400px;
+    width: 50%;
+    background-color: antiquewhite;
+    margin: 80px;
+
+}
+
+.detailsWrapper {
+    display: flex;
+}
+
+.imgWrapper {
+    padding-top: 40px;
+}
+
+
+.centre {
+    text-align: center;
+}
+
+
+
+.bow {
+    display: flex;
+    /* justify-content: space-between;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: small;
+    font-weight: bold; */
+
+}
+
+.buttonDiv {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
