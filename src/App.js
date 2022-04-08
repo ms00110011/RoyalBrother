@@ -9,6 +9,7 @@ import { Franchise } from "../src/Components/Partners/Franchise";
 import { Partner } from "../src/Components/Partners/Partner";
 import { Woman } from "./Page/WomanComponents/Woman";
 import { Terms } from "./Page/TermsComponents/Terms";
+import { Privacy } from "./Page/PrivacyComponents/Privacy";
 function App() {
   return (
     <div className="App">
@@ -17,6 +18,7 @@ function App() {
       <Franchise />
       <Woman />
       <Terms />
+      <Privacy />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
         <Route path="/offer" element={<Offer />} />
