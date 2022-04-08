@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import style from "./Blog.module.css";
 
-import rightArrow from "../HomeComponets/icons/right-arrow.svg";
-import leftArrow from "../HomeComponets/icons/left-arrow.svg";
 import Line from "../HomeComponets/Line";
 
 export const Blog = () => {
