@@ -3,7 +3,9 @@
   margin: 0;
   padding: 0;
 }
-
+.w-main{
+  padding-bottom: 4em;
+}
 .w-poster {
   background-image: url("../../Photo/w-poster.jpg");
   height: 90vh;

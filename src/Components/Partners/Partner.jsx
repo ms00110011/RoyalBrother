@@ -1,20 +1,27 @@
 import React from "react";
 import styles from "./Partner.module.css";
-import pic from "../../Photo/bike.jpg";
 import first from "../../Photo/first.png";
 import second from "../../Photo/second.png";
 import third from "../../Photo/third.png";
 import gt from "../../Icon/gt.png";
+import down from "../../Icon/down.png";
 import flex4 from "../../Photo/flex4.png";
 import flex5 from "../../Photo/flex5.png";
 import flex6 from "../../Photo/flex6.png";
 
 export const Partner = () => {
+  React.useEffect(() => {
+    document.title = "Earn With US | Royal Brothers";
+  }, []);
+
   return (
     <div className={styles.partner}>
-      <div>
+      <div className={styles.pic}>
         <div className={styles.first_title}>Earn with us</div>
-        <img src={pic} alt="bike" className={styles.pic} />
+        <div className={styles.pt_flex_1}>
+          <p className={styles.pt_partner}>Let your bike earn for you</p>
+          <button className={styles.pt_apply}>Start Earning</button>
+        </div>
       </div>
 
       <div class="d-flex flex-column align-items-center my-5">
@@ -29,29 +36,25 @@ export const Partner = () => {
         </div>
         <div class="container mt-lg-3 mb-lg-5 w-75">
           <div class="row">
-            <div
-              class="col-lg-3 col-md-3 bg-white border rounded  d-flex flex-column align-items-center p-3 h-25"
-              className={styles.bgflex}
-            >
+            <div class="col-lg-3 col-md-3 bg-white border rounded d-flex flex-column align-items-center p-3 h-25 shadow">
               <img src={first} width="65%" alt=""></img>
               <p class="text-center my-4 fw-bold">Invest on RB Bikes</p>
             </div>
             <div class="col-lg-1 col-md-1 d-flex justify-content-center align-items-center ">
               <img className={styles.gt} src={gt} alt="" />
             </div>
-            <div class="col-lg-3 col-md-3  bg-white border rounded  d-flex flex-column align-items-center p-3 h-50">
+            <div class="col-lg-3 col-md-3  bg-white border rounded  d-flex flex-column align-items-center p-3 shadow">
               <img src={second} width="65%" alt=""></img>
-              <p class="text-center my-4 fw-bold">
-                Get into contract with Royal Brothers
-              </p>
+              <p class="text-center my-4 fw-bold">Get into contract</p>
             </div>
             <div class="col-lg-1 col-md-1 d-flex justify-content-center align-items-center">
               <img className={styles.gt} src={gt} alt="" />
             </div>
-            <div class="col-lg-3 col-md-3 bg-white border rounded d-flex flex-column align-items-center p-3 h-25">
+            <div class="col-lg-3 col-md-3 bg-white border rounded d-flex flex-column align-items-center p-3 h-25 shadow">
               <img src={third} width="65%" alt=""></img>
               <p class="text-center my-4 fw-bold">Get paid every month</p>
             </div>
+            <div class="col-lg-12 d-none">hello</div>
           </div>
         </div>
         <div className={styles.Pearning}>
@@ -75,9 +78,9 @@ export const Partner = () => {
               class="btn"
               data-bs-toggle="collapse"
               href="#first"
-              className={styles.fafs1}
+              className={styles.fafs}
             >
-              <i class="fa-solid fa-angle-up"></i>
+              <img src={down} alt="" width="30" />
             </a>
           </div>
           <div
@@ -102,6 +105,14 @@ export const Partner = () => {
               className={styles.fafs}
             >
               How much will I earn?
+            </a>
+            <a
+              class="collapsed btn"
+              data-bs-toggle="collapse"
+              href="#collapseTwo"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
             </a>
           </div>
           <div
@@ -129,6 +140,14 @@ export const Partner = () => {
             >
               How will I get paid?
             </a>
+            <a
+              class="btn"
+              data-bs-toggle="collapse"
+              href="#collapseThree"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
+            </a>
           </div>
           <div
             id="collapseThree"
@@ -150,6 +169,14 @@ export const Partner = () => {
               className={styles.fafs}
             >
               How will I track my earnings?
+            </a>
+            <a
+              class="collapsed btn"
+              data-bs-toggle="collapse"
+              href="#collapseFour"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
             </a>
           </div>
           <div
@@ -173,6 +200,14 @@ export const Partner = () => {
               className={styles.fafs}
             >
               Which bikes should I buy?
+            </a>
+            <a
+              class="collapsed btn"
+              data-bs-toggle="collapse"
+              href="#collapseFive"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
             </a>
           </div>
           <div
@@ -198,6 +233,14 @@ export const Partner = () => {
               className={styles.fafs}
             >
               Will the bikes be registered under my name?
+            </a>
+            <a
+              class="collapsed btn"
+              data-bs-toggle="collapse"
+              href="#collapseSix"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
             </a>
           </div>
           <div
@@ -225,6 +268,14 @@ export const Partner = () => {
             >
               What is the term of the agreement?
             </a>
+            <a
+              class="collapsed btn"
+              data-bs-toggle="collapse"
+              href="#collapseSeven"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
+            </a>
           </div>
           <div
             id="collapseSeven"
@@ -246,6 +297,14 @@ export const Partner = () => {
               className={styles.fafs}
             >
               What will happen after 3 years?
+            </a>
+            <a
+              class="collapsed btn"
+              data-bs-toggle="collapse"
+              href="#collapseEight"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
             </a>
           </div>
           <div
@@ -271,6 +330,14 @@ export const Partner = () => {
             >
               Who will handle the registration process?
             </a>
+            <a
+              class="collapsed btn"
+              data-bs-toggle="collapse"
+              href="#collapseNine"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
+            </a>
           </div>
           <div
             id="collapseNine"
@@ -294,6 +361,14 @@ export const Partner = () => {
               className={styles.fafs}
             >
               Who will take care of maintenance of the bike?
+            </a>
+            <a
+              class="collapsed btn"
+              data-bs-toggle="collapse"
+              href="#collapseTen"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
             </a>
           </div>
           <div
@@ -319,6 +394,14 @@ export const Partner = () => {
             >
               What happens if the bike meets with an accident or gets stolen?
             </a>
+            <a
+              class="collapsed btn"
+              data-bs-toggle="collapse"
+              href="#collapseEleven"
+              className={styles.fafs}
+            >
+              <img src={down} alt="" width="30" />
+            </a>
           </div>
           <div
             id="collapseEleven"
@@ -339,17 +422,17 @@ export const Partner = () => {
       <h1 class="what">Why Royal Brothers?</h1>
       <div className={styles.under_line2}></div>
       <div class="flex-3">
-        <div class="flex-31 bg-white">
+        <div class="flex-31 bg-white shadow">
           <img src={flex4} class="flex-3-img"></img>
-          <p class="text-center">Licence to operate in 7 states</p>
+          <p class="text-center fw-normal">Licence to operate in 7 states</p>
         </div>
-        <div class="flex-31 bg-white">
+        <div class="flex-31 bg-white shadow">
           <img src={flex5} class="flex-3-img"></img>
-          <p class="text-center">100k+ Bookings served and counting</p>
+          <p class="text-center fw-normal">100k+ Bookings served and counting</p>
         </div>
-        <div class="flex-31 bg-white">
+        <div class="flex-31 bg-white shadow">
           <img src={flex6} class="flex-3-img"></img>
-          <p class="text-center">15 million kms served</p>
+          <p class="text-center fw-normal">15 million kms served</p>
         </div>
       </div>
     </div>

@@ -11,14 +11,14 @@
     padding: 20px;
 }
 
-h5 {
+.h5 {
     color: white;
     margin: 0;
     margin-bottom: 5px;
 
 }
 
-p {
+.p {
     color: whitesmoke;
     
     
@@ -45,7 +45,7 @@ p {
     padding-right: 20px;
 }
 
-a{
+.a{
     color: whitesmoke;
 }
 
@@ -59,7 +59,7 @@ a{
     text-align: left;
 }
 
-hr {
+.hr {
     width: 10%;
     margin: 0px;
     margin-bottom: 15px;
@@ -75,7 +75,7 @@ hr {
     
 }
 
-h1 {
+.h1 {
     color: white;
     margin: 0;
     padding: 20px;
@@ -90,12 +90,12 @@ h1 {
 }
 
 
-ul
+.ul
 { 
 
 height: 1em;
 } 
 
-li {
+.li {
     display: inline-flex ;
 }

@@ -1,0 +1,44 @@
+* {
+  font-family: muli, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.pr-main {
+  width: 70%;
+  margin: 3em auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%),
+    0 1px 5px 0 rgb(0 0 0 / 20%);
+  padding: 0px 0px 1em 0px;
+}
+
+.t-title {
+  font-size: 15px;
+}
+
+.t-desc {
+  margin-top: -1em;
+  font-size: 13px;
+}
+
+.prt-mg {
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.t-mg {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.pr-pd {
+  margin-left: 2em;
+  padding-bottom: 1em;
+}
+
+@media only screen and (max-width: 992px) {
+  .pr-main {
+    width: 85%;
+  }
+}
