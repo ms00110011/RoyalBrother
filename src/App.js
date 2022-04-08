@@ -8,6 +8,7 @@ import { Footer } from "./Components/Layout/Footer";
 import { Franchise } from "../src/Components/Partners/Franchise";
 import { Partner } from "../src/Components/Partners/Partner";
 import { Woman } from "./Page/WomanComponents/Woman";
+import { Terms } from "./Page/TermsComponents/Terms";
 function App() {
   return (
     <div className="App">
@@ -15,6 +16,7 @@ function App() {
       <Partner />
       <Franchise />
       <Woman />
+      <Terms />
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
         <Route path="/offer" element={<Offer />} />
