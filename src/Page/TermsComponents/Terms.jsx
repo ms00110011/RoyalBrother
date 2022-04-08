@@ -1,5 +1,5 @@
 import React from 'react'
-// import "./Terms.css"
+import "./Terms.css"
 export const Terms = () => {
   return (
     <div class="t-main">
