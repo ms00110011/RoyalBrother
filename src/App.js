@@ -15,21 +15,22 @@ import { Privacy } from "./Page/PrivacyComponents/Privacy";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      {/* <Navbar />
       <Partner />
       <Franchise />
       <Woman />
       <Terms />
-      <Privacy />
+      <Privacy /> */}
+      {/* <Home/> */}
+      <Blog/>
       <Routes>
         <Route path="/" element={<Home />} /> 
         <Route path="/offer" element={<Offer />} />
         <Route path="/earn-with-us" element={<Partner />} />
         <Route path="/partner-with-us" element={<Franchise />} />
       </Routes>
-      
-//       <Blog/>
       <Footer />
+      
     </div>
   );
 }
