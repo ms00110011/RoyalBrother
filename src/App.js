@@ -12,13 +12,14 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      {/* <Partner /> */}
-      {/* <Franchise /> */}
-      {/* <Woman /> */}
+      <Partner />
+      <Franchise />
+      <Woman />
       <Routes>
-        <Route path="/" element={<Home />} />
+        {/* <Route path="/" element={<Home />} /> */}
         <Route path="/offer" element={<Offer />} />
-        <Route path="/partner" element={<Partner />} />
+        <Route path="/earn-with-us" element={<Partner />} />
+        <Route path="/partner-with-us" element={<Franchise />} />
       </Routes>
       <Footer />
     </div>

@@ -12,6 +12,39 @@
   font-size: 15px;
   padding: 13px;
 }
+.pt_flex_1 {
+  display: flex;
+  width: 60%;
+  margin-left: 7em;
+  flex-direction: column;
+  margin-top: 6em;
+}
+.p-ml {
+  margin-left: 5em;
+}
+.pt_partner {
+  font-family: muli, sans-serif;
+  font-style: normal;
+  font-size: 37px;
+  color: white;
+  margin-bottom: 0px;
+}
+.pt_apply {
+  background: linear-gradient(
+    90deg,
+    rgba(243, 182, 0, 1) 0%,
+    rgba(255, 227, 144, 1) 100%
+  );
+  padding: 16px 2px;
+  font-size: 18px;
+  font-family: muli, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1.2em;
+  width: 220px;
+}
 .under_line {
   height: 6px;
   width: 50%;
@@ -32,7 +65,16 @@
   margin-top: 4em;
 }
 .pic {
-  width: 100%;
+  background-image: linear-gradient(
+      to right,
+      rgba(39, 39, 39, 0.9) 10%,
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(../../Photo/bike.jpg);
+  background-size: cover;
+  height: 70vh;
+  background-position: center;
+  color: #fff;
 }
 .container-fluid {
   padding: 0;
@@ -44,14 +86,19 @@
   flex-direction: column;
   gap: 10px;
   font-size: 14px;
+  box-shadow: 0 0.125rem 0.375rem rgb(0 0 0 / 13%);
+  border-radius: 6px;
 }
 
 .faq {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   background-color: white;
-  border-radius: 5px;
-  padding: 18px;
+  border-bottom: 1px solid #f6f6f6;
+  padding: 12px;
+  box-shadow: 0 0.125rem 0.375rem rgb(0 0 0 / 13%);
+  border-radius: 6px;
 }
 .fafs {
   color: #000000;
@@ -64,11 +111,15 @@
 }
 .fabg {
   background-color: #f0f0f0;
+  box-shadow: 0 0.125rem 0.375rem rgb(0 0 0 / 13%);
+  border-radius: 6px;
 }
 .faa {
   font-size: 17px;
   padding: 25px;
   color: #555555;
+  box-shadow: 0 0.125rem 0.375rem rgb(0 0 0 / 13%);
+  border-radius: 6px;
 }
 .flex {
   display: flex;
@@ -108,7 +159,10 @@
   );
   font-weight: 600;
   font-size: 18px;
-  border-radius: 7px;
+  border-radius: 10px;
+}
+.p-img {
+  margin-top: -3em;
 }
 .heading {
   font-size: 35px;
@@ -123,6 +177,40 @@
 .flex31 {
   background-color: white;
 }
+.shadow {
+  box-shadow: 0 0.125rem 0.375rem rgb(0 0 0 / 13%);
+  border-radius: 6px;
+}
 .p-mg {
-  background-color:red;
+  background-color: red;
+}
+
+@media only screen and (max-width: 750px) {
+  .pt_flex_1 {
+    margin-left: 2em;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .pt_flex_1 {
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .pt_apply {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .pt_partner {
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .pt_apply {
+    padding: 13px;
+    font-size: 15px;
+  }
 }

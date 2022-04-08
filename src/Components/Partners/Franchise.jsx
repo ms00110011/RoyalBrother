@@ -13,9 +13,9 @@ import flex5 from "../../Photo/flex5.png";
 import flex6 from "../../Photo/flex6.png";
 export const Franchise = () => {
   React.useEffect(() => {
-    document.title = "Partner with Us | Royalbrothers.com"
- }, []);
- 
+    document.title = "Partner with Us | Royalbrothers.com";
+  }, []);
+
   return (
     <div class="f-main">
       <div class="img-gradient">
@@ -32,8 +32,8 @@ export const Franchise = () => {
       <div class="underline"></div>
       <div class="container-fluid p-5 mg">
         <div class="row d-flex align-content-center align-items-center order">
-          <div class="col-lg-7 col-md-12 p-4 brand">
-            <h4>A Brand trusted by many</h4>
+          <div class="col-lg-7 col-md-12 p-3 brand">
+            <h4 class="fw-bold">A Brand trusted by many</h4>
             <p class="my-3 text-muted">
               {" "}
               1,00,000+ customers served across the nation in 43 different
@@ -52,7 +52,9 @@ export const Franchise = () => {
             <img src={store2} alt="store2"></img>
           </div>
           <div class="col-lg-7 col-md-12 p-4 brand-2">
-            <h4>Leverage our biggest strengths for your gains</h4>
+            <h4 class="fw-bold">
+              Leverage our biggest strengths for your gains
+            </h4>
             <p class="my-3 text-muted">
               We are the only company in this industry to hold license to
               operate in 7 states in India. Additionally, our team is constantly
@@ -71,7 +73,7 @@ export const Franchise = () => {
       <div class="container-fluid p-5 mg">
         <div class="row d-flex align-content-center align-items-center order">
           <div class="col-lg-7 col-md-12 p-4 brand">
-            <h4>Customers turned brand advocates</h4>
+            <h4 class="fw-bold">Customers turned brand advocates</h4>
             <p class="my-3 text-muted">
               The brand promise of ensuring superior quality and uncompromised
               customer service has made our customers turn into brand advocates
@@ -96,7 +98,9 @@ export const Franchise = () => {
             <img src={store4} alt="store2"></img>
           </div>
           <div class="col-lg-7 col-md-12 p-4 brand-2">
-            <h4>Technology-driven approach to optimize efficiency</h4>
+            <h4 class="fw-bold">
+              Technology-driven approach to optimize efficiency
+            </h4>
             <p class="my-3 text-muted">
               Our team has built highly sophisticated operational tools that
               help in easing out our end to end operations. Our analytical tools
@@ -115,7 +119,9 @@ export const Franchise = () => {
       <div class="container-fluid p-5">
         <div class="row d-flex align-content-center align-items-center order">
           <div class="col-lg-7 col-md-12 p-4 brand">
-            <h4>Unbeatable customer service and operational activities.</h4>
+            <h4 class="fw-bold">
+              Unbeatable customer service and operational activities.
+            </h4>
             <p class="my-3 text-muted">
               Our highly competent customer service team is available 24*7 to
               provide a hassle-free service and immediate assistance to
@@ -152,17 +158,17 @@ export const Franchise = () => {
       <h1 class="what">Why Royal Brothers?</h1>
       <div class="under_line2"></div>
       <div class="flex-3">
-        <div class="flex-31">
+        <div class="flex-31 shadow">
           <img src={flex4} class="flex-3-img"></img>
-          <p class="text-center">Licence to operate in 7 states</p>
+          <p class="text-center fw-normal">Licence to operate in 7 states</p>
         </div>
-        <div class="flex-31">
+        <div class="flex-31 shadow">
           <img src={flex5} class="flex-3-img"></img>
-          <p class="text-center">100k+ Bookings served and counting</p>
+          <p class="text-center fw-normal">100k+ Bookings served and counting</p>
         </div>
-        <div class="flex-31">
+        <div class="flex-31 shadow">
           <img src={flex6} class="flex-3-img"></img>
-          <p class="text-center">15 million kms served</p>
+          <p class="text-center fw-normal">15 million kms served</p>
         </div>
       </div>
     </div>
