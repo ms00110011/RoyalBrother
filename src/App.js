@@ -27,6 +27,8 @@ function App() {
         <Route path="/earn-with-us" element={<Partner />} />
         <Route path="/partner-with-us" element={<Franchise />} />
       </Routes>
+      
+//       <Blog/>
       <Footer />
     </div>
   );
