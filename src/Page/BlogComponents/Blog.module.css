@@ -8,6 +8,13 @@
   margin: 20px 1px;
   box-sizing: border-box;
 }
+.blog_h1{
+  color: #010101;
+  text-align: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
 
 .card {
   height: 550px;
