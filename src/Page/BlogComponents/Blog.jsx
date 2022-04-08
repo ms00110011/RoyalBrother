@@ -6,7 +6,7 @@ import Line from "../HomeComponets/Line";
 export const Blog = () => {
   const [data, setData] = useState([]);
 
-  const url = "http://localhost:3000/blogs";
+  const url = "http://localhost:3001/blogs";
   const getTodo = () => {
     fetch(url)
       .then((res) => res.json())
