@@ -1,15 +1,125 @@
 {
   "tariff": [
-    { "id": 1, "name":"Aprilia SR 150 (ABS)","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/030/medium/Aprilia-SR-150__...png?1504092295", "booktime": "22", "kmlimit": "5", "exkm":"4" },
-    { "id": 2, "name":"Honda Dio","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/035/medium/Dio-min_2.png?1519738819", "booktime": "19", "kmlimit": "5", "exkm":"4" },
-    { "id": 3, "name":"Honda Activa 4G","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/121/medium/Activa_48-min_2.png?1592300804", "booktime": "18", "kmlimit": "5", "exkm":"4" },
-    { "id": 4, "name":"Honda Activa 5G","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/233/medium/Honda_activa_5G.png?1532687566", "booktime": "19", "kmlimit": "5", "exkm":"4" },
-    { "id": 5, "name":"TVS Ntorq 125","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/257/medium/ntorq2.png?1571407789", "booktime": "21", "kmlimit": "5", "exkm":"4" },
-    { "id": 6, "name":"Bajaj Pulsar 150","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/016/medium/Bajaj_Pulsar-min_2.png?1519738545", "booktime": "25", "kmlimit": "10", "exkm":"5" },
-    { "id": 7, "name":"Yamaha FZ","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/020/medium/FZ_Version_1.png?1504100292", "booktime": "22", "kmlimit": "10", "exkm":"5" },
-    { "id": 8, "name":"Hero Glamour","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/265/medium/Glamour_125.png?1571327418", "booktime": "25", "kmlimit": "10", "exkm":"5" },
-    { "id": 9, "name":"Royal Enfield Classic 350","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/007/medium/Classic_350-1-min_2.png?1519738687", "booktime": "47", "kmlimit": "12", "exkm":"5.5" },
-    { "id": 10, "name":"Royal Enfield Himalayan","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/014/medium/Himalayan_RE-min_2.png?1519739226", "booktime": "54", "kmlimit": "12", "exkm":"6" },
-    { "id": 11, "name":"KTM Duke 200 (ABS)","img":"https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/246/medium/Duke_200_ABS.png?1559098797", "booktime": "49", "kmlimit": "10", "exkm":"6" }
+    {
+      "id": 1,
+      "name": "Aprilia SR 150 (ABS)",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/030/medium/Aprilia-SR-150__...png?1504092295",
+      "booktime": "22",
+      "kmlimit": "5",
+      "exkm": "4",
+      "price": "7021"
+    },
+    {
+      "id": 2,
+      "name": "Honda Dio",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/035/medium/Dio-min_2.png?1519738819",
+      "booktime": "19",
+      "kmlimit": "5",
+      "exkm": "4",
+      "price": "9021"
+    },
+    {
+      "id": 3,
+      "name": "Honda Activa 4G",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/121/medium/Activa_48-min_2.png?1592300804",
+      "booktime": "18",
+      "kmlimit": "5",
+      "exkm": "4",
+      "price": "5021"
+    },
+    {
+      "id": 4,
+      "name": "Honda Activa 5G",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/233/medium/Honda_activa_5G.png?1532687566",
+      "booktime": "19",
+      "kmlimit": "5",
+      "exkm": "4",
+      "price": "12021"
+    },
+    {
+      "id": 5,
+      "name": "TVS Ntorq 125",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/257/medium/ntorq2.png?1571407789",
+      "booktime": "21",
+      "kmlimit": "5",
+      "exkm": "4",
+      "price": "3041"
+    },
+    {
+      "id": 6,
+      "name": "Bajaj Pulsar 150",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/016/medium/Bajaj_Pulsar-min_2.png?1519738545",
+      "booktime": "25",
+      "kmlimit": "10",
+      "exkm": "5",
+      "price": "8092"
+    },
+    {
+      "id": 7,
+      "name": "Yamaha FZ",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/020/medium/FZ_Version_1.png?1504100292",
+      "booktime": "22",
+      "kmlimit": "10",
+      "exkm": "5",
+      "price": "4532"
+    },
+    {
+      "id": 8,
+      "name": "Hero Glamour",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/265/medium/Glamour_125.png?1571327418",
+      "booktime": "25",
+      "kmlimit": "10",
+      "exkm": "5",
+      "price": "5682"
+    },
+    {
+      "id": 9,
+      "name": "Royal Enfield Classic 350",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/007/medium/Classic_350-1-min_2.png?1519738687",
+      "booktime": "47",
+      "kmlimit": "12",
+      "exkm": "5.5",
+      "price": "7125"
+    },
+    {
+      "id": 10,
+      "name": "Royal Enfield Himalayan",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/014/medium/Himalayan_RE-min_2.png?1519739226",
+      "booktime": "54",
+      "kmlimit": "12",
+      "exkm": "6",
+      "price": "2486"
+    },
+    {
+      "id": 11,
+      "name": "KTM Duke 200 (ABS)",
+      "img": "https://d3vp2rl7047vsp.cloudfront.net/bike_models/images/000/000/246/medium/Duke_200_ABS.png?1559098797",
+      "booktime": "49",
+      "kmlimit": "10",
+      "exkm": "6",
+      "price": "10023"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "phone": "8009008284",
+      "pass": "frank",
+      "name": "mitesh"
+    },
+    {
+      "name": "asdasd",
+      "email": "ms00110011@gmail.com",
+      "password": "secret",
+      "phone": "8009008284",
+      "id": 2
+    },
+    {
+      "name": "asdasd",
+      "email": "ms00110011@gmail.com",
+      "password": "secret",
+      "phone": "8009008284",
+      "id": 3
+    }
   ]
 }

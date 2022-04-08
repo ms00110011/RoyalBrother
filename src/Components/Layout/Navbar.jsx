@@ -13,9 +13,28 @@ import AddLocationAltIcon from "@mui/icons-material/AddLocationAlt";
 import { Link } from "react-router-dom";
 import SideBar from "./SideBar";
 import { makeStyles } from "@mui/styles";
-import PositionMenu from "./PostionMenu";
+import PositionMenu from "./PositionMenu";
+import { useSelector } from "react-redux";
+import { getUsers, getUsersAction } from "../../Redux/Action";
+import { useDispatch } from "react-redux";
+import PositionMenu2 from "./PositionMenu2";
+
+
 
 export default function Navbar() {
+
+
+  const login = useSelector((state) => state.isLogin);
+  const naam = useSelector((state)=>state?.user[0]?.name) || '';
+
+  const dispatch = useDispatch();
+
+  React.useEffect(()=>{
+    if(localStorage.getItem('user')===null){}
+    else {
+      dispatch(getUsers(JSON.parse(localStorage.getItem('user'))))
+    }
+  },[])
 
 
 
@@ -87,13 +106,13 @@ export default function Navbar() {
             </Button>
             <Button
               variant="text"
-              sx={{ textTransform: "none", color: "black" }}
+              sx={{ textTransform: "none", color: "black"  }}
             >
-              <PositionMenu />
+              <PositionMenu heading="Partner with us" Link1="Earn with us" Link2="Own a franchise" Link3=""/>
             </Button>
 
             <Button
-              sx={{ borderColor: "#FED250", color: "black" }}
+              sx={{ borderColor: "#FED250", color: "black", height:"40px",marginTop:"auto",marginBottom:"auto" }}
               variant="outlined"
                 className={styles.yellow}
             >
@@ -101,7 +120,12 @@ export default function Navbar() {
             </Button>
           </div>
 
-          <div style={{ display: "flex", justifyContent: "right" }}>
+          {login?
+          
+          <PositionMenu2 user={naam} />
+          
+          
+          :<div style={{ display: "flex", justifyContent: "right" }}>
             <Button
               component={Link}
               to="/login"
@@ -122,6 +146,8 @@ export default function Navbar() {
               Sign Up
             </Button>
           </div>
+          }
+
         </Toolbar>
       </AppBar>
     </Box>
