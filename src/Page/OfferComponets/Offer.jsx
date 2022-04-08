@@ -8,7 +8,6 @@ import offerCard4 from "./img/offerCard4.jpg";
 import offerCard5 from "./img/offerCard5.jpg";
 
 
-
 const Offer = () => {
   return (
     

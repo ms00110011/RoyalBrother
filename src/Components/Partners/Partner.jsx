@@ -10,6 +10,10 @@ import flex5 from "../../Photo/flex5.png";
 import flex6 from "../../Photo/flex6.png";
 
 export const Partner = () => {
+  React.useEffect(() => {
+    document.title = "Earn With US | Royal Brothers"
+ }, []);
+ 
   return (
     <div className={styles.partner}>
       <div>

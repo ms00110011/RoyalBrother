@@ -12,6 +12,10 @@ import flex4 from "../../Photo/flex4.png";
 import flex5 from "../../Photo/flex5.png";
 import flex6 from "../../Photo/flex6.png";
 export const Franchise = () => {
+  React.useEffect(() => {
+    document.title = "Partner with Us | Royalbrothers.com"
+ }, []);
+ 
   return (
     <div class="f-main">
       <div class="img-gradient">
