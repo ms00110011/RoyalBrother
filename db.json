@@ -121,6 +121,8 @@
       "password": "secret",
       "phone": "8009008284",
       "id": 3
+    }
+  ],
 
   "posts": [
     { "id": 1, "title": "Royal Brother", "devloper": "Amanullah" },

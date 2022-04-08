@@ -6,7 +6,6 @@ import Home from "./Page/HomeComponets/Home";
 import Offer from "./Page/OfferComponets/Offer";
 
 import { Footer } from "./Components/Layout/Footer";
-import { Homepage } from "./Components/Homepage";
 import { Tariff } from "./Components/Layout/Tariff/Tariff";
 import { SearchR } from "./Components/Layout/SearchR.jsx/SearchR";
 import { Login } from "./Components/Layout/Login/Login";
