@@ -4,16 +4,21 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    height: 800px;
+
 }
 .landing_image{
+    /* background-color: aquamarine; */
     background-image: url("../../../public/Imgs/home1.jpg");
-    height: 800px;
+    /* background-image: url(); */
+    height: 750px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     padding-top: 40px;
     padding-left: 250px;
+    
 }
 
 .landing_form{
@@ -25,6 +30,18 @@
     width: 400px;
     padding-left: 40px;
     box-shadow: 10px 10px 10px 10px rgb(228, 227, 225);
+}
+.save{
+    height: 50px;
+    background-color: rgb(102, 98, 98);
+    color: white;
+    padding-top: 10px;
+    margin-top: -60px;
+    font-weight: 600;
+    text-align: right;
+    font-size: 22px;
+    padding-right: 10px;
+    width: 100%;
 }
 
 .landing_form input{
@@ -79,10 +96,10 @@
 .rbx{
     background-image: url("../../../public/Imgs/rbx.jpg");
     height: 750px;
-    background-size: contain;
+    background-size: cover;
     cursor: pointer;
     width: 100%;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     /* background-color: #fed250; */
 }
@@ -101,16 +118,7 @@
 .subscribe:hover{
     background-color: #eed487
 }
-.save{
-    height: 50px;
-    background-color: rgb(102, 98, 98);
-    color: white;
-    padding-top: 10px;
-    font-weight: 600;
-    text-align: right;
-    font-size: 22px;
-    padding-right: 10px;
-}
+
 .fleet{
     /* margin-top: 100px; */
     height:600px;
@@ -125,6 +133,43 @@
     height: 3px;
     width: 100px;
     background-color: #fed250;
+}
+.add_more{
+    position: absolute;
+    /* font-size: 100px; */
+    /* top:30; */
+    right: 40;
+    margin-top: 20px;
+    margin-left: 20px;
+    height: 384px;
+    width: 350px;
+    border-radius: 20px;
+    font-size: 40px;
+}
+.add_more img{
+    justify-content: center;
+    text-align: center;
+    margin-top: 180px;
+    height: 60px;
+    width: 60px;
+    opacity: 1;
+}
+.add_more img:hover{
+    height: 80px;
+    width: 80px;
+}
+
+.fleet_card{
+    height: 380px;
+    width: 350px;
+    background-color: #f7fafc;
+    text-align: center;
+    justify-content: center;
+    margin: 20px;
+    color: black;
+    font-size: 25px;
+    padding-top: 20px;
+    border-radius: 20px;
 }
 
 .fleetDuration{
@@ -200,9 +245,16 @@
 
 
 
-
 /* 1500 to last */
 @media screen and (max-width: 1500px){
+   body{
+       background-color: aquamarine;
+   }
+   .landing_container{
+    width: 100%;
+    height: 750px;
+
+}
     .landing_image{
         height: 700px;
         width: 100%;
@@ -210,10 +262,8 @@
     }
     .landing_form{
         height: 400px;
-        background-color:white;
         margin-top: -600px;
-       box-shadow: 10px 10px 10px 10px rgb(228, 227, 225);
-    }
+   }
     .rbx{
        height: 650px;
         width: 100%;
@@ -240,9 +290,18 @@
 
 
 @media screen and (max-width: 1200px){
+    body{
+        background-color: rgb(245, 150, 165);
+    }
+    .landing_container{
+        width: 100%;
+        height: 600px;
+        
+    
+    }
     .landing_image{
        /* background-image: url(); */
-        height: 500px;
+        height: 5;
        padding-top: 40px;
         padding-left: 70px;
     }
@@ -255,13 +314,12 @@
     .sanitized{
         font-size: 25px;
         gap: 50px;
-        /* height: 60px; */
-        /* margin-top: 10px; */
         text-align: center;
         justify-content: center;
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        margin-top: 100px;
     }
     .rbx{
         background-image: url("../../../public/Imgs/rbx.jpg");
@@ -290,7 +348,13 @@
 
 
 @media screen  and (max-width:1000px){
-    
+    body{
+        background-color: rgb(93, 61, 211);
+    }
+    .landing_container{
+        width: 100%;
+        height: 500px;  
+    }
     .landing_image{
        height: 450px;
         padding-left: 50px;
@@ -299,11 +363,15 @@
     .landing_form{
         height: 350px;
         background-color:white;
-        margin-top: -400px;
+        margin-top: -450px;
         margin-left: 50px;
        box-shadow: 10px 10px 10px 10px rgb(228, 227, 225);
     }
-    
+    .sanitized{
+        font-size: 25px;
+        gap: 50px;
+        margin-top: 0px;
+    }
     
     .rbx{
         height: 500px;
@@ -323,22 +391,30 @@
 
 
 @media screen  and (max-width:796px){
-   
+    body{
+        background-color: rgb(214, 88, 172);
+    }
+    .landing_container{
+        width: 100%;
+        height: 800px;  
+    }
     .landing_image{
-        /* background-color: aquamarine; */
-        background-image: url("../../../public/Imgs/home1.jpg");
-        /* background-image: url(); */
-        height: 400px;
-       width: 100%;
+        height: 350px;
+        width: 100%;
         padding-top: 40px;
     }
+    
     .landing_form{
         height: 400px;
         background-color:white;
         padding: 20px;
-        margin-top: 0px;
-        width:140%;
-        box-shadow: 10px 10px 10px 10px rgb(228, 227, 225);
+        margin-top: 30px;
+        width:170%;
+    }
+        .save{
+           padding-top: 10px;
+            margin-top: -20px;
+            box-shadow: 10px 10px 10px 10px rgb(228, 227, 225);
     }
     
     .landing_form input{
@@ -353,13 +429,16 @@
     
     .rbx{
         background-image: url("../../../public/Imgs/rbx.jpg");
-        height: 450px;
+        height: 350px;
        width: 100%;
     }
     
     .subscribe{
-        margin: 50% 25%;
-        font-size: 20px;
+        margin: 45% 30%;
+        justify-content: center;
+        font-size: 15px;
+        height: 30px;
+        width: 150px;
     }
    
     .save{
@@ -387,7 +466,16 @@
 
 
 @media screen and (max-width :600px){
-   
+ 
+    body{
+        background-color: rgb(209, 236, 88);
+    }
+    
+    .landing_container{
+        width: 100%;
+        height: 750px;
+    /* background-color: aquamarine; */
+    }
 .landing_image{
     /* background-color: aquamarine; */
     background-image: url("../../../public/Imgs/home1.jpg");
@@ -399,7 +487,7 @@
     height: 400px;
     background-color:white;
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 30px;
     font-size: 15px;
     /* margin-left: 15px; */
     justify-content: center;
@@ -430,13 +518,12 @@
 }
 
 .rbx{
-    background-image: url("../../../public/Imgs/rbx.jpg");
-    height: 350px;
+    height: 300px;
    width: 100%;
 }
 
 .subscribe{
-    margin: 50% 20%;
+    margin: 45% 25%;
     font-size: 10px;
     height: 25px;
     width: 150px;
@@ -471,22 +558,43 @@
     width: 150px;
     margin-left: 20px;
 }
+
+
 }
+
+
+
+
 
 
 @media screen and (max-width :450px){
-    
+    body{
+        background-color: rgb(248, 178, 137);
+    }
+    .landing_container{
+        width: 100%;
+        height: 800px;  
+        background-color: aquamarine;
+    }
 .landing_image{
-    height: 210px;
+    height: 200px;
    width: 100%;
 }
 .landing_form{
-    height: 400px;
+    height: 300px;
     background-color:white;
-    padding: 20px;
-    margin-top: 10px;
-    width:100%;
-    margin-left: 30px;
+    padding: 40px;
+    margin-top: 50px;
+    width:90%;
+    margin-left: 10px;
+}
+.save{
+    height: 50px;
+    background-color: rgb(102, 98, 98);
+    color: white;
+    padding-top: 10px;
+    margin-top: -100px;  
+    font-size: 15px;
 }
 
 .rbx{
@@ -518,7 +626,9 @@
 }
 
 .landing_form input{
+    /* margin-top: 20px; */
     width: 150px;
+
 }
 .landing_form p{
     font-size: 15px;
@@ -532,20 +642,23 @@
     margin-top: 30px;
     width: 300px;
 }
-
-
-
-.slider_com{
-    /* height: 800px; */
-    /* background-color: aqua; */
+.sanitized{
+    font-size: 20px;
+    gap: 20px;
+    /* height: 60px; */
+    margin-top: -50px;
     text-align: center;
     justify-content: center;
-    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-.slider_com h1{
-    color: black;
-}
+.sanitized_section{
+    display: flex;
+    margin-left:0%;
+    text-align: center;
+    justify-content: center;
 }
 
-
+}

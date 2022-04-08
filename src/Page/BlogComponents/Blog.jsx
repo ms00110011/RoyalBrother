@@ -17,7 +17,7 @@ export const Blog = () => {
 
   useEffect(() => getTodo(), []);
   return (
-    <div className={style.blog_container}>
+    <>    <div className={style.blog_container}>
       {data.map((ele, index) => (
         <div className={style.card}>
           <img src={ele.img} alt="" />
@@ -34,14 +34,17 @@ export const Blog = () => {
           </div>
         </div>
       ))}
-      <div>
+      
+    </div>
+    <div className={style.arrow_btn}>
         <button>
-          <img className={style.leftArrow} src={leftArrow} alt="Left Arrow" />
+          Left Arrow
         </button>
         <button>
-          <img src={rightArrow} alt="Right Arrow" />
+          Right Arrow
         </button>
       </div>
-    </div>
+    </>
+
   );
 };
