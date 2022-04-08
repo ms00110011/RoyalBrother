@@ -18,9 +18,13 @@ import { ProductDetails } from "./Components/Layout/ProductDetails";
 import { Confirmed } from "./Components/Layout/Confirmed";
 
 
+import { Routing } from "./Routing";
+
+
 function App() {
   return (
     <div className="App">
+
     <Provider store={store} >
       <Navbar />
 

@@ -8,11 +8,10 @@ import offerCard4 from "./img/offerCard4.jpg";
 import offerCard5 from "./img/offerCard5.jpg";
 
 
-
 const Offer = () => {
   return (
-    <div>
-        <h1>Offer Page </h1>
+    
+    <div className={style.Offer_container}>
         <div className={style.Offer}>
             <div className={style.Rental}>
                 <h1>BIKE RENTAL OFFERS IN Ahmedabad</h1>
