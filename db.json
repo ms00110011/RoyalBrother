@@ -157,33 +157,40 @@
       "dropDate": "",
       "dropTime": "",
       "id": 5
+    },
+    {
+      "pickupDate": "2022-04-14",
+      "pickupTime": "12:48",
+      "dropDate": "2022-04-15",
+      "dropTime": "13:46",
+      "id": 6
     }
   ],
   "blogs": [
     {
       "id": 1,
-      "text1": "Trevel",
+      "text1": "Travel",
       "text2": "Karnataka - Explore The Paradise of Plantations",
       "text3": "Must-Visit Destinations in Karnataka for Nature Lovers  ",
       "img": "https://d3vp2rl7047vsp.cloudfront.net/articles/article_images/000/000/023/med/Paradise-of-Plantations-in-Karnataka.jpg"
     },
     {
       "id": 2,
-      "text1": "Trevel",
+      "text1": "Travel",
       "text2": "Jaipur: The “Not Just Pink” City of India - Sightseeing Places to Visit, Top Attractions & Things to Do",
       "text3": "Here is the ultimate travel guide for places to visit, and things to do in Jaipur.",
       "img": "https://d3vp2rl7047vsp.cloudfront.net/articles/article_images/000/000/022/med/Bike-Trip-Exploring-Jaipur-City-Palace.png"
     },
     {
       "id": 3,
-      "text1": "Trevel",
+      "text1": "Travel",
       "text2": "Bike Trips from Bangalore – Travel Endlessly",
       "text3": "Bangalore offers a plethora of beautiful places to explore, both in and around the city. For those looking for a breath of fresh air and an exciting experience, there is no better option than a bik...",
       "img": "https://d3vp2rl7047vsp.cloudfront.net/articles/article_images/000/000/021/med/Bike-Trip.jpg"
     },
     {
       "id": 4,
-      "text1": "Trevel",
+      "text1": "Travel",
       "text2": "Travel Guide: 5 Popular Road Trip Routes in Kerala",
       "text3": "Here's a list of top 5 road trip routes in Kerala you can traverse if you want to escape a monotonous routine.",
       "img": "https://d3vp2rl7047vsp.cloudfront.net/articles/article_images/000/000/020/med/Kerala-Road-Trip.png"
