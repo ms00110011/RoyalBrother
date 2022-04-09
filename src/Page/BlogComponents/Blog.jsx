@@ -45,14 +45,18 @@ const [page,setPage] =useState(1)
         ))}
       </div>
       <div className={style.arrow_btn}>
-        <button>
-          Left Arrow
+        <button disabled={page===1} onClick={()=>{
+          setPage(page-1)
+          getTodo()
+        }}>
+          Prev
         </button>
         <button onClick={()=>{
           setPage(page+1)
           getTodo()
+          // console.log(page)
         }}>
-          Right Arrow
+          Next
         </button>
       </div>
     </>
