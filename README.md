@@ -22,34 +22,35 @@ This repository is for developing the Travelix clone.
 ### **Index Page:**
 
 
-<img src="src/photo/Readme_Home.PNG">
+<img src="src/Photo/Readme_Home.PNG">
 <br>
 
 ### **Tariff page:**
 
 //someting write here
 
-<img src="">
+<img src="<img src="src/Photo/Readme_Tariff.PNG">">
 <br>
 
 ### **Offer:**
 
 It is very intersting page, there are many offer for you
 
-<img src="">
+<img src="src/Photo/Readme_Offer.PNG">
 <br>
 
 ### **Earn with us**
 
 //something write here
 
-<img src="">
+<img src="src/Photo/Readme_Earn.PNG">
 <br>
 
 ### ** Login & Sign up**
 
 If you have anu query related any think , you conect by these page .
-<img src="">
+<img src="src/Photo/Readme_Login.PNG">
+<img src="src/Photo/Readme_Sign.PNG">
 <br>
 ## Features
 
