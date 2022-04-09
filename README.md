@@ -22,7 +22,7 @@ This repository is for developing the Travelix clone.
 ### **Index Page:**
 
 
-<img src="">
+<img src="src/photo/Readme_Home.PNG">
 <br>
 
 ### **Tariff page:**
