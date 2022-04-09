@@ -70,7 +70,7 @@ const Home = () => {
             />
             <div  >
               <div className={style.add_more}>
-                <Link to="/tariff">
+                <Link to="/searchR">
                 <img
                   src={add}
                   onClick={() => {
