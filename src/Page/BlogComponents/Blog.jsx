@@ -5,8 +5,9 @@ import Line from "../HomeComponets/Line";
 
 export const Blog = () => {
   const [data, setData] = useState([]);
-
-  const url = "http://localhost:3001/blogs";
+  
+const [page,setPage] =useState(1)
+  const url = `http://localhost:3001/blogs?_page=${page}&_limit=9`;
   const getTodo = () => {
     fetch(url)
       .then((res) => res.json())
@@ -15,6 +16,11 @@ export const Blog = () => {
   };
 
   useEffect(() => getTodo(), []);
+  React.useEffect(() => {
+    document.title = "Blogs"
+ }, []);
+
+ 
   return (
     <>
       <h1 className={style.blog_h1}>Blog</h1>
@@ -38,14 +44,17 @@ export const Blog = () => {
           </div>
         ))}
       </div>
-      {/* <div className={style.arrow_btn}>
+      <div className={style.arrow_btn}>
         <button>
           Left Arrow
         </button>
-        <button>
+        <button onClick={()=>{
+          setPage(page+1)
+          getTodo()
+        }}>
           Right Arrow
         </button>
-      </div> */}
+      </div>
     </>
   );
 };

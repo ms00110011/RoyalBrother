@@ -13,6 +13,7 @@ import HomeBike3 from "../../Photo/homeBike3.png";
 import Senitized from "./Senitized";
 import Line from "./Line";
 import add from "../HomeComponets/icons/add.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -69,7 +70,7 @@ const Home = () => {
             />
             <div  >
               <div className={style.add_more}>
-                {/* <h1 style={{color:"black"}}>Viwe more</h1> */}
+                <Link to="/tariff">
                 <img
                   src={add}
                   onClick={() => {
@@ -77,6 +78,7 @@ const Home = () => {
                   }}
                   alt=""
                 />
+                </Link>
               </div>
               <OurFleetCard
                 img={HomeBike3}
