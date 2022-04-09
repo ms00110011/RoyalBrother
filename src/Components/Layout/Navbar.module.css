@@ -21,3 +21,12 @@
     background-color: #FED250;
     border-color: #FED250;
 }
+
+@media screen and (min-device-width: 0px) and (max-device-width: 1100px) { 
+    
+    .responseNav {
+        display:none;
+    }
+
+
+}
