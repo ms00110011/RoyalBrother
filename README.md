@@ -14,9 +14,9 @@ This repository is for developing the Travelix clone.
 ## Tech Stacks Used:
  
 - **React Js**
-- **MUI**
-- **JSON server**
 - **Redux**
+- **JSON server**
+- **MUI**
 
 
 ### **Index Page:**
