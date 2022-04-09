@@ -60,6 +60,13 @@
     height: 75px;
 }
 
+.arrow_btn{
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+  border: none;
+}
+
 .blog_text3{
     line-height: 1.5;
     font-family: "Muli", sans-serif;

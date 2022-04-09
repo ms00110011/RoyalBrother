@@ -12,27 +12,33 @@ const init = {
     dropTime:""
 }
 const  [data, setData] = useState(init)
-
+console.log(data)
 const dataHandle = (e) =>{
-    console.log(data)
-    
-// //     console.log(pickupDate);
-// //     const {pickupDate,pickupTime,dropDate,dropTime} = e.target;
-// //     setData({...data, [name]:value})
+    const {value,name} = e.target
+    setData({...data,[name]:value})
 }
+const url ="http://localhost:3001/time"
+const handleAdd= () =>{
+  fetch(url,{
+    method:"POST",
+    headers:{"content-type":"application/json"},
+    body:JSON.stringify(data)
+  })
+}
+// console.log()
 // console.log(data)
   return (
     <div>
         <form className={style.landing_form}>
             <h2>Search your next ride</h2>
             <p>Pickup</p>
-            <input type="date" name="pickupDate" placeholder='Date' value={data.pickupDate} />
-            <input type="time" name="pickupTime" id="" placeholder='Time' value={data.pickupTime} /> <br />
+            <input type="date" name="pickupDate" dateFormat="dd/MM/yyyy" onChange={dataHandle}/>
+            <input type="time" name="pickupTime" onChange={dataHandle}/> <br />
             <p>Dropoff</p>
-            <input type="date" name="dropDate"/>
-            <input type="time" name="dropTime"/> <br />
+            <input type="date" name="dropDate" dateFormat="dd/MM/yyyy"  onChange={dataHandle}/>
+            <input type="time" name="dropTime" onChange={dataHandle}/> 
             <Link to="/searchR">
-            <button>Search</button>
+            <button onClick={handleAdd}>Search</button>
 
             </Link>
         </form>

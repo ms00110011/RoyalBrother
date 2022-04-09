@@ -129,21 +129,43 @@
       "id": 4
     }
   ],
-  "posts": [
+
+  "time": [
     {
-      "id": 1,
-      "title": "Royal Brother",
-      "devloper": "Amanullah"
+      "pickupDate": "2022-04-29",
+      "pickupTime": "04:38",
+      "dropDate": "2022-04-22",
+      "dropTime": "02:42",
+      "id": 1
     },
     {
-      "id": 2,
-      "title": "Royal",
-      "devloper": "Manoj"
+      "pickupDate": "2022-04-09",
+      "pickupTime": "05:01",
+      "dropDate": "2022-04-10",
+      "dropTime": "04:05",
+      "id": 2
     },
     {
-      "id": 3,
-      "title": "Royal Brother",
-      "devloper": "Mitesh"
+      "pickupDate": "2022-04-11",
+      "pickupTime": "07:00",
+      "dropDate": "2022-04-13",
+      "dropTime": "07:00",
+      "id": 3
+    },
+    {
+      "pickupDate": "2022-04-10",
+      "pickupTime": "09:01",
+      "dropDate": "2022-04-21",
+      "dropTime": "09:59",
+      "id": 4
+    },
+    {
+      "pickupDate": "",
+      "pickupTime": "",
+      "dropDate": "",
+      "dropTime": "",
+      "id": 5
+
     }
   ],
   "blogs": [
@@ -230,6 +252,7 @@
       "text2": "Tips For Renting A Motorcycle In Bangalore",
       "text3": "This article sheds light on the places around Bangalore that can be explored with a rented two-wheeler and the tips that would help one avail bike rental in Bangalore.",
       "img": "https://d3vp2rl7047vsp.cloudfront.net/articles/article_images/000/000/009/med/bangalore1-reuters-traffic-moves-along-a-road-in-the-southern-indian-city-of-bangalore-december-14-2005.jpg"
+
     },
     {
       "id": 13,
@@ -244,6 +267,8 @@
       "text2": "",
       "text3": "",
       "img": ""
+
+
     }
   ]
 }
