@@ -1,5 +1,5 @@
 # Royal Brother Clone
-This repository is for developing the Travelix clone.
+This repository is for developing the Royal Brother clone.
 
 
 
