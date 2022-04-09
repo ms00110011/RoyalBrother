@@ -86,6 +86,8 @@ export default function Navbar() {
               marginLeft: "40px",
               marginRight: "40px",
             }}
+
+            className={styles.responseNav}
           >
             <Button
               variant="text"

@@ -25,6 +25,7 @@ export default function Searchcard({ name, price, img, id }) {
   const login = useSelector(state=>state.isLogin)
 
 
+
   return (
     <Card
       sx={{
@@ -76,7 +77,8 @@ export default function Searchcard({ name, price, img, id }) {
               variant="contained"
               component={Link}
               to= {login?`/searchR/${id}`:'/login'}
-            >
+              // to={'/login'}
+            > 
               Book
             </Button>
           </div>

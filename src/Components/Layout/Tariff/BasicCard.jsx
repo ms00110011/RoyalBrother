@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
+import { Link } from 'react-router-dom';
 
 const bull = (
   <Box
@@ -72,7 +73,7 @@ export default function BasicCard({name,img,booktime,kmlimit,exkm}) {
            </div>
          </div>
        </div>      
-       <Button sx={{backgroundColor:"#FED250", width:"100%", color:"black"}} variant="contained">
+       <Button sx={{backgroundColor:"#FED250", width:"100%", color:"black"}} component={Link} to="/searchR" variant="contained">
  Book Now
 </Button>
       </CardContent>

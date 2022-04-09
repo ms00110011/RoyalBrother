@@ -7,7 +7,7 @@
       "booktime": "22",
       "kmlimit": "5",
       "exkm": "4",
-      "price": "7021"
+      "price": "7000"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "booktime": "19",
       "kmlimit": "5",
       "exkm": "4",
-      "price": "9021"
+      "price": "9000"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "booktime": "18",
       "kmlimit": "5",
       "exkm": "4",
-      "price": "5021"
+      "price": "5000"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "booktime": "19",
       "kmlimit": "5",
       "exkm": "4",
-      "price": "12021"
+      "price": "1000"
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "booktime": "21",
       "kmlimit": "5",
       "exkm": "4",
-      "price": "3041"
+      "price": "3000"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "booktime": "25",
       "kmlimit": "10",
       "exkm": "5",
-      "price": "8092"
+      "price": "8000"
     },
     {
       "id": 7,
@@ -61,7 +61,7 @@
       "booktime": "22",
       "kmlimit": "10",
       "exkm": "5",
-      "price": "4532"
+      "price": "4000"
     },
     {
       "id": 8,
@@ -70,7 +70,7 @@
       "booktime": "25",
       "kmlimit": "10",
       "exkm": "5",
-      "price": "5682"
+      "price": "5000"
     },
     {
       "id": 9,
@@ -79,7 +79,7 @@
       "booktime": "47",
       "kmlimit": "12",
       "exkm": "5.5",
-      "price": "7125"
+      "price": "7000"
     },
     {
       "id": 10,
@@ -88,7 +88,7 @@
       "booktime": "54",
       "kmlimit": "12",
       "exkm": "6",
-      "price": "2486"
+      "price": "2000"
     },
     {
       "id": 11,
@@ -97,7 +97,7 @@
       "booktime": "49",
       "kmlimit": "10",
       "exkm": "6",
-      "price": "10023"
+      "price": "1000"
     }
   ],
   "user": [
@@ -120,8 +120,16 @@
       "password": "secret",
       "phone": "8009008284",
       "id": 3
+    },
+    {
+      "name": "Sam",
+      "email": "saas",
+      "password": "mi",
+      "phone": "123456",
+      "id": 4
     }
   ],
+
   "time": [
     {
       "pickupDate": "2022-04-29",
@@ -157,6 +165,7 @@
       "dropDate": "",
       "dropTime": "",
       "id": 5
+<<<<<<< HEAD
     },
     {
       "pickupDate": "2022-04-14",
@@ -164,6 +173,9 @@
       "dropDate": "2022-04-15",
       "dropTime": "13:46",
       "id": 6
+=======
+
+>>>>>>> f704e3a05f0bfc6ca6727a5b8a3eeccebd3ea067
     }
   ],
   "blogs": [
@@ -250,6 +262,23 @@
       "text2": "Tips For Renting A Motorcycle In Bangalore",
       "text3": "This article sheds light on the places around Bangalore that can be explored with a rented two-wheeler and the tips that would help one avail bike rental in Bangalore.",
       "img": "https://d3vp2rl7047vsp.cloudfront.net/articles/article_images/000/000/009/med/bangalore1-reuters-traffic-moves-along-a-road-in-the-southern-indian-city-of-bangalore-december-14-2005.jpg"
+
+    },
+    {
+      "id": 13,
+      "text1": "Travel",
+      "text2": "",
+      "text3": "",
+      "img": ""
+    },
+    {
+      "id": 14,
+      "text1": "Travel",
+      "text2": "",
+      "text3": "",
+      "img": ""
+
+
     }
   ]
 }
