@@ -74,6 +74,6 @@ If you have anu query related any think , you conect by these page .
 
 👤 **Manoj**
 
-- Github: [](https://github.com/amnishad0512)
-- Linkedin: [Utkash Vaibhav](https://www.linkedin.com/in/amnishad0512/)
+- Github: [Manoj](https://github.com/amnishad0512)
+- Linkedin: [Manoj](https://www.linkedin.com/in/amnishad0512/)
 
