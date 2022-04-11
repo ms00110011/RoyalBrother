@@ -24,7 +24,7 @@ React.useEffect(()=>{
     <div>
 
     <div className={styles.tariffWrapper}>
-        <h2 style={{padding:"50px"}}>Bike rental tariffs in Ahmedabad</h2>
+        <h2 style={{padding:"50px"}}>Bike rental tariffs in Pune</h2>
 <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr"}}>
 {        data.map((item)=>(
             <BasicCard name={item.name} img={item.img} booktime={item.booktime} kmlimit={item.kmlimit} exkm={item.exkm} />

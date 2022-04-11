@@ -127,9 +127,22 @@
       "password": "mi",
       "phone": "123456",
       "id": 4
+    },
+    {
+      "name": "Mitesh",
+      "email": "ms00110011@gmail.com",
+      "password": "frank",
+      "phone": "8009008284",
+      "id": 5
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "phone": "",
+      "id": 6
     }
   ],
-
   "time": [
     {
       "pickupDate": "2022-04-29",
@@ -165,7 +178,27 @@
       "dropDate": "",
       "dropTime": "",
       "id": 5
-<<<<<<< HEAD
+    },
+    {
+      "pickupDate": "2022-04-15",
+      "pickupTime": "",
+      "dropDate": "",
+      "dropTime": "",
+      "id": 6
+    },
+    {
+      "pickupDate": "2022-03-31",
+      "pickupTime": "15:04",
+      "dropDate": "2022-04-14",
+      "dropTime": "15:04",
+      "id": 7
+    },
+    {
+      "pickupDate": "",
+      "pickupTime": "",
+      "dropDate": "",
+      "dropTime": "",
+      "id": 8
     },
     {
       "pickupDate": "2022-04-14",
@@ -173,9 +206,6 @@
       "dropDate": "2022-04-15",
       "dropTime": "13:46",
       "id": 6
-=======
-
->>>>>>> f704e3a05f0bfc6ca6727a5b8a3eeccebd3ea067
     }
   ],
   "blogs": [
@@ -262,7 +292,6 @@
       "text2": "Tips For Renting A Motorcycle In Bangalore",
       "text3": "This article sheds light on the places around Bangalore that can be explored with a rented two-wheeler and the tips that would help one avail bike rental in Bangalore.",
       "img": "https://d3vp2rl7047vsp.cloudfront.net/articles/article_images/000/000/009/med/bangalore1-reuters-traffic-moves-along-a-road-in-the-southern-indian-city-of-bangalore-december-14-2005.jpg"
-
     },
     {
       "id": 13,
@@ -277,8 +306,6 @@
       "text2": "",
       "text3": "",
       "img": ""
-
-
     }
   ]
 }
