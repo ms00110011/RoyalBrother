@@ -5,11 +5,14 @@ import styles from "./Signup.module.css";
 import { margin } from "@mui/material/node_modules/@mui/system";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-import { Navigate } from "react-router-dom";
+
+import { Navigate, useNavigate } from "react-router-dom";
+
 import {Redirect} from "react-router-dom"
 
 export const Signup = () => {
   
+  const navigate = useNavigate()
 
   const dispactch = useDispatch();
 
@@ -161,6 +164,7 @@ export const Signup = () => {
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
+              onClick={()=>navigate('/login')}
             >
               Sign Up
             </Button>
