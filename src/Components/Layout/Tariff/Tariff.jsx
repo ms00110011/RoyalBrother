@@ -7,7 +7,7 @@ export const Tariff = () => {
 
 
 React.useEffect(()=>{
-    fetch(`http://localhost:3001/tariff`)
+    fetch(`https://rbjson.herokuapp.com/tariff`)
     .then((res)=>res.json())
     .then((res)=>setData(res))
 },[])

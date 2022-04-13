@@ -17,7 +17,7 @@ const dataHandle = (e) =>{
     const {value,name} = e.target
     setData({...data,[name]:value})
 }
-const url ="http://localhost:3001/time"
+const url ="https://rbjson.herokuapp.com/time"
 const handleAdd= () =>{
   fetch(url,{
     method:"POST",

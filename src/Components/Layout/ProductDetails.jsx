@@ -9,7 +9,7 @@ export const ProductDetails = () => {
   const navigate = useNavigate();
 
   React.useEffect(() => {
-    fetch(`http://localhost:3001/tariff/${id}`)
+    fetch(`https://rbjson.herokuapp.com/tariff/${id}`)
       .then((res) => res.json())
       .then((res) => {
         setShop(res);

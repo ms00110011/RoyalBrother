@@ -37,7 +37,7 @@ export const Signup = () => {
 
     const payload = JSON.stringify(formData);
 
-    fetch("http://localhost:3001/user", {
+    fetch("https://rbjson.herokuapp.com/user", {
       method: "POST",
       body: payload,
       headers: { "content-type": "application/json" },

@@ -17,7 +17,7 @@ export const getUsersAction = (phone, password) => {
 
 
   return (dispatch) => {
-    fetch(`http://localhost:3001/user?phone=${phone}`)
+    fetch(`https://rbjson.herokuapp.com/user?phone=${phone}`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res[0].pass == password);

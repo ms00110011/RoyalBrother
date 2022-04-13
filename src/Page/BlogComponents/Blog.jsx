@@ -7,7 +7,7 @@ export const Blog = () => {
   const [data, setData] = useState([]);
   
 const [page,setPage] =useState(1)
-  const url = `http://localhost:3001/blogs?_page=${page}&_limit=9`;
+  const url = `https://rbjson.herokuapp.com/blogs?_page=${page}&_limit=9`;
   const getTodo = () => {
     fetch(url)
       .then((res) => res.json())
