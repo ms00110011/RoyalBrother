@@ -1,5 +1,5 @@
 import { Navigate, useNavigate } from "react-router-dom";
-import * as actions from "./Actiontype";
+import * as actions from "./actiontype";
 
 export const getUsers = (data) => {
 

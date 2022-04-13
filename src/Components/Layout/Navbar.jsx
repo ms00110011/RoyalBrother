@@ -15,7 +15,7 @@ import SideBar from "./SideBar";
 import { makeStyles } from "@mui/styles";
 import PositionMenu from "./PositionMenu";
 import { useSelector } from "react-redux";
-import { getUsers, getUsersAction } from "../../Redux/Action";
+import { getUsers, getUsersAction } from "../../Redux/action";
 import { useDispatch } from "react-redux";
 import PositionMenu2 from "./PositionMenu2";
 
