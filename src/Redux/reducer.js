@@ -1,4 +1,4 @@
-import { DELETE_USER, GET_USERS } from "./actiontype";
+import { DELETE_USER, GET_USERS } from "./Actiontype";
 
 export const Reducer = (state = { isLogin: false, user: {} }, action) => {
   switch (action.type) {
