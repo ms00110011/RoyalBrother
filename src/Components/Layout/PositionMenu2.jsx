@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Avatar, Button } from "@mui/material";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useDispatch } from "react-redux";
-import { deleteUser } from "../../Redux/action";
+import { deleteUser } from "../../Redux/Action";
 
 
 export default function PositionMenu2({user}) {

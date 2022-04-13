@@ -1,5 +1,5 @@
 import React from "react";
-import { getUsersAction } from "../../../Redux/action";
+import { getUsersAction } from "../../../Redux/Action";
 import { useDispatch } from "react-redux";
 import styles from "./Signup.module.css";
 import { margin } from "@mui/material/node_modules/@mui/system";
