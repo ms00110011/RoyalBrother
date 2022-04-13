@@ -8,7 +8,7 @@ import { Footer } from "./Components/Layout/Footer";
 import { Tariff } from "./Components/Layout/Tariff/Tariff";
 import { SearchR } from "./Components/Layout/SearchR.jsx/SearchR";
 import { Login } from "./Components/Layout/Login/Login";
-import { store } from "./Redux/Store";
+import { store } from "./Redux/store";
 import { Provider } from "react-redux";
 import { Signup } from "./Components/Layout/Signup/Signup";
 import { Profile } from "./Components/Profile/Profile";
