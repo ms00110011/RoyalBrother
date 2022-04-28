@@ -40,7 +40,7 @@ const Home = () => {
       <div>
         <div className={style.fleet}>
           <div>
-            <h1 style={{ color: "black" }}>OUR FEET</h1>
+            <h1 style={{ color: "black" }}>OUR FLEET</h1>
             <Line />
           </div>
           <div className={style.fleetDuration}>
