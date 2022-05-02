@@ -20,6 +20,7 @@ import { Woman } from "./Page/WomanComponents/Woman";
 import { Terms } from "./Page/TermsComponents/Terms";
 import { Privacy } from "./Page/PrivacyComponents/Privacy";
 import { Blog } from "./Page/BlogComponents/Blog";
+import { User } from "./Page/UserComponents/User";
 
 function App() {
   return (
@@ -43,7 +44,7 @@ function App() {
           <Route path="/privacypolicy" element={<Privacy />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/profile" element={<Profile />} />
-
+          <Route path="/user" element={<User />} />
         </Routes>
 
         <Footer />
