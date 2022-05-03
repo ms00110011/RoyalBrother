@@ -10,7 +10,7 @@ export const Reach = () => {
     <div className={styles.mainContainer}>
       <div className={styles.reachContainer}>
         <div className={styles.title}>Reach Us</div>
-        <div className="row">
+        <div className="row mb-5">
           <div className="col-lg-7 col-md-7 col-sm-7">
             <div className="row">
               <div className="col-lg-3 col-md-3 col-sm-3 col-3 text-center">
@@ -58,12 +58,12 @@ export const Reach = () => {
                 <EmailIcon />
               </div>
               <div className={`col-lg-9 col-md-9 col-sm-9 col-9 ${styles.contactDes}`}>
-                Enquiries - support@royalbrothers.comGrievances -
-                ceo@royalbrothers.com
+                Enquiries - support@royalbrothers.com <br />
+                Grievances - ceo@royalbrothers.com
               </div>
             </div>
           </div>
-          <div className="col-lg-5 col-md-5 col-sm-5 col-12 bg-primary px-4">a</div>
+          <div className="col-lg-5 col-md-5 col-sm-5 col-12 px-4"></div>
         </div>
         <div className="row px-4 mb-5">
           <div className="col-lg-4 col-md-4 col-sm-4">
