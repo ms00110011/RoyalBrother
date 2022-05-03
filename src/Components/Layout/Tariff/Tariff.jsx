@@ -7,7 +7,9 @@ export const Tariff = () => {
   React.useEffect(() => {
     fetch(`http://localhost:9008/`)
       .then((res) => res.json())
-      .then((res) => setData(res));
+      .then((res) => {
+        console.log(res)
+        setData(res)});
   }, []);
 
   return (
@@ -16,7 +18,9 @@ export const Tariff = () => {
         <h2 style={{ padding: "50px" }}>Bike rental tariffs in Pune</h2>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
           {data.map((item) => (
+
             <BasicCard
+              id={item._id}
               name={item.name}
               img={item.img}
               priceHour={item.priceHour}

@@ -35,7 +35,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/searchR" element={<SearchR />} />
           <Route path="/confirm" element={<Confirmed />} />
-          <Route path="/searchR/:id" element={<ProductDetails />} />
+          <Route path="/searchR/:id" element={<SearchR />} />
           <Route path="/earnwithus" element={<Partner />} />
           <Route path="/ownafranchise" element={<Franchise />} />
           <Route path="/rbforwomen" element={<Woman />} />
