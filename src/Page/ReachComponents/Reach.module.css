@@ -1,0 +1,59 @@
+.mainContainer {
+  background-color: white;
+}
+
+.reachContainer {
+  width: 68%;
+  margin: 47px auto 20px auto;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 1px -2px, rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
+  padding: 30px 16px;
+}
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  background-color: #eeeeee;
+  text-align: center;
+  padding: 9px;
+  margin-bottom: 13px;
+}
+.contactDes {
+  font-size: 13px;
+  font-weight: 400;
+}
+.link {
+  color: #039be5;
+  font-weight: 600;
+  text-decoration: none;
+}
+.inputField {
+  width: 100%;
+  font-size: 13px;
+  font-weight: 400;
+  border: none;
+  border-bottom: 1px solid;
+  padding: 3px 15px;
+}
+.submitBtn{
+    width: 100%;
+    border:none;
+    font-size: 14px;
+    font-weight: 600;
+    padding:8px;
+    background-color: #FEC51D;
+    border-radius: 5px;
+}
+@media only screen and (max-width: 992px){
+    .reachContainer{
+        width: 85%;
+    }
+}
+@media only screen and (max-width: 600px){
+    .inputField{
+       margin-top:3em;
+    }
+    .comment{
+        margin-top: 0px;
+    }
+}

@@ -21,6 +21,7 @@ import { Terms } from "./Page/TermsComponents/Terms";
 import { Privacy } from "./Page/PrivacyComponents/Privacy";
 import { Blog } from "./Page/BlogComponents/Blog";
 import { User } from "./Page/UserComponents/User";
+import { Reach } from './Page/ReachComponents/Reach';
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/user" element={<User />} />
+          <Route path="/reach" element={<Reach />} />
         </Routes>
 
         <Footer />
