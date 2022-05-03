@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./User.module.css";
+import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
+import EditIcon from "@mui/icons-material/Edit";
 export const User = () => {
   return (
     <div style={{ marginTop: "10px" }}>
@@ -19,7 +21,7 @@ export const User = () => {
               <p className={styles.name}>Manoj</p>
               <p className={styles.no}>91 8435925392</p>
               <p className={styles.email}>
-                amnishad0512@gmail.com
+               amnishad0512@gmail.com &nbsp; <EditIcon sx={{ fontSize: 12 }}  />
                 <i class="material-icons emaileditbtn"></i>
               </p>
               <p className={styles.credit}>Available Travel Credits : 0</p>
@@ -36,7 +38,9 @@ export const User = () => {
               <p className={styles.uploadDoc}>UPLOAD DOCUMENTS</p>
               <button className={styles.uploadBtn}>UPLOAD</button>
               <p className={styles.accountStatus}>Account Status</p>
-              <p className={styles.awaiting}>Awaiting document upload</p>
+              <p className={styles.awaiting}>
+                <RadioButtonCheckedIcon /> Awaiting document upload
+              </p>
             </div>
             <div className={styles.guidelinesContainer}>
               <p className={styles.guidelines}>Guidelines to Follow</p>
