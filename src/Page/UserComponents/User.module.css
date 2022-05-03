@@ -81,7 +81,7 @@
   font-size: 13px;
   padding: 7px 10px;
 }
-.uploadTop{
+.uploadTop {
   padding: 25px 18px 2px 25px;
 }
 .accountStatus {
@@ -108,4 +108,10 @@
 .points {
   font-size: 10px;
   font-weight: 400;
+}
+
+@media only screen and (max-width: 992px) {
+  .mainContainer {
+    width: 98%;
+  }
 }

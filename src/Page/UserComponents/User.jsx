@@ -6,7 +6,7 @@ export const User = () => {
       <div className={styles.mainContainer}>
         <div className="row">
           {/* left side */}
-          <div className="col-lg-4 bg-white">
+          <div className="col-lg-4 col-md-4 col-sm-12 bg-white">
             <div className={styles.userDetail}>
               <p className={styles.profile}>PROFILE</p>
               <div className={styles.imgContainer}>
@@ -31,7 +31,7 @@ export const User = () => {
             </div>
           </div>
           {/* right side */}
-          <div className={`col-lg-8 ${styles.upload}`}>
+          <div className={`col-lg-8 col-md-8 col-sm-12 ${styles.upload}`}>
             <div className={styles.uploadTop}>
               <p className={styles.uploadDoc}>UPLOAD DOCUMENTS</p>
               <button className={styles.uploadBtn}>UPLOAD</button>
