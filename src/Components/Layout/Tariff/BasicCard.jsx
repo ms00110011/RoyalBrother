@@ -19,7 +19,7 @@ const bull = (
   </Box>
 );
 
-export default function BasicCard({ name, img, priceHour, kmlimit, exkm }) {
+export default function BasicCard({id, name, img, priceHour, kmlimit, exkm }) {
   return (
     <Card
       sx={{
@@ -49,7 +49,7 @@ export default function BasicCard({ name, img, priceHour, kmlimit, exkm }) {
         <Button
           sx={{ backgroundColor: "#FED250", width: "100%", color: "black" }}
           component={Link}
-          to="/searchR"
+          to= {`/searchR/${id}`}
           variant="contained"
           className={styles.buttontariff}
 

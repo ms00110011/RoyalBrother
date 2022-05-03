@@ -22,14 +22,15 @@
 }
 
 .landing_form{
-    height: 400px;
+    height: 300px;
     background-color:white;
     margin-top: -700px;
     margin-left: 150px;
     padding-top: 20px;
-    width: 400px;
+    width: 380px;
     padding-left: 40px;
     box-shadow: 10px 10px 10px 10px rgb(228, 227, 225);
+    border-radius: 5px;
 }
 .save{
     height: 50px;
@@ -47,6 +48,9 @@
 .landing_form input{
     margin-top: 20px;
     width: 150px;
+    color: rgb(88, 88, 88);
+    /* border-color: rgb(88, 88, 88); */
+    font-size: 14px;
 
 }
 .landing_form p{
@@ -58,16 +62,19 @@
 }
 
 .landing_form button{
-    margin-top: 30px;
-    width: 300px;
-    text-align: center;
-    justify-content: center;
+    font-size: 16px;
+    margin-top: 70px;
+    width: 88%;
     background-color: #fed250;
-    height: 40px;
-    font-size: 20px;
+    border: 0;
+    padding: 8px 0px 8px 0px;
+    border-radius: 4px;
     font-weight: 600;
-    border: none;
-    border-radius: 10px;
+}
+
+.landingBt:hover {
+    background-color: #ffbf00;
+    transition-duration: 500ms;
 }
 
 .sanitized{
