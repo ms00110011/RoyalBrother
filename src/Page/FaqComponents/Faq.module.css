@@ -18,3 +18,11 @@
   font-size: 13px;
   font-weight: 400;
 }
+.link {
+  color: #039be5;
+  font-weight: 600;
+  text-decoration: none;
+}
+.bold {
+  font-weight: 700;
+}
