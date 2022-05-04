@@ -26,11 +26,11 @@ export default function BasicCard({id, name, img, priceHour, kmlimit, exkm }) {
         width: "90%",
         margin: "10px",
         backgroundColor: "white",
-        height: "auto",
+        // height: "auto",
         padding: "0"
       }}
     >
-      <CardContent>
+      <CardContent sx={{height:"620px"}}>
         <h6
           sx={{ fontSize: 14, textAlign: "center" }}
           color="text.secondary"
@@ -46,7 +46,8 @@ export default function BasicCard({id, name, img, priceHour, kmlimit, exkm }) {
           kmlimit={kmlimit}
           exkm={exkm}
         />
-        <Button
+      </CardContent>
+      <Button
           sx={{ backgroundColor: "#FED250", width: "100%", color: "black" }}
           component={Link}
           to= {`/searchR/${id}`}
@@ -56,7 +57,6 @@ export default function BasicCard({id, name, img, priceHour, kmlimit, exkm }) {
         >
           Book Now
         </Button>
-      </CardContent>
     </Card>
   );
 }

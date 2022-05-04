@@ -5,6 +5,7 @@ import Tab from "@mui/material/Tab";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
+import { red } from "@mui/material/colors";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -53,8 +54,8 @@ export default function TabsPanel({ name, img, priceHour, kmlimit, exkm }) {
           value={value}
           onChange={handleChange}
           aria-label="basic tabs example"
-          // textColor="secondary"
-          // indicatorColor="secondary"
+          textColor="secondary"
+          indicatorColor= "secondary"
         >
           <Tab style={{ fontSize: "13px" }} label="Hourly" {...a11yProps(0)} />
           <Tab style={{ fontSize: "13px" }} label="7 days" {...a11yProps(1)} />

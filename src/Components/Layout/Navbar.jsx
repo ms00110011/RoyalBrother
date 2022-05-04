@@ -18,6 +18,7 @@ import { useSelector } from "react-redux";
 import { getUsers, getUsersAction } from "../../Redux/Action";
 import { useDispatch } from "react-redux";
 import PositionMenu2 from "./PositionMenu2";
+import PinDropIcon from '@mui/icons-material/PinDrop';
 
 
 
@@ -124,7 +125,7 @@ export default function Navbar() {
               sx={{ borderColor: "#FED250", color: "black", height:"40px",marginTop:"auto",marginBottom:"auto" }}
               variant="outlined"
               className={styles.yellow}
-            >
+            > <PinDropIcon sx={{color:"#FED250", paddingRight:"5px"}} />
               Pune
             </Button>
           </div>
