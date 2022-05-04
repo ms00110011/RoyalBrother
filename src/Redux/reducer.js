@@ -1,6 +1,6 @@
-import { DELETE_USER, GET_USERS } from "./Actiontype";
+import { DATE_TIME, DELETE_USER, GET_USERS, HOURS_PAY, TIMELINE_VEH } from "./Actiontype";
 
-export const Reducer = (state = { isLogin: false, user: {} }, action) => {
+export const Reducer = (state = { isLogin: false, user: {}, durationData: {}, payTotal:{}, timeline:{} }, action) => {
   switch (action.type) {
     case GET_USERS: {
       return { ...state, user: action.payload, isLogin:true };
@@ -10,35 +10,25 @@ export const Reducer = (state = { isLogin: false, user: {} }, action) => {
       return {...state,user:action.payload,isLogin:false}
     }
 
+    case DATE_TIME : {
+      return {...state,durationData:action.payload}
+    }
+
+    case HOURS_PAY : {
+
+      return {...state,payTotal:action.payload}
+
+    }
+
+    case TIMELINE_VEH : {
+
+      return {...state,timeline:action.payload}
+
+
+    }
+
     default: {
       return state;
     }
   }
 };
-
-// const initialState = {
-//     product: [],
-//     isLooding: true,
-
-//   }
-
-//   const appReducer = (state= initialState,{type,payload})=> {
-//     switch(type){
-//         case "GET_PRODUCT_REQUEST": {
-//             return {
-//               ...state,
-//               isLooding: true
-//             };
-//           }
-//         case "GET_PRODUCT" : {
-//             return {
-//                 ...state,
-//                 product : payload.product,
-//                 isLooding: false
-//             }
-//         }
-//         case "ADD_TO_CART": {
-//             return {
-//                 ...state,
-//                 product : [...state.product, payload.product]
-//             }

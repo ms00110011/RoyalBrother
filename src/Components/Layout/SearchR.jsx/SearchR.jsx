@@ -2,32 +2,37 @@ import { ListItemSecondaryAction } from "@mui/material";
 import React from "react";
 import { useParams } from "react-router-dom";
 import SearchCard from "./SearchCard";
-import styles from "./SearchR.module.css"
-
+import styles from "./SearchR.module.css";
 
 export const SearchR = () => {
+  const id = useParams();
+  console.log(id);
+  const [data, setData] = React.useState([]);
+  const [data2, setData2] = React.useState([]);
 
-  const id = useParams()
-  console.log(id)
-  const [data,setData] = React.useState([]) 
-
-
-  React.useEffect(()=>{
-    getData()
+  React.useEffect(() => {
+    getData();
     // getLow()
     // getHigh()
-  },[])
-
-
+  }, []);
 
   const getData = () => {
+    console.log(id.id);
 
-    console.log(id.id)
-
-    fetch(`http://localhost:9008/${id.id}`)
+    fetch(`http://localhost:9008/search/${id.id}`)
       .then((res) => res.json())
-      .then((res) => {console.log(res)
-        setData([res])})
+      .then((res) => {
+        console.log(res);
+        setData([res]);
+      })
+      .catch((err) => console.log(err));
+
+    fetch(`http://localhost:9008/search/`)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res);
+        setData2(res);
+      })
       .catch((err) => console.log(err));
   };
 
@@ -45,9 +50,6 @@ export const SearchR = () => {
   //     .catch((err) => console.log(err));
   // };
 
-
-
-
   return (
     <div>
       {/* <div className={styles.sortBar}>
@@ -57,11 +59,32 @@ export const SearchR = () => {
         <button onClick={getHigh} className={styles.sortButton}>Price-High to Low</button>
       </div> */}
 
-      <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr"}}>
-      {        data.map((item)=>(
-            <SearchCard name={item.name} img={item.img} price={item.priceHour} id={item.id} />
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
+        {data.map((item) => (
+          <SearchCard
+            name={item.name}
+            img={item.img}
+            price={item.priceHour}
+            id={item.id}
+          />
         ))}
+      </div>
+
+      <div>
+        <p style={{ marginLeft: "25px" }}>Suggested Results</p>
+        <hr />
+
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
+          {data2.map((item) => (
+            <SearchCard
+              name={item.name}
+              img={item.img}
+              price={item.priceHour}
+              id={item.id}
+            />
+          ))}
         </div>
+      </div>
     </div>
   );
 };

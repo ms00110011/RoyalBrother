@@ -5,7 +5,7 @@ export const Tariff = () => {
   const [data, setData] = React.useState([]);
 
   React.useEffect(() => {
-    fetch(`http://localhost:9008/`)
+    fetch(`http://localhost:9008/search`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res)

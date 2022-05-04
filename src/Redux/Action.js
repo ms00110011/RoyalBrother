@@ -2,10 +2,6 @@ import { Navigate, useNavigate } from "react-router-dom";
 import * as actions from "./Actiontype";
 
 export const getUsers = (data) => {
-
-
-
-
   return {
     type: actions.GET_USERS,
     payload: data,
@@ -13,9 +9,6 @@ export const getUsers = (data) => {
 };
 
 export const getUsersAction = (phone, password) => {
-
-
-
   return (dispatch) => {
     fetch(`https://rbjson.herokuapp.com/user?phone=${phone}`)
       .then((res) => res.json())
@@ -24,10 +17,10 @@ export const getUsersAction = (phone, password) => {
         if (res[0].pass == password) {
           dispatch(getUsers(res));
           localStorage.setItem("user", JSON.stringify(res));
-          console.log(res)
+          console.log(res);
         } else {
           // alert("password is wrong");
-          throw new Error("password is wrong") 
+          throw new Error("password is wrong");
         }
       })
 
@@ -35,11 +28,32 @@ export const getUsersAction = (phone, password) => {
   };
 };
 
-
-
 export const deleteUser = () => {
   return {
     type: actions.DELETE_USER,
     payload: [],
   };
 };
+
+
+export const datetime = (payload) => {
+  return {
+    type: actions.DATE_TIME,
+    payload:payload
+};
+};
+
+export const hourspay = (payload) => {
+  return {
+    type: actions.HOURS_PAY,
+    payload:payload
+};
+};
+
+export const timelineveh = (payload) => {
+  return {
+    type: actions.TIMELINE_VEH,
+    payload:payload
+};
+};
+

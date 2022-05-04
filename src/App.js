@@ -20,6 +20,7 @@ import { Woman } from "./Page/WomanComponents/Woman";
 import { Terms } from "./Page/TermsComponents/Terms";
 import { Privacy } from "./Page/PrivacyComponents/Privacy";
 import { Blog } from "./Page/BlogComponents/Blog";
+import { SearchAll } from "./Components/Layout/SearchR.jsx/SearchAll";
 
 function App() {
   return (
@@ -33,7 +34,7 @@ function App() {
           <Route path="/tariff" element={<Tariff />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/searchR" element={<SearchR />} />
+          <Route path="/search" element={<SearchAll />} />
           <Route path="/confirm" element={<Confirmed />} />
           <Route path="/searchR/:id" element={<SearchR />} />
           <Route path="/earnwithus" element={<Partner />} />
