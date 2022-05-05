@@ -26,7 +26,6 @@
   font-weight: 700;
 }
 .img {
-    margin:auto;
   width: 150px;
   padding: 10px;
 }
@@ -129,4 +128,9 @@
     .mainContainer {
         width: 95%;
       }
+}
+@media only screen and (max-width: 768px){
+    .img{
+        margin: auto;
+    }
 }
