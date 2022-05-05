@@ -1,0 +1,132 @@
+* {
+  font-family: muli, sans-serif;
+}
+
+.header {
+  background-color: #fed250;
+  padding: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+}
+.bold {
+  font-weight: 700;
+}
+.blueText {
+  color: #1e90e8;
+  text-decoration: underline;
+}
+.mainContainer {
+  width: 75%;
+  margin: 1px auto;
+  padding: 15px;
+}
+.summary {
+  font-size: 19px;
+  font-weight: 700;
+}
+.img {
+    margin:auto;
+  width: 150px;
+  padding: 10px;
+}
+.checkout {
+  padding: 30px 21px 33px 21px;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 1px -2px, rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
+  border-radius: 6px;
+  height:fit-content;
+}
+.checkoutDes {
+  color: #555555;
+  font-size: 11px;
+  font-weight: 400;
+}
+.rupees {
+  font-size: 13px;
+  color: black;
+  font-weight: 500;
+}
+.totalAmount {
+  color: #555555;
+  font-size: 14px;
+  font-weight: 700;
+}
+.paymentBtn {
+  background-color: #fec51d;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.time {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.date {
+  font-size: 11px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.to {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+.hr1 {
+  color: gray;
+  /* padding: 0; */
+  margin-top:6px;
+}
+.hr2 {
+  color: gray;
+  /* padding: 0; */
+  margin-top:-8px;
+
+}
+.summaryDes {
+  color: #555555;
+  font-size: 11px;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+.input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-bottom: 1px solid black;
+  padding-left: 4px;
+}
+.input::placeholder {
+  color: silver;
+  border: none;
+  padding-left: 2px;
+}
+.input:focus {
+  border: none !important;
+}
+.name {
+  font-size: 19px;
+  font-weight: 700;
+}
+.thumbnail {
+  height: 87%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.mainSummary {
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 3px 1px -2px, rgba(0, 0, 0, 0.2) 0px 1px 5px 0px;
+  padding: 15px 25px;
+  border-radius: 6px;
+  height: fit-content;
+}
+@media only screen and (max-width: 992px){
+    .mainContainer {
+        width: 95%;
+      }
+}

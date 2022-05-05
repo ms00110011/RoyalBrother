@@ -23,6 +23,7 @@ import { Blog } from "./Page/BlogComponents/Blog";
 import { User } from "./Page/UserComponents/User";
 import { Reach } from './Page/ReachComponents/Reach';
 import { Faq } from './Page/FaqComponents/Faq';
+import { Summary } from './Page/SummaryComponents/Summary';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           <Route path="/user" element={<User />} />
           <Route path="/reach" element={<Reach />} />
           <Route path="/faq" element={<Faq />} />
+          <Route path="/Summary" element={<Summary />} />
         </Routes>
 
         <Footer />
