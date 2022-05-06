@@ -66,7 +66,7 @@ export const SearchAll = () => {
 
       <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr"}}>
       {        data.map((item)=>(
-            <SearchCard name={item.name} img={item.img} price={item.priceHour} id={item.id} />
+            <SearchCard name={item.name} img={item.img} price={item.priceHour} id={item._id} />
         ))}
         </div>
     </div>

@@ -2,11 +2,19 @@ import React from "react";
 import styles from "./User.module.css";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 import EditIcon from "@mui/icons-material/Edit";
+import { useSelector } from "react-redux";
 export const User = () => {
   function file(){
     console.log("hello")
   }
   document.title = "Profile | Royalbrothers.com"
+
+
+  let {name,mobile,email} = useSelector(
+    (state)=>state.user)
+
+
+
   return (
     <div style={{ marginTop: "10px" }}>
       <div className={styles.mainContainer}>
@@ -18,14 +26,14 @@ export const User = () => {
               <div className={styles.imgContainer}>
                 <img
                   className={styles.avtar}
-                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Circle-icons-profile.svg/1024px-Circle-icons-profile.svg.png"
+                  src="https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/user-profile-menu-70666577f1d7fbe6bba1f46ceacdb2e4abdbb2575014670cf9afbfbf35376c25.png"
                   alt="profile"
                 />
               </div>
-              <p className={styles.name}>Manoj</p>
-              <p className={styles.no}>91 8435925392</p>
+              <p className={styles.name}>{name}</p>
+              <p className={styles.no}>91 {mobile}</p>
               <p className={styles.email}>
-                amnishad0512@gmail.com &nbsp; <EditIcon sx={{ fontSize: 12 }} />
+                {email} &nbsp; <EditIcon sx={{ fontSize: 12 }} />
                 <i class="material-icons emaileditbtn"></i>
               </p>
               <p className={styles.credit}>Available Travel Credits : 0</p>

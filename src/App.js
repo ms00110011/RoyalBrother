@@ -20,14 +20,48 @@ import { Woman } from "./Page/WomanComponents/Woman";
 import { Terms } from "./Page/TermsComponents/Terms";
 import { Privacy } from "./Page/PrivacyComponents/Privacy";
 import { Blog } from "./Page/BlogComponents/Blog";
+import { User } from "./Page/UserComponents/User";
+import { City } from "./Page/CityComponents/City";
+import { Summary } from "./Page/SummaryComponents/Summary";
+import { Payment } from "./Page/PaymentComponents/Payment";
+import { ThemeProvider } from "styled-components";
+import { createTheme } from "@mui/material";
+
+
+
+
+
 
 import { SearchAll } from "./Components/Layout/SearchR.jsx/SearchAll";
 
 
+
+
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "rgb(244, 51, 151);",
+      },
+      secondary: {
+        main: "#1976d2",
+      },
+    },
+    typography: {
+      fontFamily: ["regular", "sans-serif"].join(","),
+    },
+  });
+
   return (
+    
+    
     <div className="App">
-      <Provider store={store}>
+
+
+
+
+   <ThemeProvider theme={theme}>
+   <Provider store={store}>
         <Navbar />
 
         <Routes>
@@ -47,8 +81,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/user" element={<User />} />
-          <Route path="/reach" element={<Reach />} />
-          <Route path="/faq" element={<Faq />} />
+          {/* <Route path="/reach" element={<Reach />} />
+          <Route path="/faq" element={<Faq />} /> */}
           <Route path="/summary" element={<Summary />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/city" element={<City />} />
@@ -56,6 +90,8 @@ function App() {
 
         <Footer />
       </Provider>
+   </ThemeProvider>
+
     </div>
   );
 }
