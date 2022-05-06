@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Model.module.css";
 export const Model = () => {
+    let logo = "https://d36g7qg6pk2cm7.cloudfront.net/assets/icons/logo-b03af389c15608bf4fa52378f448a48a9c8f92f70242cc88340e971e7599d6ae.png"
   return (
     <>
       <div
@@ -12,10 +13,8 @@ export const Model = () => {
       >
         <div className={`modal-dialog modal-lg`}>
           <div className="modal-content">
-            <div className="modal-header">
-              <h5 className="modal-title" id="exampleModalLabel">
-                Modal title
-              </h5>
+            <div className={`modal-header ${styles.header}`}>
+               <div className={styles.logo}><img src={logo} alt="logo" width="110"/>&nbsp;&nbsp;| &nbsp;Bike Rental</div>
               <button
                 type="button"
                 className="btn-close"
