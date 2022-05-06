@@ -6,13 +6,13 @@ export const City = () => {
   return (
     <>
       <div
-        className="modal fade"
+        className={`modal fade`}
         id="exampleModal"
         tabindex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
       >
-        <div className={`modal-dialog modal-lg`}>
+        <div className={`modal-dialog modal-lg ${styles.modalContainer} `}>
           <div className="modal-content">
             <div className={`modal-header ${styles.header}`}>
               <div className={styles.logo}>

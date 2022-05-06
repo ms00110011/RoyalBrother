@@ -6,6 +6,7 @@ export const User = () => {
   function file(){
     console.log("hello")
   }
+  document.title = "Profile | Royalbrothers.com"
   return (
     <div style={{ marginTop: "10px" }}>
       <div className={styles.mainContainer}>

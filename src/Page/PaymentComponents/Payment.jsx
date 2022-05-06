@@ -5,6 +5,8 @@ import american from "../../Photo/american.png";
 import club from "../../Photo/club.png";
 import rupay from "../../Photo/rupay.png";
 export const Payment = () => {
+  document.title = "https://www.royalbrothers.com/payment_initiate";
+
   return (
     <div className={`container ${styles.mainContainer}`}>
       <div className="row px-0">
