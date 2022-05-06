@@ -44,6 +44,9 @@
     background-color: #FEC51D;
     border-radius: 5px;
 }
+.map{
+  width: 100%;
+}
 @media only screen and (max-width: 992px){
     .reachContainer{
         width: 85%;
