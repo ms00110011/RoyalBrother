@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Summary.module.css";
-import { width } from "@mui/material/node_modules/@mui/system";
 export const Summary = () => {
   document.title = "Summary | Royalbrothers.com";
   return (

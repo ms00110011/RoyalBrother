@@ -24,6 +24,7 @@ import { User } from "./Page/UserComponents/User";
 import { Reach } from './Page/ReachComponents/Reach';
 import { Faq } from './Page/FaqComponents/Faq';
 import { Summary } from './Page/SummaryComponents/Summary';
+import { Payment } from './Page/PaymentComponents/Payment';
 
 function App() {
   return (
@@ -50,7 +51,8 @@ function App() {
           <Route path="/user" element={<User />} />
           <Route path="/reach" element={<Reach />} />
           <Route path="/faq" element={<Faq />} />
-          <Route path="/Summary" element={<Summary />} />
+          <Route path="/summary" element={<Summary />} />
+          <Route path="/payment" element={<Payment />} />
         </Routes>
 
         <Footer />
