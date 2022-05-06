@@ -25,6 +25,8 @@ import { Reach } from './Page/ReachComponents/Reach';
 import { Faq } from './Page/FaqComponents/Faq';
 import { Summary } from './Page/SummaryComponents/Summary';
 import { Payment } from './Page/PaymentComponents/Payment';
+import { City } from './Page/CityComponents/City';
+import { Model } from './Page/CityComponents/Model';
 
 function App() {
   return (
@@ -53,6 +55,8 @@ function App() {
           <Route path="/faq" element={<Faq />} />
           <Route path="/summary" element={<Summary />} />
           <Route path="/payment" element={<Payment />} />
+          <Route path="/city" element={<City />} />
+          <Route path="/Model" element={<Model />} />
         </Routes>
 
         <Footer />

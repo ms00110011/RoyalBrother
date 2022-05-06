@@ -1,0 +1,129 @@
+.mainGrid {
+  background-color: whitesmoke;
+  width: 55%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 172px);
+  grid-template-rows: auto;
+  row-gap: 35px;
+}
+
+.itemContainer1{
+  background-image: url(../../Photo/agra.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.itemContainer2{
+  background-image: url(../../Photo/ahmedabad.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.itemContainer3{
+  background-image: url(../../Photo/Alleppy.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.itemContainer4{
+  background-image: url(../../Photo/Amritsar.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.itemContainer5{
+  background-image: url(../../Photo/Andaman.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.itemContainer6{
+  background-image: url(../../Photo/Bangalore.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.itemContainer7{
+  background-image: url(../../Photo/Bangalore.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.itemContainer8{
+  background-image: url(../../Photo/Bankok.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.itemContainer9{
+  background-image: url(../../Photo/Belagaum.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.itemContainer10{
+  background-image: url(../../Photo/Bhubneswar.jpg);
+  background-position: center;
+  width: 153px;
+  height: 140px;
+  background-color: green;
+  border-radius: 8px;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-end;
+}
+.cityImg {
+  width: 100%;
+  border-radius: 8px;
+}
+.cityName {
+  text-align: center;
+  color: white;
+  z-index: 1;
+}

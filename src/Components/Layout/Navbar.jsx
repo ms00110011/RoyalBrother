@@ -19,26 +19,18 @@ import { getUsers, getUsersAction } from "../../Redux/Action";
 import { useDispatch } from "react-redux";
 import PositionMenu2 from "./PositionMenu2";
 
-
-
 export default function Navbar() {
-
- 
-
   const login = useSelector((state) => state.isLogin);
-  const naam = useSelector((state)=>state?.user[0]?.name) || '';
+  const naam = useSelector((state) => state?.user[0]?.name) || "";
 
   const dispatch = useDispatch();
 
-  React.useEffect(()=>{
-    if(localStorage.getItem('user')===null){}
-    else {
-      dispatch(getUsers(JSON.parse(localStorage.getItem('user'))))
+  React.useEffect(() => {
+    if (localStorage.getItem("user") === null) {
+    } else {
+      dispatch(getUsers(JSON.parse(localStorage.getItem("user"))));
     }
-  },[])
-
-
-
+  }, []);
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -86,7 +78,6 @@ export default function Navbar() {
               marginLeft: "40px",
               marginRight: "40px",
             }}
-
             className={styles.responseNav}
           >
             <Button
@@ -114,49 +105,58 @@ export default function Navbar() {
 
             <Button
               variant="text"
-              sx={{ textTransform: "none", color: "black"  }}
+              sx={{ textTransform: "none", color: "black" }}
             >
-              <PositionMenu heading="Partner with us" Link1="Earn with us" Link2="Own a franchise" Link3=""/>
+              <PositionMenu
+                heading="Partner with us"
+                Link1="Earn with us"
+                Link2="Own a franchise"
+                Link3=""
+              />
             </Button>
 
-
             <Button
-              sx={{ borderColor: "#FED250", color: "black", height:"40px",marginTop:"auto",marginBottom:"auto" }}
+              sx={{
+                borderColor: "#FED250",
+                color: "black",
+                height: "40px",
+                marginTop: "auto",
+                marginBottom: "auto",
+              }}
               variant="outlined"
               className={styles.yellow}
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
             >
               Pune
             </Button>
           </div>
 
-          {login?
-          
-          <PositionMenu2 user={naam} />
-          
-          
-          :<div style={{ display: "flex", justifyContent: "right" }}>
-            <Button
-              component={Link}
-              to="/login"
-              sx={{ color: "black", textTransform: "none" }}
-              color="inherit"
-            >
-              Login
-            </Button>
-            <Button
-              component={Link}
-              to="/signup"
-              sx={{
-                color: "black",
-                backgroundColor: "#FED250",
-                textTransform: "none",
-              }}
-            >
-              Sign Up
-            </Button>
-          </div>
-          }
-
+          {login ? (
+            <PositionMenu2 user={naam} />
+          ) : (
+            <div style={{ display: "flex", justifyContent: "right" }}>
+              <Button
+                component={Link}
+                to="/login"
+                sx={{ color: "black", textTransform: "none" }}
+                color="inherit"
+              >
+                Login
+              </Button>
+              <Button
+                component={Link}
+                to="/signup"
+                sx={{
+                  color: "black",
+                  backgroundColor: "#FED250",
+                  textTransform: "none",
+                }}
+              >
+                Sign Up
+              </Button>
+            </div>
+          )}
         </Toolbar>
       </AppBar>
     </Box>
