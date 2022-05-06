@@ -1,9 +1,13 @@
-
-
 import React from "react";
+import { useDispatch } from "react-redux";
+import { datetime } from "../../Redux/Action";
 
 // Rearrange date value to get the order you want... also replace / with a cooler separator like ⋅
 export default function TodayDate() {
+
+  let dispatch = useDispatch()
+
+
   const current = new Date();
 
   console.log(current.getDate())
@@ -19,6 +23,8 @@ export default function TodayDate() {
 
 
   const re = `${current.getFullYear()}-${month}-${date}`;
+
+   dispatch(datetime(re))
 
   return re
 }

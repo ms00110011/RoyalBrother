@@ -16,9 +16,11 @@ export const Login = () => {
 
 
   const [formData, setFormdata] = React.useState({
-    email: "",
+    phone: "",
     password: "",
   });
+
+  
 
   const handlechange = (e) => {
     const { id, value } = e.target;
@@ -34,7 +36,7 @@ export const Login = () => {
 
     const payload = JSON.stringify(formData);
 
-    try{dispactch(getUsersAction(formData.email, formData.password));
+    try{dispactch(getUsersAction(formData.phone, formData.password));
     navigate('/')
     }
     catch(error) {console.log(error)}
@@ -43,7 +45,7 @@ export const Login = () => {
 
 
 
-  const { email, password } = formData;
+  const { phone, password } = formData;
 
   return (
     <div>
@@ -75,7 +77,7 @@ export const Login = () => {
                   marginLeft: "22px",
                   padding: "0",
                 }}
-                id="email"
+                id="phone"
                 type="text"
                 placeholder="+91"
               />
@@ -88,10 +90,10 @@ export const Login = () => {
                   width: "250px",
                   borderRadius: "5px",
                 }}
-                id="email"
+                id="phone"
                 type="text"
                 onChange={handlechange}
-                value={email}
+                value={phone}
               />
               <br />
             </div>
@@ -110,7 +112,7 @@ export const Login = () => {
               type="text"
               placeholder="Enter your Password"
               onChange={handlechange}
-              email={password}
+              phone={password}
             />{" "}
             <br />
             {/* <input type="submit" /> */}
