@@ -5,7 +5,6 @@ import american from "../../Photo/american.png";
 import club from "../../Photo/club.png";
 import rupay from "../../Photo/rupay.png";
 export const Payment = () => {
- 
   return (
     <div className={`container ${styles.mainContainer}`}>
       <div className="row px-0">
