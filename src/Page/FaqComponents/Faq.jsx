@@ -43,6 +43,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 }));
 
 export function Faq() {
+  document.title="FAQs - Bike Booking, Cancellation, Security | Royalbrothers.com"
   const [expanded, setExpanded] = React.useState("panel1");
 
   const handleChange = (panel) => (event, newExpanded) => {
