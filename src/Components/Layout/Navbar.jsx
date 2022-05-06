@@ -18,6 +18,8 @@ import { useSelector } from "react-redux";
 import { getUsers, getUsersAction } from "../../Redux/Action";
 import { useDispatch } from "react-redux";
 import PositionMenu2 from "./PositionMenu2";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 export default function Navbar() {
   const login = useSelector((state) => state.isLogin);
@@ -128,7 +130,8 @@ export default function Navbar() {
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              Pune
+              <LocationOnIcon style={{ color: "orange" }}/>&nbsp;
+              Agra<KeyboardArrowDownIcon/>
             </Button>
           </div>
 
