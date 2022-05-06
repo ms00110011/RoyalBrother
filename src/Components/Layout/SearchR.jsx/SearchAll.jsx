@@ -26,7 +26,7 @@ export const SearchAll = () => {
 
   const getData = () => {
 
-    console.log(id.id)
+    // console.log(id.id)
 
     fetch(`http://localhost:9008/search/`)
       .then((res) => res.json())

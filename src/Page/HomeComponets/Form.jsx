@@ -22,7 +22,9 @@ const Form = () => {
   const [data, setData] = useState(init);
   const [duration, setDuration] = useState(init);
   console.log(data);
-  const [totalHours, setTotalHours] = useState([]);
+
+
+  const [totalHours, setTotalHours] = useState(0);
   const [timeline, setTimeline] = useState("");
 
   const dataHandle = (e) => {
@@ -142,13 +144,21 @@ const Form = () => {
       console.log(str);
 
        totalHoursVEH = hrs + year * 8760 + month * 730 + days * 24;
+
     }
 
-    setTimeline(str)
-    setTotalHours([totalHoursVEH])
 
-    dispatch(hourspay(totalHours))
-    dispatch(timelineveh(timeline))
+    console.log(totalHoursVEH+"sajkdhkdhkdhkajdh")
+    console.log(str+"jklajsdlkajdlkajdlksajdlkajdlkajdlkajdlkjaj")
+    
+
+    setTimeline(str)
+    setTotalHours(totalHoursVEH)
+
+    
+
+    dispatch(hourspay(totalHoursVEH))
+    dispatch(timelineveh(str))
 
     setData(data);
     dispatch(datetime(data));

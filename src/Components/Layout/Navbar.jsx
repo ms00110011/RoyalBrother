@@ -27,7 +27,7 @@ export default function Navbar() {
  
 
   const login = useSelector((state) => state.isLogin);
-  const naam = useSelector((state)=>state?.user[0]?.name) || '';
+  const naam = useSelector((state)=>state?.user?.name) || '';
 
   const dispatch = useDispatch();
 

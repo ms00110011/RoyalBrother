@@ -31,11 +31,11 @@ export default function Searchcard({ name, price, img, id }) {
     (state) => state.durationData
   );
 
-  // var { totalHours } = useSelector(
-  //   (state) => state.paytotal
-  // );
+  var  paytotal  = useSelector(
+    (state) => state.payTotal
+  );
 
-  var { timeline } = useSelector(
+  var  timeline  = useSelector(
     (state) => state.timeline
   );
 
@@ -61,7 +61,6 @@ export default function Searchcard({ name, price, img, id }) {
         >
           {name}
         </h6>
-      <h1 style={{color:"black"}}>{timeline}</h1>
 
         <img
           src={img}
@@ -106,7 +105,7 @@ export default function Searchcard({ name, price, img, id }) {
         <div className={styles.buttonDiv}>
           <div style={{ fontSize: "15px", fontWeight: "bold" }}>
             <CurrencyRupeeIcon sx={{ fontSize: "large" }} />
-            {price}
+            {price*paytotal}
             <p
               style={{ fontSize: "10px", fontWeight: "light", paddingTop: "0" }}
             >
