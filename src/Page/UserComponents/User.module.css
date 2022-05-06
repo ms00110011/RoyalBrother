@@ -1,0 +1,149 @@
+* {
+  font-family: muli, sans-serif;
+}
+.mainContainer {
+  width: 65%;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.imgContainer {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.profile {
+  font-weight: 700;
+  font-size: 19px;
+  color: #95989a;
+}
+.avtar {
+  margin: auto;
+  width: 40%;
+}
+.wallet {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 13.6538px 34.1338px 0px;
+  border-radius: 8px;
+  padding: 25px 12px 13px 12px;
+}
+.balance {
+  font-weight: 600;
+  font-size: 13px;
+}
+.balanceBtn {
+  background-color: #fec51d;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px;
+}
+.name {
+  font-weight: 700;
+  font-size: 12px;
+}
+.no {
+  font-weight: 400;
+  font-size: 12px;
+}
+.email {
+  font-weight: 400;
+  font-size: 12px;
+}
+.credit {
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 1px;
+}
+.userDetail {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 13.6538px 34.1338px 0px;
+  border-radius: 8px;
+  padding: 25px 18px 2px 18px;
+  margin-bottom: 13px;
+}
+.uploadDoc {
+  color: #95989a;
+  font-weight: 700;
+  font-size: 17px;
+}
+.upload {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 13.6538px 34.1338px 0px;
+  border-radius: 8px;
+  padding: 0px;
+}
+.uploadBtn {
+  background-color: #eaeaea;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #9a9c9e;
+  font-size: 13px;
+  padding: 7px 10px;
+  margin-bottom: 34px;
+}
+.uploadTop {
+  padding: 25px 18px 2px 25px;
+}
+.accountStatus {
+  color: #9a9c9e;
+  font-size: 17px;
+  font-weight: 700;
+}
+.awaiting {
+  color: #9a9c9e;
+  font-size: 13px;
+  font-weight: 400;
+}
+.guidelinesContainer {
+  background-color: #f2f2f2;
+  padding: 25px 18px 2px 25px;
+
+  border-radius: 8px;
+}
+.guidelines {
+  color: #9a9c9e;
+  font-size: 15px;
+  font-weight: 700;
+}
+.points {
+  font-size: 10px;
+  font-weight: 400;
+}
+.uploadD {
+  display: flex;
+  gap: 2em;
+}
+.add {
+  cursor: pointer;
+  width: 63px;
+  height: 63px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.addIcon {
+  width: 25px;
+  height: 25px;
+  background: silver;
+  border-radius: 50%;
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.license {
+  font-size: 11px;
+  color: #9a9c9e;
+  font-weight: 400;
+}
+@media only screen and (max-width: 992px) {
+  .mainContainer {
+    width: 98%;
+  }
+}

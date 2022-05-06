@@ -5,6 +5,7 @@ import SearchCard from "./SearchCard";
 import styles from "./SearchR.module.css";
 
 export const SearchR = () => {
+
   const id = useParams();
   console.log(id);
   const [data, setData] = React.useState([]);
@@ -64,11 +65,14 @@ export const SearchR = () => {
           <SearchCard
             name={item.name}
             img={item.img}
+
             price={item.priceHour}
+
             id={item.id}
           />
         ))}
       </div>
+
 
       <div>
         <p style={{ marginLeft: "25px" }}>Suggested Results</p>
