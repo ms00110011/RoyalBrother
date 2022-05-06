@@ -1,13 +1,53 @@
-import { DELETE_USER, GET_USERS } from "./Actiontype";
+import {
+  DATE_TIME,
+  DELETE_USER,
+  GET_USERS,
+  HOURS_PAY,
+  LOGIN,
+  LOGOUT,
+  TIMELINE_VEH,
+} from "./Actiontype";
 
-export const Reducer = (state = { isLogin: false, user: {} }, action) => {
+export const Reducer = (
+  state = {
+    isLogin: false,
+    user: {},
+    durationData: {pickupDate:"",pickupTime: "",dropDate: "",dropTime: "",},
+    payTotal: "",
+    timeline: "",
+    token: ""
+
+  },
+  action
+) => {
   switch (action.type) {
     case GET_USERS: {
-      return { ...state, user: action.payload, isLogin:true };
+      return { ...state, user: action.payload, isLogin: true };
     }
 
     case DELETE_USER: {
-      return {...state,user:action.payload,isLogin:false}
+      return { ...state, user: action.payload, isLogin: false };
+    }
+
+    case DATE_TIME: {
+      return { ...state, durationData: action.payload };
+    }
+
+    case HOURS_PAY: {
+      console.log(action.payload)
+      return { ...state, payTotal: action.payload };
+    }
+
+    case TIMELINE_VEH: {
+      return { ...state, timeline: action.payload };
+    }
+
+    case LOGOUT: {
+      return {...state,token:action.payload }
+    }
+
+    case LOGIN: {
+      return {...state,token:action.payload }
     }
 
     default: {
@@ -15,30 +55,3 @@ export const Reducer = (state = { isLogin: false, user: {} }, action) => {
     }
   }
 };
-
-// const initialState = {
-//     product: [],
-//     isLooding: true,
-
-//   }
-
-//   const appReducer = (state= initialState,{type,payload})=> {
-//     switch(type){
-//         case "GET_PRODUCT_REQUEST": {
-//             return {
-//               ...state,
-//               isLooding: true
-//             };
-//           }
-//         case "GET_PRODUCT" : {
-//             return {
-//                 ...state,
-//                 product : payload.product,
-//                 isLooding: false
-//             }
-//         }
-//         case "ADD_TO_CART": {
-//             return {
-//                 ...state,
-//                 product : [...state.product, payload.product]
-//             }

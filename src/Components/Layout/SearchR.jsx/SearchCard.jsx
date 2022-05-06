@@ -10,6 +10,8 @@ import styles from "./SearchCard.module.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import ForwardIcon from "@mui/icons-material/Forward";
+import DropDownADD from "./DropDownAddress/DropDownADD";
 
 const bull = (
   <Box
@@ -21,8 +23,21 @@ const bull = (
 );
 
 export default function Searchcard({ name, price, img, id }) {
+  const login = useSelector((state) => state.isLogin);
 
-  const login = useSelector(state=>state.isLogin)
+
+
+  var { pickupDate, pickupTime, dropDate, dropTime } = useSelector(
+    (state) => state.durationData
+  );
+
+  var  paytotal  = useSelector(
+    (state) => state.payTotal
+  );
+
+  var  timeline  = useSelector(
+    (state) => state.timeline
+  );
 
 
 
@@ -30,55 +45,90 @@ export default function Searchcard({ name, price, img, id }) {
     <Card
       sx={{
         minWidth: 275,
-        backgroundColor: "whitesmoke",
-        width: "80%",
+        backgroundColor: "white",
+        width: "70%",
         margin: "25px",
+        padding: "0",
+        height: "345px",
       }}
     >
-      <CardContent>
+      <CardContent sx={{ paddingLeft: "0", paddingRight: "0" }}>
         <h6
-          sx={{ fontSize: 14, textAlign: "center" }}
+          style={{ fontSize: "14px", textAlign: "center", fontWeight: "bold" }}
           color="text.secondary"
-          className={styles.centre}
           gutterBottom
+          className={styles.centre}
         >
           {name}
         </h6>
-        <img src={img} alt="" />
+
+        <img
+          src={img}
+          alt=""
+          style={{ paddingBottom: "10px", width: "60%", marginLeft: "49px" }}
+        />
 
         <div className={styles.centre}>
-          <p style={{ padding: "0", margin: "0", color: "gray" }}>
+          <p
+            style={{
+              padding: "0",
+              margin: "0",
+              color: "gray",
+              borderTop: "3px solid rgb(236, 236, 236)",
+              paddingTop: "10px",
+            }}
+            className={styles.setron}
+          >
             Available at
           </p>
           <p style={{ borderBottom: "1px solid gray", color: "black" }}>
-            Vishalpur (Nehru Bridge Corner)
+            <DropDownADD sx={{ backgroundColor: "white", color: "red" }} />
           </p>
         </div>
 
         <div className={styles.duration}>
           <div className={styles.bow}>
-            <div>09:00 am</div>
-            <div>07:00 pm</div>
+            <div>{pickupTime}</div>
+            <div style={{ fontWeight: "lighter" }}>{pickupDate}</div>
           </div>
+
+          <div>
+            <ForwardIcon />
+          </div>
+
           <div className={styles.bow}>
-            <div style={{ fontWeight: "lighter" }}>11 Apr 2022</div>
-            <div style={{ fontWeight: "lighter" }}>24 Apr 2022</div>
+            <div>{dropTime}</div>
+            <div style={{ fontWeight: "lighter" }}>{dropDate}</div>
           </div>
         </div>
 
         <div className={styles.buttonDiv}>
-          <div>
-            <CurrencyRupeeIcon />
-            {price}
+          <div style={{ fontSize: "15px", fontWeight: "bold" }}>
+            <CurrencyRupeeIcon sx={{ fontSize: "large" }} />
+            {price*paytotal}
+            <p
+              style={{ fontSize: "10px", fontWeight: "light", paddingTop: "0" }}
+            >
+              (1200 kms included)
+            </p>
           </div>
           <div>
             <Button
-              sx={{ backgroundColor: "#FED250", color: "black" }}
+              classname={styles.seans}
+              sx={{
+                backgroundColor: "#FED250",
+                color: "black",
+                fontWeight: "500",
+                padding: "5px 40px 5px 40px",
+                fontSize: "14px",
+                textTransform: "none",
+              }}
               variant="contained"
               component={Link}
-              to= {login?`/searchR/${id}`:'/login'}
+              to={login ? `/searchR/${id}` : "/login"}
               // to={'/login'}
-            > 
+              size="medium"
+            >
               Book
             </Button>
           </div>

@@ -20,12 +20,9 @@ import { Woman } from "./Page/WomanComponents/Woman";
 import { Terms } from "./Page/TermsComponents/Terms";
 import { Privacy } from "./Page/PrivacyComponents/Privacy";
 import { Blog } from "./Page/BlogComponents/Blog";
-import { User } from "./Page/UserComponents/User";
-import { Reach } from './Page/ReachComponents/Reach';
-import { Faq } from './Page/FaqComponents/Faq';
-import { Summary } from './Page/SummaryComponents/Summary';
-import { Payment } from './Page/PaymentComponents/Payment';
-import { City } from './Page/CityComponents/City';
+
+import { SearchAll } from "./Components/Layout/SearchR.jsx/SearchAll";
+
 
 function App() {
   return (
@@ -39,9 +36,9 @@ function App() {
           <Route path="/tariff" element={<Tariff />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/searchR" element={<SearchR />} />
+          <Route path="/search" element={<SearchAll />} />
           <Route path="/confirm" element={<Confirmed />} />
-          <Route path="/searchR/:id" element={<ProductDetails />} />
+          <Route path="/searchR/:id" element={<SearchR />} />
           <Route path="/earnwithus" element={<Partner />} />
           <Route path="/ownafranchise" element={<Franchise />} />
           <Route path="/rbforwomen" element={<Woman />} />

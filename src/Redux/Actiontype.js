@@ -1,2 +1,7 @@
 export const GET_USERS = "GET_USERS"
 export const DELETE_USER  = "DELETE_USER"
+export const DATE_TIME = "DATE_TIME"
+export const HOURS_PAY = "HOURS_PAY"
+export const TIMELINE_VEH = "TIMELINE_VEH"
+export const LOGIN = "LOGIN"
+export const LOGOUT = "LOGOUT"

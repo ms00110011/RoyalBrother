@@ -20,7 +20,7 @@ export const Signup = () => {
     name: "",
     email: "",
     password: "",
-    phone: "",
+    mobile: "",
   });
 
   const handlechange = (e) => {
@@ -37,7 +37,7 @@ export const Signup = () => {
 
     const payload = JSON.stringify(formData);
 
-    fetch("https://rbjson.herokuapp.com/user", {
+    fetch("http://localhost:9008/signup", {
       method: "POST",
       body: payload,
       headers: { "content-type": "application/json" },
@@ -46,7 +46,7 @@ export const Signup = () => {
       .then((res) => <Navigate to="/login" /> );
   };
 
-  const { name, phone, email, password } = formData;
+  const { name, mobile, email, password } = formData;
 
   return (
     <div>
@@ -128,10 +128,10 @@ export const Signup = () => {
                   width: "250px",
                   borderRadius: "5px",
                 }}
-                id="phone"
+                id="mobile"
                 type="text"
                 onChange={handlechange}
-                value={phone}
+                value={mobile}
               />
               <br />
             </div>
@@ -164,7 +164,8 @@ export const Signup = () => {
                 marginLeft: "auto",
                 marginRight: "auto",
               }}
-              onClick={()=>navigate('/login')}
+              // onClick={()=>navigate('/login')}
+              // onClick={handleSumbit}
             >
               Sign Up
             </Button>

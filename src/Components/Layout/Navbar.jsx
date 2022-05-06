@@ -18,12 +18,17 @@ import { useSelector } from "react-redux";
 import { getUsers, getUsersAction } from "../../Redux/Action";
 import { useDispatch } from "react-redux";
 import PositionMenu2 from "./PositionMenu2";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
+import PinDropIcon from '@mui/icons-material/PinDrop';
+
+
+
 
 export default function Navbar() {
   const login = useSelector((state) => state.isLogin);
-  const naam = useSelector((state) => state?.user[0]?.name) || "";
+
+  const naam = useSelector((state)=>state?.user?.name) || '';
+
 
   const dispatch = useDispatch();
 
@@ -107,14 +112,19 @@ export default function Navbar() {
 
             <Button
               variant="text"
-              sx={{ textTransform: "none", color: "black" }}
+
+              sx={{ textTransform: "none", color: "black"  }}
             >
-              <PositionMenu
-                heading="Partner with us"
-                Link1="Earn with us"
-                Link2="Own a franchise"
-                Link3=""
-              />
+              <PositionMenu heading="Partner with us" Link1="Earn with us" Link2="Own a franchise" Link3=""/>
+            </Button>
+
+
+            <Button
+              sx={{ borderColor: "#FED250", color: "black", height:"40px",marginTop:"auto",marginBottom:"auto" }}
+              variant="outlined"
+              className={styles.yellow}
+            > <PinDropIcon sx={{color:"#FED250", paddingRight:"5px"}} />
+              Pune
             </Button>
 
             <Button

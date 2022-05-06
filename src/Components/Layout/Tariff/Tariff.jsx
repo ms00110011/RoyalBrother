@@ -1,38 +1,35 @@
-import React from 'react'
-import BasicCard from './BasicCard'
-import styles from "./Tariff.module.css"
+import React from "react";
+import BasicCard from "./BasicCard";
+import styles from "./Tariff.module.css";
 export const Tariff = () => {
+  const [data, setData] = React.useState([]);
 
-    const [data,setData] = React.useState([])
-
-
-React.useEffect(()=>{
-    fetch(`https://rbjson.herokuapp.com/tariff`)
-    .then((res)=>res.json())
-    .then((res)=>setData(res))
-},[])
-
-
-
-
-
-
-
-
+  React.useEffect(() => {
+    fetch(`http://localhost:9008/search`)
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res)
+        setData(res)});
+  }, []);
 
   return (
     <div>
+      <div className={styles.tariffWrapper}>
+        <h2 style={{ padding: "50px" }}>Bike rental tariffs in Pune</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
+          {data.map((item) => (
 
-    <div className={styles.tariffWrapper}>
-        <h2 style={{padding:"50px"}}>Bike rental tariffs in Pune</h2>
-<div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr"}}>
-{        data.map((item)=>(
-            <BasicCard name={item.name} img={item.img} booktime={item.booktime} kmlimit={item.kmlimit} exkm={item.exkm} />
-        ))}
-
-</div>
+            <BasicCard
+              id={item._id}
+              name={item.name}
+              img={item.img}
+              priceHour={item.priceHour}
+              kmlimit={item.kmlimit}
+              exkm={item.exkm}
+            />
+          ))}
+        </div>
+      </div>
     </div>
-
-    </div>
-  )
-}
+  );
+};
