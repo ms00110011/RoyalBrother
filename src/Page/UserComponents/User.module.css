@@ -110,7 +110,38 @@
   font-size: 10px;
   font-weight: 400;
 }
-
+.uploadD {
+  display: flex;
+  gap: 2em;
+}
+.add {
+  cursor: pointer;
+  width: 63px;
+  height: 63px;
+  border-radius: 5px;
+  border: 1px solid silver;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.addIcon {
+  width: 25px;
+  height: 25px;
+  background: silver;
+  border-radius: 50%;
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.license {
+  font-size: 11px;
+  color: #9a9c9e;
+  font-weight: 400;
+}
 @media only screen and (max-width: 992px) {
   .mainContainer {
     width: 98%;

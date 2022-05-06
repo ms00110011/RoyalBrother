@@ -3,6 +3,9 @@ import styles from "./User.module.css";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 import EditIcon from "@mui/icons-material/Edit";
 export const User = () => {
+  function file(){
+    console.log("hello")
+  }
   return (
     <div style={{ marginTop: "10px" }}>
       <div className={styles.mainContainer}>
@@ -21,7 +24,7 @@ export const User = () => {
               <p className={styles.name}>Manoj</p>
               <p className={styles.no}>91 8435925392</p>
               <p className={styles.email}>
-               amnishad0512@gmail.com &nbsp; <EditIcon sx={{ fontSize: 12 }}  />
+                amnishad0512@gmail.com &nbsp; <EditIcon sx={{ fontSize: 12 }} />
                 <i class="material-icons emaileditbtn"></i>
               </p>
               <p className={styles.credit}>Available Travel Credits : 0</p>
@@ -36,6 +39,30 @@ export const User = () => {
           <div className={`col-lg-8 col-md-8 col-sm-12 ${styles.upload}`}>
             <div className={styles.uploadTop}>
               <p className={styles.uploadDoc}>UPLOAD DOCUMENTS</p>
+              <p className={styles.license}>Driving License</p>
+              <div className={styles.uploadD}>
+                <div className={styles.add} onClick={file}>
+                  <div className={styles.addIcon}>+</div>
+                </div>
+                <div className={styles.add}>
+                  <div className={styles.addIcon}>+</div>
+                </div>
+                <div className={styles.add}>
+                  <div className={styles.addIcon}>+</div>
+                </div>
+              </div><br />
+              <p className={styles.license}>ID Proof</p>
+              <div className={styles.uploadD}>
+                <div className={styles.add}>
+                  <div className={styles.addIcon}>+</div>
+                </div>
+                <div className={styles.add}>
+                  <div className={styles.addIcon}>+</div>
+                </div>
+                <div className={styles.add}>
+                  <div className={styles.addIcon}>+</div>
+                </div>
+              </div><br />
               <button className={styles.uploadBtn}>UPLOAD</button>
               <p className={styles.accountStatus}>Account Status</p>
               <p className={styles.awaiting}>
