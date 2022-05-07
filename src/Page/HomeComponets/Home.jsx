@@ -11,9 +11,11 @@ import HomeBike1 from "../../Photo/homeBike.png";
 import HomeBike2 from "../../Photo/homeBike1.png";
 import HomeBike3 from "../../Photo/homeBike3.png";
 import Senitized from "./Senitized";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Line from "./Line";
 import add from "../HomeComponets/icons/add.png";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
 
 const Home = () => {
   return (
@@ -43,54 +45,30 @@ const Home = () => {
             <h1 style={{ color: "black" }}>OUR FLEET</h1>
             <Line />
           </div>
-          <div className={style.fleetDuration}>
-            <label htmlFor="">Duration </label>
-            <select name="hours" id="">
-              <option value="">Hours</option>
-              <option value="">7 Days</option>
-              <option value="">15 Days</option>
-              <option value="">1 months</option>
-            </select>
-          </div>
           <div className={style.fleet_card_container}>
             <OurFleetCard
               img={HomeBike1}
               text={"Honda Dio"}
-              price={"$1/Hours"}
+              price={"19/hr"}
             />
             <OurFleetCard
               img={HomeBike2}
               text={"Honda Activa 5 G"}
-              price={"$2/Hours"}
+              price={"22/hr"}
             />
             <OurFleetCard
               img={HomeBike3}
               text={"Royal EndField 350"}
-              price={"$3/Hours"}
+              price={"35/hr"}
             />
-            <div  >
-              <div className={style.add_more}>
-                <Link to="/searchR">
-                <img
-                  src={add}
-                  onClick={() => {
-                    console.log("aman");
-                  }}
-                  alt=""
-                />
-                </Link>
-              </div>
-              <OurFleetCard
-                img={HomeBike3}
-                text={"Royal EndField 350"}
-                price={"$3/Hours"}
-              />
+            <div>
+             <Button component={Link} to={'/tariff'} sx={{backgroundColor:"#fed250", color:"black",marginTop:"150px", marginLeft:"20px", height:"100px", borderRadius:"15px", width:"350px"}}>Check out our Tariff Page <ArrowForwardIcon /></Button>
             </div>
           </div>
         </div>
       </div>
       <div className={style.slider_com}>
-        <h1 style={{ color: "black" }}>WE BELIEVE IN QUALITY</h1>
+        <h1 style={{ color: "black",marginTop:"-400px" }}>WE BELIEVE IN QUALITY</h1>
         <Slider />
       </div>
     </div>

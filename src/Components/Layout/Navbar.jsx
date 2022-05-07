@@ -101,6 +101,8 @@ export default function Navbar() {
             <Button
               variant="text"
               sx={{ textTransform: "none", color: "black" }}
+              component={Link}
+              to="/rbforwomen"
             >
               What's New?
             </Button>

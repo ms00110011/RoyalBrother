@@ -76,7 +76,7 @@ export default function DropDownADD() {
         sx={{backgroundColor:"white",color:"black", fontSize:"12px",width:"100%", textTransform:"none"}}
         className={styles.areaButton}
       >
-        Sadashiva Nagar
+        MG Road
       </Button>
       <StyledMenu
         id="demo-customized-menu"
@@ -89,16 +89,13 @@ export default function DropDownADD() {
         
       >
         <MenuItem onClick={handleClose} disableRipple >
-          <EditIcon />
+        HSR layout
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
-          <FileCopyIcon />
-          Duplicate
+          Koramangla
         </MenuItem>
-        <Divider sx={{ my: 0.5 }} />
         <MenuItem onClick={handleClose} disableRipple>
-          <ArchiveIcon />
-          Archive
+        Indira Nagar
         </MenuItem>
         <MenuItem onClick={handleClose} disableRipple>
           <MoreHorizIcon />

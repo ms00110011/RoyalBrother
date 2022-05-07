@@ -14,6 +14,10 @@ export const Login = () => {
 
   const navigate = useNavigate()
 
+  const {pickupDate} = useSelector(
+    (state)=>state.durationData
+  )
+
 
   const [formData, setFormdata] = React.useState({
     phone: "",
@@ -37,7 +41,7 @@ export const Login = () => {
     const payload = JSON.stringify(formData);
 
     try{dispactch(getUsersAction(formData.phone, formData.password));
-    navigate('/')
+        navigate(`/`)
     }
     catch(error) {console.log(error)}
     
@@ -109,7 +113,7 @@ export const Login = () => {
                 marginBottom: "40px",
               }}
               id="password"
-              type="text"
+              type="password"
               placeholder="Enter your Password"
               onChange={handlechange}
               phone={password}

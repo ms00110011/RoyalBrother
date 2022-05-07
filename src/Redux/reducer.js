@@ -19,7 +19,7 @@ export const Reducer = (
     payTotal: "",
     timeline: "",
     token: "", 
-    city:"Bangalore",
+    city:"Pune",
     vehicle: {name:"",img:"",perhr:""},
     rideamount:""
   },

@@ -8,6 +8,7 @@ import styles from "./SearchR.module.css"
 
 export const SearchAll = () => {
 
+  var city = useSelector((state) => state.city);
 
 
 
@@ -20,15 +21,14 @@ export const SearchAll = () => {
     getData()
     // getLow()
     // getHigh()
-  },[])
-
+  },[city])
 
 
   const getData = () => {
 
     // console.log(id.id)
 
-    fetch(`http://localhost:9008/search/`)
+    fetch(`http://localhost:9008/searchcity/${city}`)
       .then((res) => res.json())
       .then((res) => {console.log(res)
         setData(res)})

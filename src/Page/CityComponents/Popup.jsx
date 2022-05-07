@@ -12,6 +12,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import AddIcon from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
 import { blue } from '@mui/material/colors';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { useDispatch } from 'react-redux';
 import { setCity } from '../../Redux/Action';
 
@@ -85,7 +86,7 @@ export default function Popup() {
                 justifyContent:"centre",
                 marginTop:"-50px"
               }}>
-        {selectedValue}
+      <LocationOnIcon sx={{color:"#FED250", marginRight:"5px"}} />{selectedValue}
       </Button>
       <SimpleDialog
         selectedValue={selectedValue}
