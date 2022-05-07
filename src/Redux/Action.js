@@ -34,7 +34,7 @@ export const getUsersAction = (phone, password) => {
     })
       .then((res) => res.json())
       .then((res)=>{
-
+        
         dispatch(getUsers(res.userDetail))
         dispatch(setToken(res.token))
         localStorage.setItem("token", res.token);
