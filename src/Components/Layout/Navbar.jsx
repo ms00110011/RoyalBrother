@@ -36,9 +36,27 @@ export default function Navbar() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    if (localStorage.getItem("user") === null) {
+
+
+    if (localStorage.getItem("token") === null) {
     } else {
-      dispatch(getUsers(JSON.parse(localStorage.getItem("user"))));
+
+      console.log(localStorage.getItem("token"))
+      const payload = JSON.stringify({token:localStorage.getItem("token")})
+
+      fetch("http://localhost:9008/tokenUser", {
+        method: "POST",
+        body: payload,
+        headers: { "content-type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((res)=>{
+          console.log(res)
+          dispatch(getUsers(res))
+        })
+  
+
+      // dispatch(getUsers(JSON.parse(localStorage.getItem("user"))));
     }
   }, []);
 

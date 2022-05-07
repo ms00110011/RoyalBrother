@@ -14,7 +14,7 @@ export default function PositionMenu2({user}) {
 
 
   const logout =  () => {
-    localStorage.removeItem('user')
+    localStorage.removeItem('token')
     dispatch(deleteUser)
     navigate('/login')
     window.location.reload(false)
