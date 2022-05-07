@@ -8,6 +8,7 @@ import styles from "./SearchR.module.css"
 
 export const SearchAll = () => {
 
+  var city = useSelector((state) => state.city);
 
 
 
@@ -20,15 +21,14 @@ export const SearchAll = () => {
     getData()
     // getLow()
     // getHigh()
-  },[])
-
+  },[city])
 
 
   const getData = () => {
 
     // console.log(id.id)
 
-    fetch(`http://localhost:9008/search/`)
+    fetch(`http://localhost:9008/searchcity/${city}`)
       .then((res) => res.json())
       .then((res) => {console.log(res)
         setData(res)})
@@ -66,7 +66,7 @@ export const SearchAll = () => {
 
       <div style={{display:"grid", gridTemplateColumns:"1fr 1fr 1fr"}}>
       {        data.map((item)=>(
-            <SearchCard name={item.name} img={item.img} price={item.priceHour} id={item.id} />
+            <SearchCard name={item.name} img={item.img} price={item.priceHour} id={item._id} />
         ))}
         </div>
     </div>

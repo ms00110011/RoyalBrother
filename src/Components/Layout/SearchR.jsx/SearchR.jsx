@@ -1,5 +1,6 @@
 import { ListItemSecondaryAction } from "@mui/material";
 import React from "react";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import SearchCard from "./SearchCard";
 import styles from "./SearchR.module.css";
@@ -7,6 +8,8 @@ import styles from "./SearchR.module.css";
 export const SearchR = () => {
 
   const id = useParams();
+  var city = useSelector((state) => state.city);
+
   console.log(id);
   const [data, setData] = React.useState([]);
   const [data2, setData2] = React.useState([]);
@@ -15,10 +18,14 @@ export const SearchR = () => {
     getData();
     // getLow()
     // getHigh()
-  }, []);
+  }, [city]);
+
+
 
   const getData = () => {
     console.log(id.id);
+
+
 
     fetch(`http://localhost:9008/search/${id.id}`)
       .then((res) => res.json())
@@ -28,7 +35,7 @@ export const SearchR = () => {
       })
       .catch((err) => console.log(err));
 
-    fetch(`http://localhost:9008/search/`)
+      fetch(`http://localhost:9008/searchcity/${city}`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);

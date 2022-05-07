@@ -15,6 +15,13 @@ export const setToken = (data) => {
   };
 };
 
+export const setCity = (data) => {
+  return {
+    type: actions.CITY,
+    payload: data,
+  };
+};
+
 export const getUsersAction = (phone, password) => {
 
   let payload = JSON.stringify({mobile:phone,password:password})
@@ -27,9 +34,10 @@ export const getUsersAction = (phone, password) => {
     })
       .then((res) => res.json())
       .then((res)=>{
-
+        
         dispatch(getUsers(res.userDetail))
         dispatch(setToken(res.token))
+        localStorage.setItem("token", res.token);
 
       })
 
@@ -87,3 +95,20 @@ export const deleteToken = (token) => {
       .catch((res) => console.log(res));
   };
 };
+
+
+export const setVehicle = (payload) => {
+  return {
+    type: actions.VEHICLE_BOOK,
+    payload:payload
+};
+};
+
+
+export const rideamount = (payload) => {
+  return {
+    type: actions.RIDE_AMOUNT,
+    payload:payload
+};
+};
+

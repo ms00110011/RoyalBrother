@@ -4,8 +4,16 @@ import visa from "../../Photo/visa.png";
 import american from "../../Photo/american.png";
 import club from "../../Photo/club.png";
 import rupay from "../../Photo/rupay.png";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 export const Payment = () => {
   document.title = "https://www.royalbrothers.com/payment_initiate";
+
+
+  var rideamount = useSelector(
+    (state) => state.rideamount
+  );
 
   return (
     <div className={`container ${styles.mainContainer}`}>
@@ -160,9 +168,9 @@ export const Payment = () => {
                           </div>
                         </div>
                       </div>
-                      <button className={styles.paymentBtn}>
-                        MAKE PAYMENT
-                      </button>
+                      <Button component={Link} to={'/confirm'} sx={{backgroundColor:"#FED250", color:"black"}}>
+                        Make payment
+                      </Button>
                     </div>
                   </div>
                   <div
@@ -260,9 +268,9 @@ export const Payment = () => {
                           </div>
                         </div>
                       </div>
-                      <button className={styles.paymentBtn}>
-                        MAKE PAYMENT
-                      </button>
+                      <Button component={Link} to={'/confirm'} sx={{backgroundColor:"#FED250", color:"black"}}>
+                        Make payment
+                      </Button>
                     </div>
                   </div>
                   <div
@@ -293,7 +301,7 @@ export const Payment = () => {
           </p>
           <p>
             {" "}
-            <p className={`text-center ${styles.rupees}`}> &#x20B9;1300.00</p>
+            <p className={`text-center ${styles.rupees}`}> &#x20B9;{rideamount}.00</p>
           </p>
         </div>
       </div>

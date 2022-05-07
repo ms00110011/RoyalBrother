@@ -1,4 +1,5 @@
 import {
+  CITY,
   DATE_TIME,
   DELETE_USER,
   GET_USERS,
@@ -6,6 +7,8 @@ import {
   LOGIN,
   LOGOUT,
   TIMELINE_VEH,
+  VEHICLE_BOOK,
+  RIDE_AMOUNT
 } from "./Actiontype";
 
 export const Reducer = (
@@ -15,8 +18,10 @@ export const Reducer = (
     durationData: {pickupDate:"",pickupTime: "",dropDate: "",dropTime: "",},
     payTotal: "",
     timeline: "",
-    token: ""
-
+    token: "", 
+    city:"Pune",
+    vehicle: {name:"",img:"",perhr:""},
+    rideamount:""
   },
   action
 ) => {
@@ -48,6 +53,19 @@ export const Reducer = (
 
     case LOGIN: {
       return {...state,token:action.payload }
+    }
+
+    case CITY: {
+      return {...state,city:action.payload }
+    }
+
+    case VEHICLE_BOOK : {
+      return {...state,vehicle:action.payload}
+    }
+
+    case RIDE_AMOUNT : {
+      return {...state, rideamount:action.payload }
+
     }
 
     default: {

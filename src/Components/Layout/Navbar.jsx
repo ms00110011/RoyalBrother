@@ -17,9 +17,12 @@ import PositionMenu from "./PositionMenu";
 import { useSelector } from "react-redux";
 import { getUsers, getUsersAction } from "../../Redux/Action";
 import { useDispatch } from "react-redux";
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PositionMenu2 from "./PositionMenu2";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 import PinDropIcon from '@mui/icons-material/PinDrop';
+import Popup from "../../Page/CityComponents/Popup";
 
 
 
@@ -33,9 +36,27 @@ export default function Navbar() {
   const dispatch = useDispatch();
 
   React.useEffect(() => {
-    if (localStorage.getItem("user") === null) {
+
+
+    if (localStorage.getItem("token") === null) {
     } else {
-      dispatch(getUsers(JSON.parse(localStorage.getItem("user"))));
+
+      console.log(localStorage.getItem("token"))
+      const payload = JSON.stringify({token:localStorage.getItem("token")})
+
+      fetch("http://localhost:9008/tokenUser", {
+        method: "POST",
+        body: payload,
+        headers: { "content-type": "application/json" },
+      })
+        .then((res) => res.json())
+        .then((res)=>{
+          console.log(res)
+          dispatch(getUsers(res))
+        })
+  
+
+      // dispatch(getUsers(JSON.parse(localStorage.getItem("user"))));
     }
   }, []);
 
@@ -98,6 +119,8 @@ export default function Navbar() {
             <Button
               variant="text"
               sx={{ textTransform: "none", color: "black" }}
+              component={Link}
+              to="/rbforwomen"
             >
               What's New?
             </Button>
@@ -119,30 +142,28 @@ export default function Navbar() {
             </Button>
 
 
-            <Button
-              sx={{ borderColor: "#FED250", color: "black", height:"40px",marginTop:"auto",marginBottom:"auto" }}
-              variant="outlined"
-              className={styles.yellow}
-            > <PinDropIcon sx={{color:"#FED250", paddingRight:"5px"}} />
-              Pune
-            </Button>
-
-            <Button
+            {/* <Button
               sx={{
                 borderColor: "#FED250",
                 color: "black",
                 height: "40px",
                 marginTop: "auto",
                 marginBottom: "auto",
+                fontSize:"12px"
               }}
               variant="outlined"
               className={styles.yellow}
               data-bs-toggle="modal"
               data-bs-target="#exampleModal"
             >
-              <LocationOnIcon style={{ color: "orange" }}/>&nbsp;
-              Agra<KeyboardArrowDownIcon/>
-            </Button>
+              <LocationOnIcon style={{ color: "#FED250" }} />&nbsp;
+              Agra <KeyboardArrowDownIcon />
+            </Button> */}
+
+
+            <Popup     />
+
+
           </div>
 
           {login ? (

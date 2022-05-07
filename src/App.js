@@ -20,11 +20,33 @@ import { Woman } from "./Page/WomanComponents/Woman";
 import { Terms } from "./Page/TermsComponents/Terms";
 import { Privacy } from "./Page/PrivacyComponents/Privacy";
 import { Blog } from "./Page/BlogComponents/Blog";
-
+import { User } from "./Page/UserComponents/User";
+import { City } from "./Page/CityComponents/City";
+import { Summary } from "./Page/SummaryComponents/Summary";
+import { Payment } from "./Page/PaymentComponents/Payment";
+import { Faq } from "./Page/FaqComponents/Faq";
+import { ThemeProvider } from "styled-components";
+import { createTheme } from "@mui/material";
+import { Reach } from "./Page/ReachComponents/Reach";
 import { SearchAll } from "./Components/Layout/SearchR.jsx/SearchAll";
-
+import { TariffBook } from "./Page/HomeComponets/TariffBook";
+import Form2 from "./Page/HomeComponets/Form2";
 
 function App() {
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "rgb(244, 51, 151);",
+      },
+      secondary: {
+        main: "#1976d2",
+      },
+    },
+    typography: {
+      fontFamily: ["regular", "sans-serif"].join(","),
+    },
+  });
+
   return (
     <div className="App">
       <Provider store={store}>
@@ -33,7 +55,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/offer" element={<Offer />} />
+
+
           <Route path="/tariff" element={<Tariff />} />
+
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/search" element={<SearchAll />} />
@@ -44,12 +69,18 @@ function App() {
           <Route path="/rbforwomen" element={<Woman />} />
           <Route path="/terms&conditions" element={<Terms />} />
           <Route path="/privacypolicy" element={<Privacy />} />
+
+          <Route path="/form2/:id" element={<TariffBook />} />
+
+
           <Route path="/blog" element={<Blog />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/user" element={<User />} />
           <Route path="/reach" element={<Reach />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/summary" element={<Summary />} />
+          <Route path="/tariffBook" element={<TariffBook />} />
+
           <Route path="/payment" element={<Payment />} />
           <Route path="/city" element={<City />} />
         </Routes>

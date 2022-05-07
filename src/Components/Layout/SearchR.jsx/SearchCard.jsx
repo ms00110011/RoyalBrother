@@ -9,9 +9,10 @@ import { textAlign } from "@mui/material/node_modules/@mui/system";
 import styles from "./SearchCard.module.css";
 import CurrencyRupeeIcon from "@mui/icons-material/CurrencyRupee";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ForwardIcon from "@mui/icons-material/Forward";
 import DropDownADD from "./DropDownAddress/DropDownADD";
+import { setVehicle } from "../../../Redux/Action";
 
 const bull = (
   <Box
@@ -25,7 +26,7 @@ const bull = (
 export default function Searchcard({ name, price, img, id }) {
   const login = useSelector((state) => state.isLogin);
 
-
+  const dispatch  = useDispatch()
 
   var { pickupDate, pickupTime, dropDate, dropTime } = useSelector(
     (state) => state.durationData
@@ -38,6 +39,12 @@ export default function Searchcard({ name, price, img, id }) {
   var  timeline  = useSelector(
     (state) => state.timeline
   );
+
+
+  const handleVehicle = () => {
+    console.log("handle vehicle")
+    dispatch(setVehicle({name:name,img:img,perhr:price}))
+  }
 
 
 
@@ -123,11 +130,13 @@ export default function Searchcard({ name, price, img, id }) {
                 fontSize: "14px",
                 textTransform: "none",
               }}
+              onClick={handleVehicle}
               variant="contained"
               component={Link}
-              to={login ? `/searchR/${id}` : "/login"}
+              to={login ? `/summary` : "/login"}
               // to={'/login'}
               size="medium"
+             
             >
               Book
             </Button>

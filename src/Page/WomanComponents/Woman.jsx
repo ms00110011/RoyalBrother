@@ -8,7 +8,6 @@ import g5 from "../../Photo/wg5.jpg";
 import g6 from "../../Photo/wg6.jpg";
 export const Woman = () => {
   React.useEffect(() => {
-    document.title = "Ladies, this is your chance for a license to thrill!"
  }, []);
   return (
     <div class="w-main">

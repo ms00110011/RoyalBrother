@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import { Navigate, useNavigate } from "react-router-dom";
 
 import {Redirect} from "react-router-dom"
+import { Check } from "@mui/icons-material";
 
 export const Signup = () => {
   
@@ -22,6 +23,13 @@ export const Signup = () => {
     password: "",
     mobile: "",
   });
+
+  const[alert,setAlert] = React.useState(false)
+
+  function alertNow() {
+    setAlert(false)
+  }
+
 
   const handlechange = (e) => {
     const { id, value } = e.target;
@@ -43,8 +51,12 @@ export const Signup = () => {
       headers: { "content-type": "application/json" },
     })
       .then((res) => res.json())
-      .then((res) => <Navigate to="/login" /> );
+      .then((res) => { setAlert(true)
+        setTimeout(alertNow, 5000);
+      } );
   };
+
+  // <Navigate to="/login" />
 
   const { name, mobile, email, password } = formData;
 
@@ -54,7 +66,7 @@ export const Signup = () => {
         <h2 style={{ color: "black", margin: "40px" }}>Rent.Ride.Explore</h2>
         <div className={styles.logincard}>
           <div className={styles.loginbanner}>
-            <h6>SIGN UP</h6>
+            <h6>SIGN UP {alert?<p style={{color:"green"}}>Registered <Check/> </p>: <p></p> }</h6>
           </div>
           <form onSubmit={handleSumbit}>
             <h6 style={{ textAlign: "left", marginLeft: "20px" }}>
@@ -147,7 +159,7 @@ export const Signup = () => {
                 marginBottom: "40px",
               }}
               id="password"
-              type="text"
+              type="password"
               placeholder="Enter your Password"
               onChange={handlechange}
               value={password}
@@ -165,7 +177,7 @@ export const Signup = () => {
                 marginRight: "auto",
               }}
               // onClick={()=>navigate('/login')}
-              // onClick={handleSumbit}
+              onClick={handleSumbit}
             >
               Sign Up
             </Button>

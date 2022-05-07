@@ -41,7 +41,7 @@ export default function BasicCard({id, name, img, priceHour, kmlimit, exkm }) {
         <img src={img} alt="" />
         <TabsPanel
           name={name}
-          img={img}
+          img={img} 
           priceHour={priceHour}
           kmlimit={kmlimit}
           exkm={exkm}
@@ -50,7 +50,7 @@ export default function BasicCard({id, name, img, priceHour, kmlimit, exkm }) {
       <Button
           sx={{ backgroundColor: "#FED250", width: "100%", color: "black" }}
           component={Link}
-          to= {`/searchR/${id}`}
+          to= {`/Form2/${id}`}
           variant="contained"
           className={styles.buttontariff}
 
