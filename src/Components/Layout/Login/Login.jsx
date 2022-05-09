@@ -22,21 +22,35 @@ export const Login = () => {
   });
 
 
-  React.useEffect(()=>{
+  React.useEffect(()=> {
     now()
   },[login])
+
+
+
+
+    function now() {
+      if (login) {
+        navigate(`/`);
+      } else {
+        setWait(false)
+        setEnterError(true);
+        setTimeout(errorTimeout, 2000);
+      }
+    }
+
+
+
+
+
 
   function errorTimeout() {
     setEnterError(false);
   }
 
-  function now() {
-    if (login) {
-      navigate(`/`);
-    } else {
-      setEnterError(true);
-      setTimeout(errorTimeout, 5000);
-    }
+
+  function rep() {
+    let a = 10
   }
 
   const handlechange = (e) => {
@@ -50,7 +64,6 @@ export const Login = () => {
 
   const handleSumbit = (e) => {
     e.preventDefault();
-
     console.log(login);
 
     if (phone === "" || password === "") {
@@ -60,10 +73,8 @@ export const Login = () => {
       setEnterError(true);
       setTimeout(errorTimeout, 5000);
     } else {
-      const payload = JSON.stringify(formData);
-
+      setWait(true)
       dispatch(getUsersAction(formData.phone, formData.password));
-      // setWait(true)
     }
 
   };
@@ -87,8 +98,8 @@ export const Login = () => {
           )}
 
           {enterError ? (
-            <h6 style={{ color: "red", fontSize: "14px" }}>
-              Phone Number or password is wrong.Please try again.
+            <h6 style={{ color: "#fed250", fontSize: "14px" }}>
+              Please Enter valid phone Number and password to Login.
             </h6>
           ) : (
             ""
