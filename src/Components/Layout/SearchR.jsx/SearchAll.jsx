@@ -19,8 +19,8 @@ export const SearchAll = () => {
 
   React.useEffect(()=>{
     getData()
-    // getLow()
-    // getHigh()
+    getLow()
+    getHigh()
   },[city])
 
 
@@ -36,14 +36,14 @@ export const SearchAll = () => {
   };
 
   const getLow = () => {
-    fetch("http://localhost:9008/search?_sort=price&_order=asc")
+    fetch(`http://localhost:9008/searchcityASC/${city}`)
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((err) => console.log(err));
   };
 
   const getHigh = () => {
-    fetch("http://localhost:9008/search?_sort=price&_order=desc")
+    fetch(`http://localhost:9008/searchcityDSC/${city}`)
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((err) => console.log(err));

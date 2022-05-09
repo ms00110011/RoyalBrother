@@ -8,5 +8,7 @@ export const LOGOUT = "LOGOUT"
 export const CITY = "CITY"
 export const VEHICLE_BOOK = "VEHICLE_BOOK"
 export const RIDE_AMOUNT = "RIDE_AMOUNT"
+export const LOGIN_CHECK = "LOGIN_CHECK"
+
 
 

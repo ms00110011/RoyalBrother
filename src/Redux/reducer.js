@@ -8,11 +8,13 @@ import {
   LOGOUT,
   TIMELINE_VEH,
   VEHICLE_BOOK,
-  RIDE_AMOUNT
+  RIDE_AMOUNT,
+  LOGIN_CHECK
 } from "./Actiontype";
 
 export const Reducer = (
   state = {
+    loginNow: false,
     isLogin: false,
     user: {},
     durationData: {pickupDate:"",pickupTime: "",dropDate: "",dropTime: "",},
@@ -66,6 +68,10 @@ export const Reducer = (
     case RIDE_AMOUNT : {
       return {...state, rideamount:action.payload }
 
+    }
+
+    case LOGIN_CHECK : {
+      return {loginNow:true}
     }
 
     default: {

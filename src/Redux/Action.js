@@ -22,6 +22,8 @@ export const setCity = (data) => {
   };
 };
 
+
+
 export const getUsersAction = (phone, password) => {
 
   let payload = JSON.stringify({mobile:phone,password:password})
@@ -35,9 +37,15 @@ export const getUsersAction = (phone, password) => {
       .then((res) => res.json())
       .then((res)=>{
         
+        if(res.status==="success") {
+        
         dispatch(getUsers(res.userDetail))
         dispatch(setToken(res.token))
         localStorage.setItem("token", res.token);
+        }
+        else {
+          
+        }
 
       })
 
@@ -112,3 +120,9 @@ export const rideamount = (payload) => {
 };
 };
 
+export const loginCheck = (payload) => {
+  return {
+    type: actions.LOGIN_CHECK,
+    payload:payload
+};
+};

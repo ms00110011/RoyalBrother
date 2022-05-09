@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 import { datetime, hourspay, timelineveh } from "../../Redux/Action";
 import style from "./Home.module.css";
 import TodayDate from "./TodayDate";
 
 const Form = () => {
   //   console.log(today)
+
+  const navigate = useNavigate()
 
   const dispatch = useDispatch();
 
@@ -22,6 +24,8 @@ const Form = () => {
   const [data, setData] = useState(init);
   const [duration, setDuration] = useState(init);
   console.log(data);
+
+  const [enterError,setEnterError] = useState(false)
 
 
   const [totalHours, setTotalHours] = useState(0);
@@ -96,11 +100,21 @@ const Form = () => {
 
 
 
+  function errorTimeout() {
+    setEnterError(false)
+  }
 
 
 
 
   const handleAdd = (e) => {
+  e.preventDefault()
+
+    if (data.pickupDate==""||data.pickupTime==""||data.dropDate==""||data.dropTime=="") {
+      setEnterError(true)
+      setTimeout(errorTimeout, 5000);
+    }
+    else {
 
     let str
     let totalHoursVEH
@@ -156,21 +170,38 @@ const Form = () => {
     setTotalHours(totalHoursVEH)
 
     
-
+    
     dispatch(hourspay(totalHoursVEH))
     dispatch(timelineveh(str))
 
+
     setData(data);
     dispatch(datetime(data));
-    console.log(data);
+    console.log(data)
+    localStorage.setItem("pickD", data.pickupDate);
+    localStorage.setItem("dropD", data.dropDate);
+    localStorage.setItem("pickT", data.pickupTime);
+    localStorage.setItem("dropT", data.dropTime);
+
+
+    console.log(data.dropDate);
+  navigate(`/search`)
+
+  }
+
+
+
+
   };
 
   return (
+    <>
     <div>
       <form className={style.landing_form}>
         <h2 style={{ fontSize: "24px", fontWeight: "bold" }}>
           Search your next ride
         </h2>
+        {enterError?<h6>Please pick your own valid date and time</h6>:""}
         <p
           style={{ fontSize: "15px", fontWeight: "bold", marginBottom: "-5px" }}
         >
@@ -214,15 +245,14 @@ const Form = () => {
           onChange={dataHandle}
           defaultValue="21:47"
         />
-        <Link to="/search">
           {" "}
           <br />
           <button className={style.landingBt} onClick={handleAdd}>
             Search
           </button>
-        </Link>
       </form>
     </div>
+    </>
   );
 };
 
