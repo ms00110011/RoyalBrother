@@ -27,7 +27,7 @@ export const SearchR = () => {
 
 
 
-    fetch(`http://localhost:9008/search/${id.id}`)
+    fetch(`https://rbclonebackend.herokuapp.com/search/${id.id}`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -35,7 +35,7 @@ export const SearchR = () => {
       })
       .catch((err) => console.log(err));
 
-      fetch(`http://localhost:9008/searchcity/${city}`)
+      fetch(`https://rbclonebackend.herokuapp.com/searchcity/${city}`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res);

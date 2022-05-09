@@ -29,7 +29,7 @@ export const getUsersAction = (phone, password) => {
   let payload = JSON.stringify({mobile:phone,password:password})
 
   return (dispatch) => {
-    fetch("http://localhost:9008/login", {
+    fetch("https://rbclonebackend.herokuapp.com/login", {
       method: "POST",
       body: payload,
       headers: { "content-type": "application/json" },
