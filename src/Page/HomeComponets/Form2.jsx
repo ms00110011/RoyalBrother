@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
 import { datetime, hourspay, timelineveh } from "../../Redux/Action";
 import style from "./Home.module.css";
 import TodayDate from "./TodayDate";
@@ -17,6 +17,8 @@ const Form2 = () => {
   const DateTod = TodayDate();
   console.log(DateTod);
 
+  const navigate = useNavigate()
+
   const init = {
     pickupDate: "",
     pickupTime: "",
@@ -29,7 +31,17 @@ const Form2 = () => {
 
 
   const [totalHours, setTotalHours] = useState(0);
+  const [enterError,setEnterError] = useState(false)
+
   const [timeline, setTimeline] = useState("");
+
+
+
+  function errorTimeout() {
+    setEnterError(false)
+  }
+
+
 
   const dataHandle = (e) => {
     let { value, name } = e.target;
@@ -105,7 +117,14 @@ const Form2 = () => {
 
 
   const handleAdd = (e) => {
+    e.preventDefault()
 
+    if (data.pickupDate==""||data.pickupTime==""||data.dropDate==""||data.dropTime=="") {
+      setEnterError(true)
+      setTimeout(errorTimeout, 5000);
+    }
+    else {
+      
     let str
     let totalHoursVEH
     setDuration(duration);
@@ -167,14 +186,20 @@ const Form2 = () => {
     setData(data);
     dispatch(datetime(data));
     console.log(data);
+    navigate(`/searchR/${id}`)
+    }
+
   };
 
   return (
     <div>
       <form className={style.landing_form}>
+
         <h2 style={{ fontSize: "24px", fontWeight: "bold" }}>
           Search your next ride
         </h2>
+      {enterError?<h6>Please pick your own valid date and time</h6>:""}
+
         <p
           style={{ fontSize: "15px", fontWeight: "bold", marginBottom: "-5px" }}
         >
@@ -218,14 +243,11 @@ const Form2 = () => {
           onChange={dataHandle}
           defaultValue="21:47"
         />
-        <Link to={`/searchR/${id}`}>
           {" "}
           <br />
-          <button className={style.landingBt} onClick={handleAdd} component={Link}
-          to= {`/searchR/${id}`}>
+          <button className={style.landingBt} onClick={handleAdd}>
             Search
           </button>
-        </Link>
       </form>
     </div>
   );

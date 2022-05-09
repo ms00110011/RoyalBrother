@@ -8,7 +8,7 @@ import { Footer } from "./Components/Layout/Footer";
 import { Tariff } from "./Components/Layout/Tariff/Tariff";
 import { SearchR } from "./Components/Layout/SearchR.jsx/SearchR";
 import { Login } from "./Components/Layout/Login/Login";
-import { store } from "./Redux/store";
+import { persistor, store} from "./Redux/store";
 import { Provider } from "react-redux";
 import { Signup } from "./Components/Layout/Signup/Signup";
 import { Profile } from "./Components/Profile/Profile";
@@ -31,6 +31,7 @@ import { Reach } from "./Page/ReachComponents/Reach";
 import { SearchAll } from "./Components/Layout/SearchR.jsx/SearchAll";
 import { TariffBook } from "./Page/HomeComponets/TariffBook";
 import Form2 from "./Page/HomeComponets/Form2";
+import { PersistGate } from 'redux-persist/integration/react';
 
 function App() {
   const theme = createTheme({
@@ -50,6 +51,7 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
         <Navbar />
 
         <Routes>
@@ -86,6 +88,7 @@ function App() {
         </Routes>
 
         <Footer />
+        </PersistGate>
       </Provider>
     </div>
   );

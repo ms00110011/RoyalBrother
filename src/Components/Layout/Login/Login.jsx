@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { getUsersAction } from "../../../Redux/Action";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./Login.module.css";
@@ -7,24 +7,37 @@ import { Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 
 export const Login = () => {
-  const dispactch = useDispatch();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const login = useSelector((state) => state.isLogin);
+  console.log(login);
 
-
-  const navigate = useNavigate()
-
-  const {pickupDate} = useSelector(
-    (state)=>state.durationData
-  )
-
+  const [enterError, setEnterError] = useState(false);
+  const [wait, setWait] = useState(false);
 
   const [formData, setFormdata] = React.useState({
     phone: "",
     password: "",
   });
 
-  
+
+  React.useEffect(()=>{
+    now()
+  },[login])
+
+  function errorTimeout() {
+    setEnterError(false);
+  }
+
+  function now() {
+    if (login) {
+      navigate(`/`);
+    } else {
+      setEnterError(true);
+      setTimeout(errorTimeout, 5000);
+    }
+  }
 
   const handlechange = (e) => {
     const { id, value } = e.target;
@@ -38,16 +51,22 @@ export const Login = () => {
   const handleSumbit = (e) => {
     e.preventDefault();
 
-    const payload = JSON.stringify(formData);
+    console.log(login);
 
-    try{dispactch(getUsersAction(formData.phone, formData.password));
-        navigate(`/`)
+    if (phone === "" || password === "") {
+      setEnterError(true);
+      setTimeout(errorTimeout, 5000);
+    } else if (phone.length !== 10) {
+      setEnterError(true);
+      setTimeout(errorTimeout, 5000);
+    } else {
+      const payload = JSON.stringify(formData);
+
+      dispatch(getUsersAction(formData.phone, formData.password));
+      // setWait(true)
     }
-    catch(error) {console.log(error)}
-    
+
   };
-
-
 
   const { phone, password } = formData;
 
@@ -57,8 +76,23 @@ export const Login = () => {
         <h2 style={{ color: "black", margin: "40px" }}>Rent.Ride.Explore</h2>
         <div className={styles.logincard}>
           <div className={styles.loginbanner}>
-            <h6>LOGIN</h6>
+            <h6>LOGIN {login}</h6>
           </div>
+          {wait ? (
+            <h6 style={{ color: "#FED250", fontSize: "14px" }}>
+              Please wait...
+            </h6>
+          ) : (
+            ""
+          )}
+
+          {enterError ? (
+            <h6 style={{ color: "red", fontSize: "14px" }}>
+              Phone Number or password is wrong.Please try again.
+            </h6>
+          ) : (
+            ""
+          )}
           <form onSubmit={handleSumbit}>
             <h6 style={{ textAlign: "left", marginLeft: "20px" }}>Phone</h6>
             <div
@@ -81,7 +115,7 @@ export const Login = () => {
                   marginLeft: "22px",
                   padding: "0",
                 }}
-                id="phone"
+                id="phoneA"
                 type="text"
                 placeholder="+91"
               />
@@ -95,7 +129,7 @@ export const Login = () => {
                   borderRadius: "5px",
                 }}
                 id="phone"
-                type="text"
+                type="number"
                 onChange={handlechange}
                 value={phone}
               />
@@ -122,6 +156,7 @@ export const Login = () => {
             {/* <input type="submit" /> */}
             <Button
               variant="contained"
+              // onClick={()=>setTimeout(now,6000)}
               type="submit"
               sx={{
                 backgroundColor: "#FED250",
@@ -135,7 +170,7 @@ export const Login = () => {
             </Button>
           </form>
           <Link to="/signup">
-            <p style={{color:"black",padding:"20px"}}>
+            <p style={{ color: "black", padding: "20px" }}>
               New here? Sign up here to start riding!
             </p>
           </Link>

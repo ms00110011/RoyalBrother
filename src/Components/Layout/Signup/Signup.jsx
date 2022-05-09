@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { getUsersAction } from "../../../Redux/Action";
 import { useDispatch } from "react-redux";
 import styles from "./Signup.module.css";
@@ -25,11 +25,28 @@ export const Signup = () => {
   });
 
   const[alert,setAlert] = React.useState(false)
+  const [enterError,setEnterError] = useState(false)
+  const [phoneError,setphoneError] = useState(false)
+  const [wait,setWait] = useState(false)
+
+
+
 
   function alertNow() {
     setAlert(false)
   }
 
+  function errorTimeout() {
+    setEnterError(false)
+  }
+
+  function redirect() {
+    navigate('/login')
+  }
+
+  function phoneerrorTimeout() {
+    setphoneError(false)
+  }
 
   const handlechange = (e) => {
     const { id, value } = e.target;
@@ -41,19 +58,41 @@ export const Signup = () => {
   };
 
   const handleSumbit = (e) => {
+
     e.preventDefault();
 
-    const payload = JSON.stringify(formData);
 
-    fetch("http://localhost:9008/signup", {
-      method: "POST",
-      body: payload,
-      headers: { "content-type": "application/json" },
-    })
-      .then((res) => res.json())
-      .then((res) => { setAlert(true)
-        setTimeout(alertNow, 5000);
-      } );
+
+
+      if(name===""|| mobile==="" ||email===""|| password==="") {
+        setEnterError(true)
+        setTimeout(errorTimeout, 5000);
+      }
+      else if(mobile.length!==10) {
+        setphoneError(true)
+        setTimeout(phoneerrorTimeout, 5000);
+      }
+      else {
+
+        setWait(true)
+
+        const payload = JSON.stringify(formData);
+    
+        fetch("http://localhost:9008/signup", {
+          method: "POST",
+          body: payload,
+          headers: { "content-type": "application/json" },
+        })
+          .then((res) => res.json())
+
+          .then((res) => { setWait(false)
+            setAlert(true)
+            setTimeout(alertNow, 3000);
+            setTimeout(redirect, 1500);
+            
+          } );
+
+      }
   };
 
   // <Navigate to="/login" />
@@ -66,8 +105,13 @@ export const Signup = () => {
         <h2 style={{ color: "black", margin: "40px" }}>Rent.Ride.Explore</h2>
         <div className={styles.logincard}>
           <div className={styles.loginbanner}>
-            <h6>SIGN UP {alert?<p style={{color:"green"}}>Registered <Check/> </p>: <p></p> }</h6>
+            <h6>SIGN UP</h6>
           </div>
+        {enterError?<h6 style={{color:"red", fontSize:"14px",marginTop:"-30px"}}>Please fill all the fields.</h6>:""}
+        {alert?<h6 style={{color:"green", fontSize:"14px",marginTop:"-30px"}}>You have been registered successfully.</h6>:""}
+        {wait?<h6 style={{color:"#FED250", fontSize:"14px",marginTop:"-30px"}}>Please Wait...</h6>:""}
+
+
           <form onSubmit={handleSumbit}>
             <h6 style={{ textAlign: "left", marginLeft: "20px" }}>
               Name as per Aadhaar/Passport
@@ -106,6 +150,8 @@ export const Signup = () => {
               onChange={handlechange}
               value={email}
             />
+        {phoneError?<h6 style={{color:"red", fontSize:"14px",whiteSpace:"nowrap"}}>Please enter a valid 10 digit Phone Number.</h6>:""}
+
 
             <h6 style={{ textAlign: "left", marginLeft: "20px" }}>Phone</h6>
             <div
@@ -118,6 +164,8 @@ export const Signup = () => {
                 width: "90%",
               }}
             >
+
+
               <input
                 style={{
                   border: "0",
@@ -131,7 +179,6 @@ export const Signup = () => {
                 type="text"
                 placeholder="+91"
               />
-
               <input
                 style={{
                   border: "0",
@@ -141,7 +188,7 @@ export const Signup = () => {
                   borderRadius: "5px",
                 }}
                 id="mobile"
-                type="text"
+                type="number"
                 onChange={handlechange}
                 value={mobile}
               />
