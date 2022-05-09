@@ -14,7 +14,7 @@ import {
 
 export const Reducer = (
   state = {
-    loginNow: false,
+    loginNow: "",
     isLogin: false,
     user: {},
     durationData: {pickupDate:"",pickupTime: "",dropDate: "",dropTime: "",},
