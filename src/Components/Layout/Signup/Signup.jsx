@@ -10,6 +10,8 @@ import { Navigate, useNavigate } from "react-router-dom";
 
 import {Redirect} from "react-router-dom"
 import { Check } from "@mui/icons-material";
+import validator from 'validator'
+
 
 export const Signup = () => {
   
@@ -27,6 +29,7 @@ export const Signup = () => {
   const[alert,setAlert] = React.useState(false)
   const [enterError,setEnterError] = useState(false)
   const [phoneError,setphoneError] = useState(false)
+  const [emailError,setEmailError] = useState(false)
   const [wait,setWait] = useState(false)
 
 
@@ -34,6 +37,10 @@ export const Signup = () => {
 
   function alertNow() {
     setAlert(false)
+  }
+
+  function emailErrorTimeout() {
+    setEmailError(false)
   }
 
   function errorTimeout() {
@@ -71,6 +78,11 @@ export const Signup = () => {
       else if(mobile.length!==10) {
         setphoneError(true)
         setTimeout(phoneerrorTimeout, 5000);
+      }
+      else if(!validator.isEmail(email)) {
+        console.log(validator.isEmail(email))
+        setEmailError(true)
+        setTimeout(emailErrorTimeout, 5000);
       }
       else {
 
@@ -132,6 +144,9 @@ export const Signup = () => {
               onChange={handlechange}
               value={name}
             />
+
+        {emailError?<h6 style={{color:"red", fontSize:"14px",whiteSpace:"nowrap"}}>Please enter a valid email.</h6>:""}
+
 
             <h6 style={{ textAlign: "left", marginLeft: "20px" }}>Email</h6>
             <input

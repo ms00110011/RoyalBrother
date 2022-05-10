@@ -13,12 +13,19 @@ import AddIcon from '@mui/icons-material/Add';
 import Typography from '@mui/material/Typography';
 import { blue } from '@mui/material/colors';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setCity } from '../../Redux/Action';
+
+
 
 const emails = ['Bangalore', 'Pune', 'Mumbai', 'Lucknow'];
 
+
+
 function SimpleDialog(props) {
+
+
+
   const { onClose, selectedValue, open } = props;
 
   const handleClose = () => {
@@ -54,6 +61,10 @@ SimpleDialog.propTypes = {
 };
 
 export default function Popup() {
+
+var city = useSelector((state) => state.city);
+
+
   const [open, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState(emails[1]);
   const dispatch = useDispatch();
