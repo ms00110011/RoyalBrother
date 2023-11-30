@@ -8,7 +8,7 @@ export const Tariff = () => {
   var city = useSelector((state) => state.city);
 
   React.useEffect(() => {
-    fetch(`https://rbclonebackend.herokuapp.com/searchcity/${city}`)
+    fetch(`https://rbbackendclone.onrender.com/searchcity/${city}`)
       .then((res) => res.json())
       .then((res) => {
         console.log(res)

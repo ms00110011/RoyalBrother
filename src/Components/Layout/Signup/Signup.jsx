@@ -90,7 +90,7 @@ export const Signup = () => {
 
         const payload = JSON.stringify(formData);
     
-        fetch("https://rbclonebackend.herokuapp.com/signup", {
+        fetch("https://rbbackendclone.onrender.com/signup", {
           method: "POST",
           body: payload,
           headers: { "content-type": "application/json" },

@@ -44,7 +44,7 @@ export default function Navbar() {
       console.log(localStorage.getItem("token"))
       const payload = JSON.stringify({token:localStorage.getItem("token")})
 
-      fetch("https://rbclonebackend.herokuapp.com/tokenUser", {
+      fetch("https://rbbackendclone.onrender.com/tokenUser", {
         method: "POST",
         body: payload,
         headers: { "content-type": "application/json" },

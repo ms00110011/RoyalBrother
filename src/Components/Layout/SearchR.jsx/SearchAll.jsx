@@ -28,7 +28,7 @@ export const SearchAll = () => {
 
     // console.log(id.id)
 
-    fetch(`https://rbclonebackend.herokuapp.com/searchcity/${city}`)
+    fetch(`https://rbbackendclone.onrender.com/searchcity/${city}`)
       .then((res) => res.json())
       .then((res) => {console.log(res)
         setData(res)})
@@ -36,14 +36,14 @@ export const SearchAll = () => {
   };
 
   const getLow = () => {
-    fetch(`https://rbclonebackend.herokuapp.com/searchcityASC/${city}`)
+    fetch(`https://rbbackendclone.onrender.com/searchcityASC/${city}`)
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((err) => console.log(err));
   };
 
   const getHigh = () => {
-    fetch(`https://rbclonebackend.herokuapp.com/searchcityDSC/${city}`)
+    fetch(`https://rbbackendclone.onrender.com/searchcityDSC/${city}`)
       .then((res) => res.json())
       .then((res) => setData(res))
       .catch((err) => console.log(err));
