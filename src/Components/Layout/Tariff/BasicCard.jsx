@@ -38,7 +38,7 @@ export default function BasicCard({id, name, img, priceHour, kmlimit, exkm }) {
         >
           {name}
         </h6>
-        <img sx={{width:30%}} src={img} alt="" />
+        <img  src={img} alt="" />
         <TabsPanel
           name={name}
           img={img} 
