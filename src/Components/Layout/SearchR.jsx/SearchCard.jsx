@@ -56,7 +56,7 @@ export default function Searchcard({ name, price, img, id }) {
         width: "70%",
         margin: "25px",
         padding: "0",
-        height: "345px",
+        height: "auto",
       }}
     >
       <CardContent sx={{ paddingLeft: "0", paddingRight: "0" }}>

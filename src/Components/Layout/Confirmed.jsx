@@ -17,7 +17,7 @@ export const Confirmed = () => {
     
         <h1 style={{color:"black"}}>Booking Confirmed</h1>
         <CheckCircleIcon sx={{fontSize:"100px",color:"#FED250"}} />
-        <Link to="/"><h3 style={{color:"#FED250",textDecoration:"none",padding:"30px"}}>Go to Home Page</h3></Link>
+      
 
         <Button component={Link} to={'/'} > Go to Home Page</Button>
 
